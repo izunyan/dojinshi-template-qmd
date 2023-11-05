@@ -1,0 +1,13 @@
+# (PART) 前半 {-#zennhann}
+
+# 設定 {#setting}
+
+## ggplot{#zu}
+```{r}
+ggplot(mtcars) +
+  geom_point(aes(mpg,disp))
+
+```
+
+
+## 日本語 {#setting_japanese}
