@@ -1,0 +1,12 @@
+# 設定 {#sec-setting}
+
+## ggplot{#zu}
+```{r}
+library(tidyverse)
+ggplot(mtcars) +
+  geom_point(aes(mpg,disp))
+
+```
+
+
+## 日本語 {#sec-setting-japanese}

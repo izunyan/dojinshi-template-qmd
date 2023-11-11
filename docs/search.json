@@ -1,1 +1,107 @@
-[{"path":"index.html","id":"hajimeni","chapter":"はじめに","heading":"はじめに","text":"本webサイトは，にて頒布した書名のオンラインバージョンこちらは随時updateされていく予定はじめにの文章","code":""},{"path":"index.html","id":"テンプレートの説明","chapter":"はじめに","heading":"テンプレートの説明","text":"同人誌の原稿を書くためのテンプレート同人誌の原稿を書くためのテンプレートBuild Bookすればhtmとpdfがそのままできる\nhtmlはbs4_bookスタイル\npdfは目次から始まり，ページ番号が1から始まる\nBuild Bookすればhtmとpdfがそのままできるhtmlはbs4_bookスタイルpdfは目次から始まり，ページ番号が1から始まる","code":""},{"path":"index.html","id":"実行方法","chapter":"はじめに","heading":"実行方法","text":"Buildタブで\nBuild Book > bookdown::bs4_book\nBuild Book > bookdown::pdf_book\nBuild Book > bookdown::bs4_bookBuild Book > bookdown::pdf_bookKnitでやるとエラーになるよ！","code":""},{"path":"index.html","id":"とてもお世話になったサイト","chapter":"はじめに","heading":"とてもお世話になったサイト","text":"Bookdownによる技術系同人誌執筆","code":""},{"path":"index.html","id":"マークダウンの書式など","chapter":"はじめに","heading":"マークダウンの書式など","text":"リンクの貼り方　たとえばセクション2文字列のリンク→注意事項","code":""},{"path":"index.html","id":"概要","chapter":"はじめに","heading":"概要","text":"本書の目的\n説明\n説明本書の内容\n説明\n説明執筆動機\n説明\n説明今後の展望\n\n本書の内容は、githubレポジトリですべて公開","code":""},{"path":"index.html","id":"本書の特徴","chapter":"はじめに","heading":"本書の特徴","text":"本書の強み\n\n","code":""},{"path":"index.html","id":"想定読者","chapter":"はじめに","heading":"想定読者","text":"RとRStudioをダウンロードしてPCにインストールまでできることが最低条件","code":""},{"path":"index.html","id":"各章の紹介","chapter":"はじめに","heading":"各章の紹介","text":"1章では","code":""},{"path":"index.html","id":"執筆環境","chapter":"はじめに","heading":"執筆環境","text":"本書はbookdownにて執筆","code":""},{"path":"index.html","id":"rおよびrstudioパッケージのバージョン","chapter":"はじめに","heading":"RおよびRStudio、パッケージのバージョン","text":"rstudioだけなぜか表示されないので手動で…\nバージョン 2022.02.1+461 Prairie Trillium (desktop)\nバージョン 2022.02.1+461 Prairie Trillium (desktop)","code":""},{"path":"index.html","id":"注意事項など","chapter":"はじめに","heading":"注意事項など","text":"本書の内容はすべてwindows環境を想定しています。本書の内容はすべてwindows環境を想定しています。この本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできません。使用する際は、自己責任でお願いします。この本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできません。使用する際は、自己責任でお願いします。","code":""},{"path":"index.html","id":"ライセンス","chapter":"はじめに","heading":"ライセンス","text":"","code":""},{"path":"index.html","id":"association","chapter":"はじめに","heading":"関連情報","text":"","code":"\n# 日本語表示"},{"path":"setting.html","id":"setting","chapter":"1 設定","heading":"1 設定","text":"","code":""},{"path":"setting.html","id":"setting_japanese","chapter":"1 設定","heading":"1.1 日本語","text":"","code":""},{"path":"caution.html","id":"caution","chapter":"2 注意事項","heading":"2 注意事項","text":"奇数ページだと1ページ白紙になるので，偶数ページにしないとだめ前半，後半部分は，PDFとして作成するときはページ数増えるので不要かも","code":""}]
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "はじめに",
+    "section": "",
+    "text": "はじめに\nはじめにの文章:ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"
+  },
+  {
+    "objectID": "index.html#テンプレートの説明",
+    "href": "index.html#テンプレートの説明",
+    "title": "はじめに",
+    "section": "テンプレートの説明",
+    "text": "テンプレートの説明\n\nQuartoで同人誌の原稿を書くためのテンプレート\n\nbookdownパッケージでR Markdownで書く解説はこちら\n\nRender Bookすればhtmlとpdfがそのままできる\n\npdfは目次から始まり，ページ番号が1から始まる\n\n\n\n実行方法\n\nBuildタブで\n\nRender Book &gt; HTML Format\nRender Book &gt; PDF Format\n\n\n\n\nbookdown版でとてもお世話になったサイト\n\nBookdownによる技術系同人誌執筆\n\n\n\nマークダウンの書式など\n\nリンクの貼り方　たとえばセクション 2\n文字列のリンク→注意事項"
+  },
+  {
+    "objectID": "index.html#概要",
+    "href": "index.html#概要",
+    "title": "はじめに",
+    "section": "概要",
+    "text": "概要\n\n本書の目的\n\n説明\n\n本書の内容\n\n説明\n\n執筆動機\n\n説明\n\n今後の展望\n\n\n\n本書の内容は、githubレポジトリですべて公開"
+  },
+  {
+    "objectID": "index.html#本書の特徴",
+    "href": "index.html#本書の特徴",
+    "title": "はじめに",
+    "section": "本書の特徴",
+    "text": "本書の特徴\n\n本書の強み"
+  },
+  {
+    "objectID": "index.html#想定読者",
+    "href": "index.html#想定読者",
+    "title": "はじめに",
+    "section": "想定読者",
+    "text": "想定読者\n\nRとRStudioをダウンロードしてPCにインストールまでできることが最低条件"
+  },
+  {
+    "objectID": "index.html#各章の紹介",
+    "href": "index.html#各章の紹介",
+    "title": "はじめに",
+    "section": "各章の紹介",
+    "text": "各章の紹介\n\nChapter 1 章では"
+  },
+  {
+    "objectID": "index.html#執筆環境",
+    "href": "index.html#執筆環境",
+    "title": "はじめに",
+    "section": "執筆環境",
+    "text": "執筆環境\n\n本書はQuartoにて執筆\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン 2022.02.1+461 Prairie Trillium (desktop)\n\n\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2023-11-12\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0"
+  },
+  {
+    "objectID": "index.html#注意事項など",
+    "href": "index.html#注意事項など",
+    "title": "はじめに",
+    "section": "注意事項など",
+    "text": "注意事項など\n\n本書の内容はすべてwindows環境を想定しています。\nこの本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできません。使用する際は、自己責任でお願いします。"
+  },
+  {
+    "objectID": "index.html#ライセンス",
+    "href": "index.html#ライセンス",
+    "title": "はじめに",
+    "section": "ライセンス",
+    "text": "ライセンス"
+  },
+  {
+    "objectID": "index.html#関連情報",
+    "href": "index.html#関連情報",
+    "title": "はじめに",
+    "section": "関連情報",
+    "text": "関連情報\n\n\nCode\n# 日本語表示"
+  },
+  {
+    "objectID": "zenhan.html",
+    "href": "zenhan.html",
+    "title": "前半",
+    "section": "",
+    "text": "前半が始まるよ"
+  },
+  {
+    "objectID": "setting.html#zu",
+    "href": "setting.html#zu",
+    "title": "1  設定",
+    "section": "1.1 ggplot",
+    "text": "1.1 ggplot\n\n\nCode\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nCode\nggplot(mtcars) +\n  geom_point(aes(mpg,disp))"
+  },
+  {
+    "objectID": "setting.html#sec-setting-japanese",
+    "href": "setting.html#sec-setting-japanese",
+    "title": "1  設定",
+    "section": "1.2 日本語",
+    "text": "1.2 日本語"
+  },
+  {
+    "objectID": "kohan.html",
+    "href": "kohan.html",
+    "title": "後半",
+    "section": "",
+    "text": "後半が始まるよ"
+  },
+  {
+    "objectID": "attention.html",
+    "href": "attention.html",
+    "title": "2  注意事項",
+    "section": "",
+    "text": "奇数ページだと1ページ白紙になるので，偶数ページにしないとだめ\n前半，後半部分は，PDFとして作成するときはページ数増えるので不要かも"
+  }
+]

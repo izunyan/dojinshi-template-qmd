@@ -1,0 +1,40 @@
+project:
+  type: book
+  output-dir: docs # pdfの出力先
+
+book:
+  # title: "日本語の本"
+  # author: "やわらかクジラ"
+  # date: "2023/10/9"
+  cover-image: "images/cover.png" # 表紙画像
+  open-graph: true # 他メディアでのサムネイル表示のため
+  search: true
+  repo-url: https://github.com/izunyan/gisho12
+  
+  chapters:
+    - index.qmd
+    - part: zenhan.qmd
+      chapters: 
+        - setting.qmd
+    - part: kohan.qmd
+      chapters:
+        - attention.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+  pdf:
+    documentclass: bxjsbook                     # 日本語pdf
+    classoption: xelatex, ja=standard           # 
+    papersize: b5paper                          # サイズ指定
+    pandoc_args: --top-level-division=chapter   # ?
+    include-in-header: preamble.tex             # プリアンブル：色々指定する所
+    include-after-body: after.tex               # 奥付
+  epub: default
+
+
+
