@@ -59,10 +59,7 @@ knitr::include_graphics("images/cover.png")
 
 -   [Bookdownによる技術系同人誌執筆](https://teastat.blogspot.com/2019/01/bookdown.html)
 
-### マークダウンの書式など
 
--   リンクの貼り方　たとえば[セクション -@sec-caution]
--   文字列のリンク→[注意事項](#sec-caution)
 
 
 
@@ -94,7 +91,7 @@ knitr::include_graphics("images/cover.png")
 
 ## 各章の紹介
 
-* @sec-setting 章では
+* -@sec-setting 章では
 
 ## 執筆環境
 

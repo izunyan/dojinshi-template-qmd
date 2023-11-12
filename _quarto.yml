@@ -2,6 +2,9 @@ project:
   type: book
   output-dir: docs # pdfの出力先
 
+execute:
+  warning: false
+
 book:
   # title: "日本語の本"
   # author: "やわらかクジラ"
@@ -30,7 +33,7 @@ format:
   pdf:
     documentclass: bxjsbook                     # 日本語pdf
     classoption: xelatex, ja=standard           # 
-    papersize: b5paper                          # サイズ指定
+    papersize: b5                               # サイズ指定(b5paperはA4になってしまう)
     pandoc_args: --top-level-division=chapter   # ?
     include-in-header: preamble.tex             # プリアンブル：色々指定する所
     include-after-body: after.tex               # 奥付

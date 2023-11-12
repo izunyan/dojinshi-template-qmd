@@ -1,12 +1,36 @@
 # 設定 {#sec-setting}
 
-## ggplot{#zu}
 ```{r}
 library(tidyverse)
+```
+
+## マークダウンの書式など
+
+### セクションへのリンク
+
+| 見え方                             | コード                                 |
+|------------------------------------|----------------------------------------|
+| [@sec-caution]                     | `[@sec-caution]`             |
+| [セクション -@sec-caution]         | `[セクション -@sec-caution]` |
+| [-@sec-caution]                    | `[-@sec-caution]`            |
+| [-@sec-caution]章                  | `[-@sec-caution]章`          |
+| [-@sec-caution 章]                  | `[-@sec-caution 章]`          |
+| [注意事項](#sec-caution)           | `[注意事項](#sec-caution)`         |
+|                                    |                                        |
+|                                    |                                        |
+
+-   
+
+-   文字列のリンク→
+
+-   記述法:
+
+## ggplot {#zu}
+
+```{r}
 ggplot(mtcars) +
   geom_point(aes(mpg,disp))
 
 ```
-
 
 ## 日本語 {#sec-setting-japanese}
