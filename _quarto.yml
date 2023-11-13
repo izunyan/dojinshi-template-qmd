@@ -19,6 +19,7 @@ book:
     - part: zenhan.qmd
       chapters: 
         - setting.qmd
+        - fig_table.qmd
     - part: kohan.qmd
       chapters:
         - attention.qmd

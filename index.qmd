@@ -100,7 +100,7 @@ knitr::include_graphics("images/cover.png")
 ### RおよびRStudio、パッケージのバージョン
 
 * rstudioだけなぜか表示されないので手動で…
-  + バージョン 2022.02.1+461 Prairie Trillium (desktop)
+  + バージョン RStudio 2023.09.0+463 "Desert Sunflower"
 
 ```{r}
 #| echo: false

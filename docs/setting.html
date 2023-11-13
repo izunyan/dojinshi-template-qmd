@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./kohan.html" rel="next">
+<link href="./fig_table.html" rel="next">
 <link href="./zenhan.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -98,10 +98,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="1&nbsp; 設定">
-<meta property="og:image" content="setting_files/figure-html/unnamed-chunk-2-1.png">
 </head>
 
 <body class="nav-sidebar floating">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -154,6 +154,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">設定</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fig_table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">図表</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -168,7 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./attention.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">注意事項</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">注意事項</span></span></a>
   </div>
 </li>
       </ul>
@@ -186,9 +192,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#マークダウンの書式など" id="toc-マークダウンの書式など" class="nav-link active" data-scroll-target="#マークダウンの書式など"><span class="header-section-number">1.1</span> マークダウンの書式など</a>
   <ul class="collapse">
   <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link" data-scroll-target="#セクションへのリンク"><span class="header-section-number">1.1.1</span> セクションへのリンク</a></li>
+  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">1.1.2</span> 図表へのリンク</a></li>
   </ul></li>
-  <li><a href="#zu" id="toc-zu" class="nav-link" data-scroll-target="#zu"><span class="header-section-number">1.2</span> ggplot</a></li>
-  <li><a href="#sec-setting-japanese" id="toc-sec-setting-japanese" class="nav-link" data-scroll-target="#sec-setting-japanese"><span class="header-section-number">1.3</span> 日本語</a></li>
+  <li><a href="#sec-setting-japanese" id="toc-sec-setting-japanese" class="nav-link" data-scroll-target="#sec-setting-japanese"><span class="header-section-number">1.2</span> 日本語</a></li>
   </ul>
 </nav>
     </div>
@@ -231,27 +237,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="attention.html"><span>Chapter&nbsp;2</span></a></td>
+<td><a href="attention.html"><span>Chapter&nbsp;3</span></a></td>
 <td><code>[@sec-caution]</code></td>
 </tr>
 <tr class="even">
-<td><a href="attention.html">セクション&nbsp;<span>2</span></a></td>
-<td><code>[セクション -@sec-caution]</code></td>
-</tr>
-<tr class="odd">
-<td><a href="attention.html"><span>2</span></a></td>
+<td><a href="attention.html"><span>3</span></a></td>
 <td><code>[-@sec-caution]</code></td>
 </tr>
+<tr class="odd">
+<td><a href="attention.html">セクション&nbsp;<span>3</span></a></td>
+<td><code>[セクション -@sec-caution]</code></td>
+</tr>
 <tr class="even">
-<td><a href="attention.html"><span>2</span></a>章</td>
+<td><a href="attention.html"><span>3</span></a>章</td>
 <td><code>[-@sec-caution]章</code></td>
 </tr>
 <tr class="odd">
-<td><a href="attention.html"><span>2</span></a></td>
+<td><a href="attention.html"><span>3</span></a></td>
 <td><code>[-@sec-caution 章]</code></td>
 </tr>
 <tr class="even">
-<td><a href="attention.html">注意事項</a></td>
+<td><a href="fig_table.html">注意事項</a></td>
 <td><code>[注意事項](#sec-caution)</code></td>
 </tr>
 <tr class="odd">
@@ -264,28 +270,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<ul>
-<li></li>
-<li><p>文字列のリンク→</p></li>
-<li><p>記述法:</p></li>
-</ul>
+</section>
+<section id="図表へのリンク" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">1.1.2</span> 図表へのリンク</h3>
+<p><a href="fig_table.html#fig-zu">Figure&nbsp;<span>2.1</span></a> を参照<br>
+<a href="fig_table.html#tbl-hyo">Table&nbsp;<span>2.1</span></a> を参照</p>
 </section>
 </section>
-<section id="zu" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="zu"><span class="header-section-number">1.2</span> ggplot</h2>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(mpg,disp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img src="setting_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-<section id="sec-setting-japanese" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="sec-setting-japanese"><span class="header-section-number">1.3</span> 日本語</h2>
+<section id="sec-setting-japanese" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-setting-japanese"><span class="header-section-number">1.2</span> 日本語</h2>
 
 
 </section>
@@ -524,6 +517,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./zenhan.html" class="pagination-link">
@@ -531,8 +525,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./kohan.html" class="pagination-link">
-        <span class="nav-page-text">後半</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./fig_table.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">図表</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,27 @@
+# 図表 {#sec-caution}
+
+## 図
+
+```{r}
+#| label: fig-zu
+#| fig-cap: "散布図"
+
+
+library(ggplot2)
+ggplot(mtcars) +
+  geom_point(aes(mpg,disp))
+
+```
+
+@fig-zu を参照
+
+## 表
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| x    | 1    | 10   |
+| y    | 0    | 20   |
+
+: 表タイトル {#tbl-hyo}
+
+@tbl-hyo を参照
