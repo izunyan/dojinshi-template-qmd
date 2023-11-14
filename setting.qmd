@@ -21,8 +21,8 @@ library(tidyverse)
 
 ### 図表へのリンク
 
-@fig-zu を参照  
-@tbl-hyo を参照  
+@fig-zu を参照,  [図 -@fig-zu] を参照 
+@tbl-hyo を参照, [表 -@tbl-hyo]を参照  
 
 
 

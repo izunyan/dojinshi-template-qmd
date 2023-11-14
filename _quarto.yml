@@ -5,6 +5,8 @@ project:
 execute:
   warning: false
 
+toc-title: 目次
+
 book:
   # title: "日本語の本"
   # author: "やわらかクジラ"
@@ -16,13 +18,19 @@ book:
   
   chapters:
     - index.qmd
-    - part: zenhan.qmd
-      chapters: 
-        - setting.qmd
-        - fig_table.qmd
-    - part: kohan.qmd
-      chapters:
-        - attention.qmd
+    - setting.qmd
+    - fig_table.qmd
+    - attention.qmd
+    # 1部などと区切りたい場合
+    # - part: zenhan.qmd
+    #   chapters: 
+    #     - setting.qmd
+    #     - fig_table.qmd
+    # - part: kohan.qmd
+    #   chapters:
+    #     - attention.qmd
+
+
 
 bibliography: references.bib
 

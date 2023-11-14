@@ -8,14 +8,20 @@
 <!-- knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, -->
 <!--                       dev = "cairo_pdf", dev.args = list(family = "ipaexg")) # pdfでggplot2の日本語出力に必要な設定→html不可？ -->
 
-<!-- tibble_opt <- list( -->
-<!--   "tibble.print_min" = 3, # 表示する行の数 -->
-<!--   "tibble.width" = 65     # 横の表示幅 -->
-<!-- ) -->
-
-<!-- options(tibble_opt) -->
 
 <!-- ``` -->
+
+```{r}
+#| include: false
+
+tibble_opt <- list(
+  "tibble.print_min" = 3, # 表示する行の数
+  "tibble.width" = 65     # 横の表示幅
+)
+
+options(tibble_opt)
+```
+
 
 <!-- 全体の設定ここまで -->
 
@@ -91,11 +97,19 @@ knitr::include_graphics("images/cover.png")
 
 ## 各章の紹介
 
-* -@sec-setting 章では
+* [-@sec-setting]章では
 
 ## 執筆環境
 
 * 本書は[Quarto](https://quarto.org/)にて執筆
+
+### Quartoのバージョン
+```{r}
+#| echo: false
+
+quarto::quarto_version()
+```
+
 
 ### RおよびRStudio、パッケージのバージョン
 
@@ -105,11 +119,9 @@ knitr::include_graphics("images/cover.png")
 ```{r}
 #| echo: false
 
-# rsinfo <- 
-# rstudioapi::versionInfo()
-# 
-# rsinfo$version
-# rsinfo$release_name
+
+# rstudioapi::versionInfo()$version
+# rstudioapi::versionInfo()$release_name 
 
 # or
 
@@ -119,14 +131,11 @@ knitr::include_graphics("images/cover.png")
 
 
 ```{r}
-#| echo: false
 
 
 library(tidyverse)
-res_si <- 
-   sessioninfo::session_info()
 
-res_si$platform |>
+sessioninfo::session_info()$platform |> 
   stack() |>
   tibble::as_tibble() |>
   dplyr::relocate(ind) |>
@@ -135,10 +144,10 @@ res_si$platform |>
   knitr::kable() |>
   kableExtra::kable_styling(position = "center")
 
-res_si$packages |> 
+sessioninfo::session_info()$packages |> 
   tibble::as_tibble() |> 
   dplyr::select(package, loadedversion) |> 
-  dplyr::filter(package %in% c("bookdown", "tidyverse")) |>
+  dplyr::filter(package %in% c("tidyverse")) |>
   knitr::kable() |>
   kableExtra::kable_styling(position = "center")
 ```
