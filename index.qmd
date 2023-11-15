@@ -97,19 +97,12 @@ knitr::include_graphics("images/cover.png")
 
 ## 各章の紹介
 
-* [-@sec-setting]章では
+* [-@sec-standard]章では
 
 ## 執筆環境
 
-* 本書は[Quarto](https://quarto.org/)にて執筆
-
-### Quartoのバージョン
-```{r}
-#| echo: false
-
-quarto::quarto_version()
-```
-
+- 本書は[Quarto](https://quarto.org/)にて執筆
+  - バージョン`r quarto::quarto_version()`
 
 ### RおよびRStudio、パッケージのバージョン
 
@@ -131,7 +124,7 @@ quarto::quarto_version()
 
 
 ```{r}
-
+#| echo: false
 
 library(tidyverse)
 
@@ -152,7 +145,7 @@ sessioninfo::session_info()$packages |>
   kableExtra::kable_styling(position = "center")
 ```
 
-## 注意事項など
+## 使用上の注意など
 
 * 本書の内容はすべてwindows環境を想定しています。
 
@@ -165,8 +158,4 @@ sessioninfo::session_info()$packages |>
 <!--   + 引用例：やわらかクジラ（2021）『がんばらないデータ加工　Rによるくり返し作業入門　前編』. （サークル名：ヤサイゼリー）, オンライン版:https://izunyan.github.io/gisho12/ -->
 <!--   + ただし，ライセンスの適用は本書での著作部分のみとなり，用いているデータやパッケージや画像などはそれぞれのライセンスに準じる -->
 
-## 関連情報
-```{r}
-# 日本語表示
-```
 

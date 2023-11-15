@@ -18,17 +18,17 @@ book:
   
   chapters:
     - index.qmd
-    - setting.qmd
+    - standard.qmd
     - fig_table.qmd
-    - attention.qmd
+    - caution.qmd
     # 1部などと区切りたい場合
     # - part: zenhan.qmd
     #   chapters: 
-    #     - setting.qmd
+    #     - standard.qmd
     #     - fig_table.qmd
     # - part: kohan.qmd
     #   chapters:
-    #     - attention.qmd
+    #     - caution.qmd
 
 
 

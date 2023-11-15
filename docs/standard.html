@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; 設定</title>
+<title>1&nbsp; マークダウンの基本</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="1&nbsp; 設定">
+<meta property="og:title" content="1&nbsp; マークダウンの基本">
 </head>
 
 <body class="nav-sidebar floating">
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./setting.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">設定</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./standard.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">マークダウンの基本</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -141,8 +141,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setting.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">設定</span></span></a>
+  <a href="./standard.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">マークダウンの基本</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -153,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./attention.html" class="sidebar-item-text sidebar-link">
+  <a href="./caution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">注意事項</span></span></a>
   </div>
 </li>
@@ -167,12 +167,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#マークダウンの書式など" id="toc-マークダウンの書式など" class="nav-link active" data-scroll-target="#マークダウンの書式など"><span class="header-section-number">1.1</span> マークダウンの書式など</a>
-  <ul class="collapse">
-  <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link" data-scroll-target="#セクションへのリンク"><span class="header-section-number">1.1.1</span> セクションへのリンク</a></li>
-  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">1.1.2</span> 図表へのリンク</a></li>
-  </ul></li>
-  <li><a href="#sec-setting-japanese" id="toc-sec-setting-japanese" class="nav-link" data-scroll-target="#sec-setting-japanese"><span class="header-section-number">1.2</span> 日本語</a></li>
+  <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link active" data-scroll-target="#セクションへのリンク"><span class="header-section-number">1.1</span> セクションへのリンク</a></li>
+  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">1.2</span> 図表へのリンク</a></li>
   </ul>
 </nav>
     </div>
@@ -181,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-setting" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">設定</span></span></h1>
+<h1 class="title"><span id="sec-standard" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">マークダウンの基本</span></span></h1>
 </div>
 
 
@@ -202,10 +198,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="マークダウンの書式など" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="マークダウンの書式など"><span class="header-section-number">1.1</span> マークダウンの書式など</h2>
-<section id="セクションへのリンク" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="セクションへのリンク"><span class="header-section-number">1.1.1</span> セクションへのリンク</h3>
+<section id="セクションへのリンク" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="セクションへのリンク"><span class="header-section-number">1.1</span> セクションへのリンク</h2>
 <table class="table">
 <thead>
 <tr class="header">
@@ -215,23 +209,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="attention.html"><span>Chapter&nbsp;3</span></a></td>
+<td><a href="caution.html"><span>Chapter&nbsp;3</span></a></td>
 <td><code>[@sec-caution]</code></td>
 </tr>
 <tr class="even">
-<td><a href="attention.html"><span>3</span></a></td>
+<td><a href="caution.html"><span>3</span></a></td>
 <td><code>[-@sec-caution]</code></td>
 </tr>
 <tr class="odd">
-<td><a href="attention.html">セクション&nbsp;<span>3</span></a></td>
+<td><a href="caution.html">セクション&nbsp;<span>3</span></a></td>
 <td><code>[セクション -@sec-caution]</code></td>
 </tr>
 <tr class="even">
-<td><a href="attention.html"><span>3</span></a>章</td>
+<td><a href="caution.html"><span>3</span></a>章</td>
 <td><code>[-@sec-caution]章</code></td>
 </tr>
 <tr class="odd">
-<td><a href="attention.html"><span>3</span></a></td>
+<td><a href="caution.html"><span>3</span></a></td>
 <td><code>[-@sec-caution 章]</code></td>
 </tr>
 <tr class="even">
@@ -249,13 +243,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="図表へのリンク" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">1.1.2</span> 図表へのリンク</h3>
-<p><a href="fig_table.html#fig-zu">Figure&nbsp;<span>2.1</span></a> を参照, <a href="fig_table.html#fig-zu">図&nbsp;<span>2.1</span></a> を参照 <a href="fig_table.html#tbl-hyo">Table&nbsp;<span>2.1</span></a> を参照, <a href="fig_table.html#tbl-hyo">表&nbsp;<span>2.1</span></a>を参照</p>
-</section>
-</section>
-<section id="sec-setting-japanese" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="sec-setting-japanese"><span class="header-section-number">1.2</span> 日本語</h2>
+<section id="図表へのリンク" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">1.2</span> 図表へのリンク</h2>
+<ul>
+<li><a href="fig_table.html#fig-zu">Figure&nbsp;<span>2.1</span></a> を参照, <a href="fig_table.html#fig-zu">図&nbsp;<span>2.1</span></a> を参照<br>
+</li>
+<li><a href="fig_table.html#tbl-hyo">Table&nbsp;<span>2.1</span></a> を参照, <a href="fig_table.html#tbl-hyo">表&nbsp;<span>2.1</span></a>を参照</li>
+</ul>
 
 
 </section>
