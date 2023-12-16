@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; マークダウンの基本</title>
+<title>日本語の本 - 1&nbsp; マークダウンの基本</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="1&nbsp; マークダウンの基本">
+<meta property="og:title" content="日本語の本 - 1&nbsp; マークダウンの基本">
+<meta property="og:description" content="">
+<meta property="og:site-name" content="日本語の本">
 </head>
 
 <body class="nav-sidebar floating">
@@ -123,14 +125,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">日本語の本</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/izunyan/gisho12" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
         </div>
-        <div class="sidebar-tools-collapse">
-    <a href="https://github.com/izunyan/gisho12" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -157,6 +164,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">注意事項</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sanko.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">参考資料</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -167,8 +180,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link active" data-scroll-target="#セクションへのリンク"><span class="header-section-number">1.1</span> セクションへのリンク</a></li>
-  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">1.2</span> 図表へのリンク</a></li>
+  <li><a href="#引用と脚注" id="toc-引用と脚注" class="nav-link active" data-scroll-target="#引用と脚注"><span class="header-section-number">1.1</span> 引用と脚注</a></li>
+  <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link" data-scroll-target="#セクションへのリンク"><span class="header-section-number">1.2</span> セクションへのリンク</a></li>
+  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">1.3</span> 図表へのリンク</a></li>
   </ul>
 </nav>
     </div>
@@ -198,13 +212,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="セクションへのリンク" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="セクションへのリンク"><span class="header-section-number">1.1</span> セクションへのリンク</h2>
+<section id="引用と脚注" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="引用と脚注"><span class="header-section-number">1.1</span> 引用と脚注</h2>
+<ul>
+<li>脚注(footnote)をつける</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>見え方</th>
+<th>書き方</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>基本の脚注<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td><code>基本の脚注[^1]</code></td>
+</tr>
+<tr class="even">
+<td>[　]内は文字でもよい<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td><code>[　]内は文字でもよい[^word]</code></td>
+</tr>
+<tr class="odd">
+<td>脚注内容を本文中に<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
+<td><code>脚注内容を本文中に^[直接[ ]内に内容を書く]</code></td>
+</tr>
+<tr class="even">
+<td>見え方と書き方で脚注番号が異なることも<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
+<td><code>見え方と書き方で脚注番号が異なることも[^2]</code></td>
+</tr>
+<tr class="odd">
+<td>脚注を複数行に分ける<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></td>
+<td><code>脚注を複数行に分ける[^multiple]</code></td>
+</tr>
+<tr class="even">
+<td>同じ文字数字を書くとどうなるか<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></td>
+<td><code>同じ文字数字を書くとどうなるか[^1]</code></td>
+</tr>
+</tbody>
+</table>
+<p>脚注内容の記述</p>
+<pre><code>[^1]: 脚注の内容を本文とは別に書く
+[^word]:文字でも脚注番号に変換される 
+[^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される
+[^multiple]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり。
+
+      2段落目
+      
+      3段落目
+      
+      4段落目  
+
+[^1]: 自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい
+
+
+【補足】
+本来は[^multiple]で
+
+{ }でコードも書ける 
+
+    { 1+1 }
+
+と書きたかったが，pdfでエラーになるので省略</code></pre>
+</section>
+<section id="セクションへのリンク" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="セクションへのリンク"><span class="header-section-number">1.2</span> セクションへのリンク</h2>
 <table class="table">
 <thead>
 <tr class="header">
 <th>見え方</th>
-<th>コード</th>
+<th>書き方</th>
 </tr>
 </thead>
 <tbody>
@@ -243,15 +324,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="図表へのリンク" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">1.2</span> 図表へのリンク</h2>
-<ul>
-<li><a href="fig_table.html#fig-zu">Figure&nbsp;<span>2.1</span></a> を参照, <a href="fig_table.html#fig-zu">図&nbsp;<span>2.1</span></a> を参照<br>
-</li>
-<li><a href="fig_table.html#tbl-hyo">Table&nbsp;<span>2.1</span></a> を参照, <a href="fig_table.html#tbl-hyo">表&nbsp;<span>2.1</span></a>を参照</li>
-</ul>
+<section id="図表へのリンク" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">1.3</span> 図表へのリンク</h2>
+<table class="table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>見え方</th>
+<th>書き方</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="fig_table.html#fig-zu">Figure&nbsp;<span>2.1</span></a> を参照</td>
+<td><code>@fig-zu を参照</code></td>
+</tr>
+<tr class="even">
+<td><a href="fig_table.html#fig-zu">図&nbsp;<span>2.1</span></a> を参照</td>
+<td><code>[図 -@fig-zu] を参照</code></td>
+</tr>
+<tr class="odd">
+<td><a href="fig_table.html#tbl-hyo">Table&nbsp;<span>2.1</span></a> を参照</td>
+<td><code>@tbl-hyo を参照</code></td>
+</tr>
+<tr class="even">
+<td><a href="fig_table.html#tbl-hyo">表&nbsp;<span>2.1</span></a>を参照</td>
+<td><code>[表 -@tbl-hyo]を参照</code></td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>文字でも脚注番号に変換される<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>直接[ ]内に内容を書く<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり</p>
+<p>2段落目</p>
+<p>3段落目</p>
+<p>4段落目<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

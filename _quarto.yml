@@ -2,25 +2,32 @@ project:
   type: book
   output-dir: docs # pdfの出力先
 
-execute:
+# 全体に反映するチャンクオプション
+execute:           
   warning: false
 
+# 目次タイトル名の指定。デフォルトはtable of contents
 toc-title: 目次
 
 book:
-  # title: "日本語の本"
-  # author: "やわらかクジラ"
-  # date: "2023/10/9"
+  ##### PDF作成時は以下3行コメントアウト##### 
+  title: "日本語の本"
+  author: "やわらかクジラ"
+  date: "2023/10/9"
+  ###########################################
   cover-image: "images/cover.png" # 表紙画像
-  open-graph: true # 他メディアでのサムネイル表示のため
-  search: true
-  repo-url: https://github.com/izunyan/gisho12
+  open-graph: true                # 他メディアでのサムネイル表示のため
+  search: true                    # 検索フォーム付与
+  repo-url: https://github.com/izunyan/gisho12 # GithubリポジトリのURL
   
+  # 作成するページのgmdファイル名を順番に指定
   chapters:
     - index.qmd
     - standard.qmd
     - fig_table.qmd
     - caution.qmd
+    - sanko.qmd
+    
     # 1部などと区切りたい場合
     # - part: zenhan.qmd
     #   chapters: 
@@ -30,10 +37,9 @@ book:
     #   chapters:
     #     - caution.qmd
 
-
-
 bibliography: references.bib
 
+# 出力する形式ごとのオプション指定
 format:
   html:
     toc: true

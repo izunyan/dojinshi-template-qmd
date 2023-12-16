@@ -2,79 +2,93 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "",
     "text": "はじめに\nはじめにの文章:ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"
   },
   {
     "objectID": "index.html#テンプレートの説明",
     "href": "index.html#テンプレートの説明",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "テンプレートの説明",
     "text": "テンプレートの説明\n\nQuartoで同人誌の原稿を書くためのテンプレート\n\nbookdownパッケージでR Markdownで書く解説はこちら\n\nRender Bookすればhtmlとpdfがそのままできる\n\npdfは目次から始まり，ページ番号が1から始まる\n\n\n\n実行方法\n\nBuildタブで\n\nRender Book &gt; HTML Format\nRender Book &gt; PDF Format\n\n\n\n\nbookdown版でとてもお世話になったサイト\n\nBookdownによる技術系同人誌執筆"
   },
   {
     "objectID": "index.html#概要",
     "href": "index.html#概要",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "概要",
     "text": "概要\n\n本書の目的\n\n説明\n\n本書の内容\n\n説明\n\n執筆動機\n\n説明\n\n今後の展望\n\n\n\n本書の内容は、githubレポジトリですべて公開"
   },
   {
     "objectID": "index.html#本書の特徴",
     "href": "index.html#本書の特徴",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "本書の特徴",
     "text": "本書の特徴\n\n本書の強み"
   },
   {
     "objectID": "index.html#想定読者",
     "href": "index.html#想定読者",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "想定読者",
     "text": "想定読者\n\nRとRStudioをダウンロードしてPCにインストールまでできることが最低条件"
   },
   {
     "objectID": "index.html#各章の紹介",
     "href": "index.html#各章の紹介",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "各章の紹介",
     "text": "各章の紹介\n\n1章では"
   },
   {
     "objectID": "index.html#執筆環境",
     "href": "index.html#執筆環境",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "執筆環境",
-    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.3.433\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2023-11-15\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0"
+    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.3.450\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2023-12-16\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0"
   },
   {
     "objectID": "index.html#使用上の注意など",
     "href": "index.html#使用上の注意など",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "使用上の注意など",
     "text": "使用上の注意など\n\n本書の内容はすべてwindows環境を想定しています。\nこの本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできません。使用する際は、自己責任でお願いします。"
   },
   {
     "objectID": "index.html#ライセンス",
     "href": "index.html#ライセンス",
-    "title": "はじめに",
+    "title": "日本語の本",
     "section": "ライセンス",
     "text": "ライセンス"
+  },
+  {
+    "objectID": "standard.html#引用と脚注",
+    "href": "standard.html#引用と脚注",
+    "title": "1  マークダウンの基本",
+    "section": "1.1 引用と脚注",
+    "text": "1.1 引用と脚注\n\n脚注(footnote)をつける\n\n\n\n\n\n\n\n\n見え方\n書き方\n\n\n\n\n基本の脚注1\n基本の脚注[^1]\n\n\n[　]内は文字でもよい2\n[　]内は文字でもよい[^word]\n\n\n脚注内容を本文中に3\n脚注内容を本文中に^[直接[ ]内に内容を書く]\n\n\n見え方と書き方で脚注番号が異なることも4\n見え方と書き方で脚注番号が異なることも[^2]\n\n\n脚注を複数行に分ける5\n脚注を複数行に分ける[^multiple]\n\n\n同じ文字数字を書くとどうなるか6\n同じ文字数字を書くとどうなるか[^1]\n\n\n\n脚注内容の記述\n[^1]: 脚注の内容を本文とは別に書く\n[^word]:文字でも脚注番号に変換される \n[^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される\n[^multiple]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり。\n\n      2段落目\n      \n      3段落目\n      \n      4段落目  \n\n[^1]: 自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい\n\n\n【補足】\n本来は[^multiple]で\n\n{ }でコードも書ける \n\n    { 1+1 }\n\nと書きたかったが，pdfでエラーになるので省略"
   },
   {
     "objectID": "standard.html#セクションへのリンク",
     "href": "standard.html#セクションへのリンク",
     "title": "1  マークダウンの基本",
-    "section": "1.1 セクションへのリンク",
-    "text": "1.1 セクションへのリンク\n\n\n\n見え方\nコード\n\n\n\n\nChapter 3\n[@sec-caution]\n\n\n3\n[-@sec-caution]\n\n\nセクション 3\n[セクション -@sec-caution]\n\n\n3章\n[-@sec-caution]章\n\n\n3\n[-@sec-caution 章]\n\n\n注意事項\n[注意事項](#sec-caution)"
+    "section": "1.2 セクションへのリンク",
+    "text": "1.2 セクションへのリンク\n\n\n\n見え方\n書き方\n\n\n\n\nChapter 3\n[@sec-caution]\n\n\n3\n[-@sec-caution]\n\n\nセクション 3\n[セクション -@sec-caution]\n\n\n3章\n[-@sec-caution]章\n\n\n3\n[-@sec-caution 章]\n\n\n注意事項\n[注意事項](#sec-caution)"
   },
   {
     "objectID": "standard.html#図表へのリンク",
     "href": "standard.html#図表へのリンク",
     "title": "1  マークダウンの基本",
-    "section": "1.2 図表へのリンク",
-    "text": "1.2 図表へのリンク\n\nFigure 2.1 を参照, 図 2.1 を参照\n\nTable 2.1 を参照, 表 2.1を参照"
+    "section": "1.3 図表へのリンク",
+    "text": "1.3 図表へのリンク\n\n\n\n\n\n\n\n見え方\n書き方\n\n\n\n\nFigure 2.1 を参照\n@fig-zu を参照\n\n\n図 2.1 を参照\n[図 -@fig-zu] を参照\n\n\nTable 2.1 を参照\n@tbl-hyo を参照\n\n\n表 2.1を参照\n[表 -@tbl-hyo]を参照"
+  },
+  {
+    "objectID": "standard.html#footnotes",
+    "href": "standard.html#footnotes",
+    "title": "1  マークダウンの基本",
+    "section": "",
+    "text": "自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい↩︎\n文字でも脚注番号に変換される↩︎\n直接[ ]内に内容を書く↩︎\nこれまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される↩︎\n複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり\n2段落目\n3段落目\n4段落目↩︎\n自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい↩︎"
   },
   {
     "objectID": "fig_table.html#図",
@@ -96,5 +110,12 @@
     "title": "3  注意事項",
     "section": "",
     "text": "奇数ページだと1ページ白紙になるので，偶数ページにしないとだめ\n前半，後半部分は，PDFとして作成するときはページ数増えるので不要かも"
+  },
+  {
+    "objectID": "sanko.html",
+    "href": "sanko.html",
+    "title": "4  参考資料",
+    "section": "",
+    "text": "Quarto Booksのドキュメント"
   }
 ]
