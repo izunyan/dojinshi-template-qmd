@@ -14,7 +14,8 @@ book:
   title: "日本語の本"
   author: "やわらかクジラ"
   date: "2023/10/9"
-  ###########################################
+  ##### PDF作成時のコメントアウトここまで#####
+  
   cover-image: "images/cover.png" # 表紙画像
   open-graph: true                # 他メディアでのサムネイル表示のため
   search: true                    # 検索フォーム付与
@@ -23,7 +24,7 @@ book:
   # 作成するページのgmdファイル名を順番に指定
   chapters:
     - index.qmd
-    - standard.qmd
+    - basic.qmd
     - fig_table.qmd
     - caution.qmd
     - sanko.qmd
@@ -31,7 +32,7 @@ book:
     # 1部などと区切りたい場合
     # - part: zenhan.qmd
     #   chapters: 
-    #     - standard.qmd
+    #     - basic.qmd
     #     - fig_table.qmd
     # - part: kohan.qmd
     #   chapters:
@@ -43,15 +44,15 @@ bibliography: references.bib
 format:
   html:
     toc: true
-    code-fold: true
+    code-fold: true # コードを折りたたんだ状態で表示
     theme: cosmo
   pdf:
     documentclass: bxjsbook                     # 日本語pdf
     classoption: xelatex, ja=standard           # 
     papersize: b5                               # サイズ指定(b5paperはA4になってしまう)
     pandoc_args: --top-level-division=chapter   # ?
-    include-in-header: preamble.tex             # プリアンブル：色々指定する所
-    include-after-body: after.tex               # 奥付
+    include-in-header: preamble.tex             # プリアンブル：色々指定するファイル
+    include-after-body: after.tex               # 奥付のファイル
   epub: default
 
 

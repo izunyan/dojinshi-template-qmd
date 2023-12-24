@@ -97,7 +97,7 @@ knitr::include_graphics("images/cover.png")
 
 ## 各章の紹介
 
-* [-@sec-standard]章では
+* [-@sec-basic]章では
 
 ## 執筆環境
 
