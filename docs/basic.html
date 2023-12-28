@@ -183,16 +183,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#チャンクオプション" id="toc-チャンクオプション" class="nav-link active" data-scroll-target="#チャンクオプション"><span class="header-section-number">1.1</span> チャンクオプション</a>
   <ul class="collapse">
-  <li><a href="#実行結果表示コードなしデフォルト" id="toc-実行結果表示コードなしデフォルト" class="nav-link" data-scroll-target="#実行結果表示コードなしデフォルト"><span class="header-section-number">1.1.1</span> 実行結果表示，コードなし（デフォルト）</a></li>
+  <li><a href="#実行あり結果表示ありコードあり" id="toc-実行あり結果表示ありコードあり" class="nav-link" data-scroll-target="#実行あり結果表示ありコードあり"><span class="header-section-number">1.1.1</span> 実行あり，結果表示あり，コードあり</a></li>
+  <li><a href="#実行あり結果表示ありコードなし" id="toc-実行あり結果表示ありコードなし" class="nav-link" data-scroll-target="#実行あり結果表示ありコードなし"><span class="header-section-number">1.1.2</span> 実行あり，結果表示あり，コードなし</a></li>
+  <li><a href="#実行あり結果表示なし図はありコードあり" id="toc-実行あり結果表示なし図はありコードあり" class="nav-link" data-scroll-target="#実行あり結果表示なし図はありコードあり"><span class="header-section-number">1.1.3</span> 実行あり，結果表示なし(図はあり)，コードあり</a></li>
+  <li><a href="#実行あり結果表示なしコードあり" id="toc-実行あり結果表示なしコードあり" class="nav-link" data-scroll-target="#実行あり結果表示なしコードあり"><span class="header-section-number">1.1.4</span> 実行あり，結果表示なし，コードあり</a></li>
+  <li><a href="#実行なしコードあり" id="toc-実行なしコードあり" class="nav-link" data-scroll-target="#実行なしコードあり"><span class="header-section-number">1.1.5</span> 実行なし，コードあり</a></li>
+  <li><a href="#実行あり結果表示なしコードなし" id="toc-実行あり結果表示なしコードなし" class="nav-link" data-scroll-target="#実行あり結果表示なしコードなし"><span class="header-section-number">1.1.6</span> 実行あり，結果表示なし，コードなし</a></li>
   </ul></li>
-  <li><a href="#実行結果表示コードあり" id="toc-実行結果表示コードあり" class="nav-link" data-scroll-target="#実行結果表示コードあり"><span class="header-section-number">1.2</span> ### 実行結果表示，コードあり</a>
-  <ul class="collapse">
-  <li><a href="#実行なしコードあり" id="toc-実行なしコードあり" class="nav-link" data-scroll-target="#実行なしコードあり"><span class="header-section-number">1.2.1</span> 実行なし，コードあり</a></li>
-  <li><a href="#実行なしコードなし" id="toc-実行なしコードなし" class="nav-link" data-scroll-target="#実行なしコードなし"><span class="header-section-number">1.2.2</span> 実行なし，コードなし</a></li>
-  </ul></li>
-  <li><a href="#引用と脚注" id="toc-引用と脚注" class="nav-link" data-scroll-target="#引用と脚注"><span class="header-section-number">1.3</span> 引用と脚注</a></li>
-  <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link" data-scroll-target="#セクションへのリンク"><span class="header-section-number">1.4</span> セクションへのリンク</a></li>
-  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">1.5</span> 図表へのリンク</a></li>
+  <li><a href="#引用と脚注" id="toc-引用と脚注" class="nav-link" data-scroll-target="#引用と脚注"><span class="header-section-number">1.2</span> 引用と脚注</a></li>
+  <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link" data-scroll-target="#セクションへのリンク"><span class="header-section-number">1.3</span> セクションへのリンク</a></li>
+  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">1.4</span> 図表へのリンク</a></li>
   </ul>
 </nav>
     </div>
@@ -217,71 +217,105 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <div class="cell">
-<details>
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  palmerpenguins<span class="sc">::</span>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <section id="チャンクオプション" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="チャンクオプション"><span class="header-section-number">1.1</span> チャンクオプション</h2>
-<section id="実行結果表示コードなしデフォルト" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="実行結果表示コードなしデフォルト"><span class="header-section-number">1.1.1</span> 実行結果表示，コードなし（デフォルト）</h3>
+<ul>
+<li><a href="https://quarto.org/docs/reference/formats/html.html#execution">デフォルトの確認</a></li>
+<li><a href="https://quarto.org/docs/output-formats/html-code.html">HTML Code Blocks</a>
+<ul>
+<li></li>
+</ul></li>
+</ul>
+<section id="実行あり結果表示ありコードあり" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="実行あり結果表示ありコードあり"><span class="header-section-number">1.1.1</span> 実行あり，結果表示あり，コードあり</h3>
+<ul>
+<li>デフォルト</li>
+</ul>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="basic_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
-</section>
-<section id="実行結果表示コードあり" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="実行結果表示コードあり"><span class="header-section-number">1.2</span> ### 実行結果表示，コードあり</h2>
+<section id="実行あり結果表示ありコードなし" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="実行あり結果表示ありコードなし"><span class="header-section-number">1.1.2</span> 実行あり，結果表示あり，コードなし</h3>
+<ul>
+<li><code>#| echo: false</code></li>
+</ul>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
 <div class="cell-output-display">
 <p><img src="basic_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<section id="実行なしコードあり" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="実行なしコードあり"><span class="header-section-number">1.2.1</span> 実行なし，コードあり</h3>
+</section>
+<section id="実行あり結果表示なし図はありコードあり" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="実行あり結果表示なし図はありコードあり"><span class="header-section-number">1.1.3</span> 実行あり，結果表示なし(図はあり)，コードあり</h3>
+<ul>
+<li><code>#| results: hide</code></li>
+</ul>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="basic_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
-<section id="実行なしコードなし" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="実行なしコードなし"><span class="header-section-number">1.2.2</span> 実行なし，コードなし</h3>
+<section id="実行あり結果表示なしコードあり" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="実行あり結果表示なしコードあり"><span class="header-section-number">1.1.4</span> 実行あり，結果表示なし，コードあり</h3>
+<ul>
+<li><code>#| output: false</code></li>
+</ul>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<p><img src="basic_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
-</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="実行なしコードあり" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="実行なしコードあり"><span class="header-section-number">1.1.5</span> 実行なし，コードあり</h3>
+<ul>
+<li><code>#| eval: false</code>
+<ul>
+<li>コード表示したいだけの時に便利</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_length_mm, bill_depth_mm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="引用と脚注" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="引用と脚注"><span class="header-section-number">1.3</span> 引用と脚注</h2>
+<section id="実行あり結果表示なしコードなし" class="level3" data-number="1.1.6">
+<h3 data-number="1.1.6" class="anchored" data-anchor-id="実行あり結果表示なしコードなし"><span class="header-section-number">1.1.6</span> 実行あり，結果表示なし，コードなし</h3>
+<ul>
+<li><code>#| include: false</code></li>
+</ul>
+</section>
+</section>
+<section id="引用と脚注" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="引用と脚注"><span class="header-section-number">1.2</span> 引用と脚注</h2>
 <ul>
 <li>脚注(footnote)をつける</li>
 </ul>
@@ -344,8 +378,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- ↓これをやると^1の脚注内容が上書きされてしまうので不可 -->
 <!-- [^1]: 自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい -->
 </section>
-<section id="セクションへのリンク" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="セクションへのリンク"><span class="header-section-number">1.4</span> セクションへのリンク</h2>
+<section id="セクションへのリンク" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="セクションへのリンク"><span class="header-section-number">1.3</span> セクションへのリンク</h2>
 <table class="table">
 <thead>
 <tr class="header">
@@ -389,8 +423,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="図表へのリンク" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">1.5</span> 図表へのリンク</h2>
+<section id="図表へのリンク" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">1.4</span> 図表へのリンク</h2>
 <table class="table">
 <colgroup>
 <col style="width: 47%">

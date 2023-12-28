@@ -9,37 +9,93 @@ df <-
 
 ## チャンクオプション
 
-### 実行結果表示，コードなし（デフォルト）
+* [デフォルトの確認](https://quarto.org/docs/reference/formats/html.html#execution)
+* [HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html)
+    +  
+
+### 実行あり，結果表示あり，コードあり
+
+* デフォルト
 
 ```{r}
+1 + 1
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+### 実行あり，結果表示あり，コードなし
+
+* `#| echo: false`
+
+```{r}
+#| echo: false
+
+1 + 1
+
+
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行結果表示，コードあり
--
+### 実行あり，結果表示なし(図はあり)，コードあり
+
+* `#| results: hide`
 
 ```{r}
+#| results: hide
+
+1 + 1
+
 
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
+
+### 実行あり，結果表示なし，コードあり
+
+* `#| output: false`
+
+```{r}
+#| output: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
 
 
 ### 実行なし，コードあり
+
+* `#| eval: false`
+    + コード表示したいだけの時に便利
+
 ```{r}
+#| eval: false  
+
+1 + 1
+
 
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行なし，コードなし
+
+### 実行あり，結果表示なし，コードなし
+
+* `#| include: false`
+
 ```{r}
+#| include: false
+
+1 + 1
+
 
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
-
 
 
 ## 引用と脚注 

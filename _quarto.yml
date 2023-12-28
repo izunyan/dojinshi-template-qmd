@@ -44,7 +44,7 @@ bibliography: references.bib
 format:
   html:
     toc: true
-    code-fold: true # コードを折りたたんだ状態で表示
+    # code-fold: true # コードを折りたたんだ状態で表示
     theme: cosmo
   pdf:
     documentclass: bxjsbook                     # 日本語pdf
