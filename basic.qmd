@@ -7,11 +7,15 @@ df <-
   palmerpenguins::penguins
 ```
 
-## チャンクオプション
+## コードと結果の表示に関するオプションの設定
 
-* [デフォルトの確認](https://quarto.org/docs/reference/formats/html.html#execution)
-* [HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html)
+* [Execution options](https://quarto.org/docs/reference/formats/html.html#execution)
+
+<!-- * [HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html) -->
     +  
+
+::: {.panel-tabset}
+
 
 ### 実行あり，結果表示あり，コードあり
 
@@ -23,6 +27,7 @@ df <-
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
+
 ### 実行あり，結果表示あり，コードなし
 
 * `#| echo: false`
@@ -51,7 +56,26 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行あり，結果表示なし，コードあり
+### 実行あり，結果表示なし，コードあり(1)
+
+* `#| results: hide`
+* `#| fig-show: hide`
+
+
+```{r}
+#| results: hide
+#| fig-show: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
+
+### 実行あり，結果表示なし，コードあり(2)
 
 * `#| output: false`
 
@@ -97,6 +121,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
+::: 
 
 ## 引用と脚注 
 
