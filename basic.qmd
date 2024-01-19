@@ -1,5 +1,12 @@
 # マークダウンの基本 {#sec-basic}
 
+## 準備
+
+* 本書で使う処理のため，まず`tidyverse`パッケージを読み込む
+* 使用するデータは`palmerpenguins`パッケージの`penguins`データ
+    + ここではオブジェクトの名前を`df`として格納する。
+    + `パッケージ名::パッケージ中のデータ`，`パッケージ名::関数()`で`library(パッケージ名)`で読み込んでいなくても直に読み出せる，
+
 ```{r}
 library(tidyverse)
 
@@ -9,18 +16,44 @@ df <-
 
 ## コードと結果の表示に関するオプションの設定
 
-* [Execution options](https://quarto.org/docs/reference/formats/html.html#execution)
+　技術系同人誌では，コードとその実行結果について，全て示したい場合や一部だけ示したい場合がある。ここでは，考えられるパターンのそれぞれについてQuartoでどう指定するかを解説する。
+
+* 公式ドキュメントの参照箇所
+    + [Chunk options](https://r4ds.hadley.nz/quarto.html#chunk-options)
+    + [Execution options](https://quarto.org/docs/reference/formats/html.html#execution)
+    + [Code Output](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output)
 
 <!-- * [HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html) -->
-    +  
+ 
+ チャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。〇はあり，×はなしであることを示している。
+
+* チャンクオプションの記述例
+    + `#| eval: false`のように，`#|`の後にオプションとのその`true`または`false`などを指定する
+    
+    
+```{r}
+#| echo: fenced
+#| eval: false
+
+1 + 1
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
+---
+
+**様々なパターンの記述例**
 
 ::: {.panel-tabset}
 
 
-### 実行あり，結果表示あり，コードあり
+### 実行〇|出力〇|コード〇
 
-* デフォルト
+* デフォルトの設定なので，必要なチャンクオプション特になし
 
+**コード表示**
 ```{r}
 1 + 1
 
@@ -28,10 +61,20 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行あり，結果表示あり，コードなし
+###  実行〇|出力〇|コード×
 
-* `#| echo: false`
+**チャンクでの書き方**
+```{{r}}
+#| echo: false
 
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+**コード表示**：なし
 ```{r}
 #| echo: false
 
@@ -42,10 +85,23 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行あり，結果表示なし(図はあり)，コードあり
 
-* `#| results: hide`
 
+
+### 実行〇|出力×（図はあり）|コード〇
+ 
+**チャンクでの書き方**
+```{{r}}
+#| results: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+**コード表示**
 ```{r}
 #| results: hide
 
@@ -56,12 +112,21 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行あり，結果表示なし，コードあり(1)
+### 実行〇|出力×|コード〇(1)
 
-* `#| results: hide`
-* `#| fig-show: hide`
+**チャンクでの書き方**
+```{{r}}
+#| results: hide
+#| fig-show: hide
+
+1 + 1
 
 
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+**コード表示**
 ```{r}
 #| results: hide
 #| fig-show: hide
@@ -75,10 +140,20 @@ ggplot(df) +
 
 
 
-### 実行あり，結果表示なし，コードあり(2)
+### 実行〇|出力×|コード〇(2)
 
-* `#| output: false`
+**チャンクでの書き方**
+```{{r}}
+#| output: false
 
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+**コード表示**
 ```{r}
 #| output: false
 
@@ -91,13 +166,11 @@ ggplot(df) +
 
 
 
-### 実行なし，コードあり
+### 実行〇|出力×|コード×
 
-* `#| eval: false`
-    + コード表示したいだけの時に便利
-
-```{r}
-#| eval: false  
+**チャンクでの書き方**
+```{{r}}
+#| include: false
 
 1 + 1
 
@@ -106,11 +179,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-
-### 実行あり，結果表示なし，コードなし
-
-* `#| include: false`
-
+**コード表示**：なし
 ```{r}
 #| include: false
 
@@ -121,11 +190,92 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
+### 実行×|コード〇
+
+* 単にコードを表示したいだけの時に便利
+
+**チャンクでの書き方**
+```{{r}}
+#| eval: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+**コード表示**
+```{r}
+#| eval: false  
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+### 実行〇|出力×|コード〇（チャンク表示）
+
+
+* 公式ドキュメント[Fenced Echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)を参照
+
+**チャンクでの書き方**
+```{{r}}
+#| echo: fenced
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+**チャンク表示**
+```{r}
+#| echo: fenced
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
+
+
+### 実行×|コード〇（チャンク表示）
+
+* `{r}`をさらに`{}`で囲んで`{{r}}`と2重に書く
+
+**チャンクでの書き方**
+````
+```{{{r}}}
+
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+````
+
+* gmd上は上記書き方のみで「実行×|コード〇（チャンク表示）」が実現できる
+* ただし上記出力に`{{r}}`を表示させるためには,````(4 backticks)で囲んで{{{r}}}と書く必要がある
+    
+
+
 ::: 
 
-## 引用と脚注 
 
-- 脚注(footnote)をつける
+## 脚注 
+
+本文中に`[^ここに数字や文字]`と書き，別途内容を記述することで，脚注(footnote)をつけることができる。
+
 
 | 見え方                             | 書き方                                 |
 |------------------------------------|----------------------------------------|
@@ -137,7 +287,7 @@ ggplot(df) +
 <!-- |同じ文字数字を書くとどうなるか[^1]  |`同じ文字数字を書くとどうなるか[^1]`| -->
 
 
-脚注内容の記述 
+脚注内容 <!-- 記述部分を表示させるために``` ```で囲んである -->
 
 ```
 [^1]: 脚注の内容を本文とは別に書く
@@ -153,15 +303,15 @@ ggplot(df) +
 
 
 【補足】
-本来は[^multiple]で
+本来は[^multiple]で以下のように書きたかったが，pdfでエラーになるので省略
 
-{ }でコードも書ける 
+> { }でコードも書ける 
 
-    { 1+1 }
+>    { 1+1 }
 
-と書きたかったが，pdfでエラーになるので省略
 ```
 
+ここが脚注の記述内容
 
 [^1]: １行のみの脚注
 [^word]:文字でも脚注番号に変換される
@@ -174,6 +324,7 @@ ggplot(df) +
       
       4段落目
 
+<!-- 【ここは備忘録用メモ】 -->
 <!-- ↓これをやると^1の脚注内容が上書きされてしまうので不可 -->
 <!-- [^1]: 自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい -->
      
@@ -193,16 +344,29 @@ ggplot(df) +
 
 ## 図表へのリンク
 
-| 見え方                             | 書き方                                 |
-|------------------------------------|----------------------------------------|
-|   @fig-zu を参照                   | `@fig-zu を参照`             |
-|   [図 -@fig-zu] を参照             | `[図 -@fig-zu] を参照`             |
-|   @tbl-hyo を参照                  | `@tbl-hyo を参照`             |
-|   [表 -@tbl-hyo]を参照             | ` [表 -@tbl-hyo]を参照`             |
-
- 
+| 見え方                           | 書き方                                 |
+|----------------------------------|----------------------------------------|
+| @fig-zu を参照                   | `@fig-zu を参照`             |
+| [図 -@fig-zu] を参照             | `[図 -@fig-zu] を参照`             |
+| @tbl-hyo を参照                  | `@tbl-hyo を参照`             |
+| [表 -@tbl-hyo]を参照             | ` [表 -@tbl-hyo]を参照`             |
 
 
+## MacのPCのキーボード記号の意味
+
+* Quartoの公式ドキュメントでは，当たり前のように使われているので，知らないと読み解けない
+
+* Apple公式の説明
+    + [Macのメニューに表示される記号](https://support.apple.com/ja-jp/guide/mac-help/cpmh0011/mac)
+    + [Mac のキーボードショートカット](https://support.apple.com/ja-jp/HT201236) (記号がコピペできる)
+    
+
+| 意味         | 記号   |
+|--------------|--------|
+|Commandキー   |⌘      |
+|Shiftキー     |⇧       |
+|Optionキー    |⌥      |
+|Controlキー   |⌃       |
 
 
 
