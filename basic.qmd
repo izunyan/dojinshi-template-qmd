@@ -14,7 +14,7 @@ df <-
   palmerpenguins::penguins
 ```
 
-## コードと結果の表示に関するオプションの設定
+## コードと結果の表示に関するチャンクオプションの設定
 
 　技術系同人誌では，コードとその実行結果について，全て示したい場合や一部だけ示したい場合がある。ここでは，考えられるパターンのそれぞれについてQuartoでどう指定するかを解説する。
 
@@ -41,6 +41,21 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
+* チャンクオプションと実行後パターンの対応一覧
+
+| チャンクオプション            | 実行 | 出力      | コード| 
+|-------------------------------|------|-----------|-------|
+| echo: false                   |〇    |〇         |×      |
+| results: hide                 |〇    |×(図はあり)|〇     |
+| results: hide fig-show: hide  |〇    |×          |〇(1)  |
+| output: false                 |〇    |×          |〇(2)  |
+| include: false                |〇    |×          |×      |
+| eval: false                   |×     |×          |〇     |   
+| echo: fenced                  |〇    |×          |〇（チャンク）|    
+| `{{r}}`                       |×     |×          |〇（チャンク）|    |
+|                                       |                                        |
+
+     
 
 ---
 
@@ -190,7 +205,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行×|コード〇
+### 実行×|出力×|コード〇
 
 * 単にコードを表示したいだけの時に便利
 
@@ -216,7 +231,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行〇|出力×|コード〇（チャンク表示）
+### 実行〇|出力×|コード〇（チャンク）
 
 
 * 公式ドキュメント[Fenced Echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)を参照
@@ -246,7 +261,7 @@ ggplot(df) +
 
 
 
-### 実行×|コード〇（チャンク表示）
+### 実行×|出力×|コード〇（チャンク）
 
 * `{r}`をさらに`{}`で囲んで`{{r}}`と2重に書く
 
@@ -264,9 +279,21 @@ ggplot(df) +
 
 ````
 
-* gmd上は上記書き方のみで「実行×|コード〇（チャンク表示）」が実現できる
-* ただし上記出力に`{{r}}`を表示させるためには,````(4 backticks)で囲んで{{{r}}}と書く必要がある
-    
+* qmd上は上記書き方のみで「実行×|出力×|コード〇（チャンク表示）」が実現できる
+  + ただし解説目的で上記出力に`{{r}}`を表示させるためには,````(4 backticks)で囲んで{{{r}}}と書く必要がある
+
+
+**チャンク表示**
+
+```{{r}}
+
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
 
 
 ::: 
@@ -351,6 +378,155 @@ ggplot(df) +
 | @tbl-hyo を参照                  | `@tbl-hyo を参照`             |
 | [表 -@tbl-hyo]を参照             | ` [表 -@tbl-hyo]を参照`             |
 
+
+## コールアウト
+
+* 公式ドキュメントの参照箇所
+    + [Callout Blocks](https://quarto.org/docs/authoring/callouts.html)
+
+
+### 基本の型
+``` markdown
+::: {.callout-note}
+ここにテキスト
+:::
+
+```
+
+::: {.callout-note}
+ここにテキスト
+:::
+
+
+``` markdown
+::: {.callout-note}
+ここにテキスト
+:::
+
+```
+
+::: {.callout-tip}
+ここにテキスト
+:::
+
+``` markdown
+::: {.callout-note}
+ここにテキスト
+:::
+
+```
+
+::: {.callout-warning}
+ここにテキスト
+:::
+
+``` markdown
+::: {.callout-note}
+ここにテキスト
+:::
+
+```
+
+
+::: {.callout-caution}
+ここにテキスト
+:::
+
+``` markdown
+::: {.callout-note}
+ここにテキスト
+:::
+
+```
+
+::: {.callout-important}
+ここにテキスト
+:::
+
+
+### 見え方の変更
+
+``` markdown
+::: {.callout-note}
+## メモ
+タイトルを変更
+:::
+
+```
+::: {.callout-note}
+## メモ
+タイトルを変更
+:::
+
+``` markdown
+::: {.callout-note collapse="true"}
+## 折りたたみもできる
+ここにテキスト
+:::
+
+``` 
+::: {.callout-note collapse="true"}
+## 折りたたみもできる
+ここにテキスト
+:::
+
+
+
+``` markdown
+::: {.callout-note}
+## メモ
+アイコンなし
+:::
+
+```
+
+
+::: {.callout-note icon=false}
+## メモ
+アイコンなし
+:::
+
+
+
+``` markdown
+::: {.callout-note appearance="simple"}
+## シンプルに
+ここにテキスト
+:::
+
+``` 
+
+::: {.callout-note appearance="simple"}
+## シンプルに
+ここにテキスト
+:::
+
+
+``` markdown
+::: {.callout-note appearance="minimal"}
+## アイコンなし
+ここにテキスト
+:::
+
+``` 
+::: {.callout-note appearance="minimal"}
+## シンプルでアイコンなし
+ここにテキスト
+:::
+
+
+
+``` markdown
+``` 
+
+
+### コールアウトへのリンク 
+
+::: {#nte-example .callout-note}
+ここにテキスト
+:::
+
+参照 @nte-example
 
 ## MacのPCのキーボード記号の意味
 

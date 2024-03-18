@@ -49,7 +49,7 @@ knitr::include_graphics("images/cover.png")
 ## テンプレートの説明
 
 * Quartoで同人誌の原稿を書くためのテンプレート
-  + bookdownパッケージでR Markdownで書く解説は[こちら]()
+  + bookdownパッケージでR Markdownで書く解説は[こちら](https://izunyan.github.io/dojinshi-template-rmd/)
 
 * Render Bookすればhtmlとpdfがそのままできる
 

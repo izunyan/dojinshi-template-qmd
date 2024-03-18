@@ -46,7 +46,7 @@
     "href": "index.html#執筆環境",
     "title": "技術系同人誌テンプレート",
     "section": "執筆環境",
-    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.3.450\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-01-20\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0"
+    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.3.450\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-03-18\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0"
   },
   {
     "objectID": "index.html#使用上の注意など",
@@ -70,11 +70,11 @@
     "text": "1.1 準備\n\n本書で使う処理のため，まずtidyverseパッケージを読み込む\n使用するデータはpalmerpenguinsパッケージのpenguinsデータ\n\nここではオブジェクトの名前をdfとして格納する。\nパッケージ名::パッケージ中のデータ，パッケージ名::関数()でlibrary(パッケージ名)で読み込んでいなくても直に読み出せる，\n\n\n\nlibrary(tidyverse)\n\ndf &lt;- \n  palmerpenguins::penguins"
   },
   {
-    "objectID": "basic.html#コードと結果の表示に関するオプションの設定",
-    "href": "basic.html#コードと結果の表示に関するオプションの設定",
+    "objectID": "basic.html#コードと結果の表示に関するチャンクオプションの設定",
+    "href": "basic.html#コードと結果の表示に関するチャンクオプションの設定",
     "title": "1  マークダウンの基本",
-    "section": "1.2 コードと結果の表示に関するオプションの設定",
-    "text": "1.2 コードと結果の表示に関するオプションの設定\n　技術系同人誌では，コードとその実行結果について，全て示したい場合や一部だけ示したい場合がある。ここでは，考えられるパターンのそれぞれについてQuartoでどう指定するかを解説する。\n\n公式ドキュメントの参照箇所\n\nChunk options\nExecution options\nCode Output\n\n\n\nチャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。〇はあり，×はなしであることを示している。\n\nチャンクオプションの記述例\n\n#| eval: falseのように，#|の後にオプションとのそのtrue OR falseなどを指定する\n\n\n\n```{r}\n#| eval: false\n\n1 + 1\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\n\n実行〇|出力〇|コード〇実行〇|出力〇|コード×実行〇|出力×（図はあり）|コード〇実行〇|出力×|コード〇(1)実行〇|出力×|コード〇(2)実行〇|出力×|コード×実行×|コード〇実行〇|出力×|コード〇（チャンク表示）実行×|コード〇（チャンク表示）\n\n\n\nデフォルトの設定なので，必要なチャンクオプション特になし\n\nコード表示\n\n1 + 1\n\n[1] 2\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n\n\n```{r}\n#| echo: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示：なし\n\n\n[1] 2\n\n\n\n\n\n\n\n```{r}\n#| results: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n\n\n```{r}\n#| results: hide\n#| fig-show: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n```{r}\n#| output: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n#| include: false\n\n```{r}\n#| include: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示：なし\n\n\n\n単にコードを表示したいだけの時に便利\n\n```{r}\n#| eval: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n公式ドキュメントFenced Echoを参照\n\n```{r}\n#| echo: fenced\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nチャンク表示\n\n```{r}\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\n[1] 2\n\n\n\n\n\n\n\n\n{r}をさらに{}で囲んで{{r}}と2重に書く\n\nチャンク表示\n```{{r}}\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\ngmd上は上記書き方のみで「実行×|コード〇（チャンク表示）」が実現できる\nただし上記出力に{{r}}を表示させるためには,````(4 backticks)で囲んで{{{r}}}と書く必要がある"
+    "section": "1.2 コードと結果の表示に関するチャンクオプションの設定",
+    "text": "1.2 コードと結果の表示に関するチャンクオプションの設定\n　技術系同人誌では，コードとその実行結果について，全て示したい場合や一部だけ示したい場合がある。ここでは，考えられるパターンのそれぞれについてQuartoでどう指定するかを解説する。\n\n公式ドキュメントの参照箇所\n\nChunk options\nExecution options\nCode Output\n\n\n\nチャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。〇はあり，×はなしであることを示している。\n\nチャンクオプションの記述例\n\n#| eval: falseのように，#|の後にオプションとのそのtrueまたはfalseなどを指定する\n\n\n\n```{r}\n#| eval: false\n\n1 + 1\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\n\nチャンクオプションと実行後パターンの対応一覧\n\n\n\n\n\n\n\n\n\n\nチャンクオプション\n実行\n出力\nコード\n\n\n\n\necho: false\n〇\n〇\n×\n\n\nresults: hide\n〇\n×(図はあり)\n〇\n\n\nresults: hide fig-show: hide\n〇\n×\n〇(1)\n\n\noutput: false\n〇\n×\n〇(2)\n\n\ninclude: false\n〇\n×\n×\n\n\neval: false\n×\n×\n〇\n\n\necho: fenced\n〇\n×\n〇（チャンク）\n\n\n{{r}}\n×\n×\n〇（チャンク）\n\n\n\n\n\n\n\n\n\n\n様々なパターンの記述例\n\n実行〇|出力〇|コード〇実行〇|出力〇|コード×実行〇|出力×（図はあり）|コード〇実行〇|出力×|コード〇(1)実行〇|出力×|コード〇(2)実行〇|出力×|コード×実行×|出力×|コード〇実行〇|出力×|コード〇（チャンク）実行×|出力×|コード〇（チャンク）\n\n\n\nデフォルトの設定なので，必要なチャンクオプション特になし\n\nコード表示\n\n1 + 1\n\n[1] 2\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| echo: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示：なし\n\n\n[1] 2\n\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| results: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| results: hide\n#| fig-show: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\nチャンクでの書き方\n```{r}\n#| output: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\nチャンクでの書き方\n```{r}\n#| include: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示：なし\n\n\n\n単にコードを表示したいだけの時に便利\n\nチャンクでの書き方\n```{r}\n#| eval: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n公式ドキュメントFenced Echoを参照\n\nチャンクでの書き方\n```{r}\n#| echo: fenced\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nチャンク表示\n\n```{r}\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\n[1] 2\n\n\n\n\n\n\n\n\n{r}をさらに{}で囲んで{{r}}と2重に書く\n\nチャンクでの書き方\n```{{r}}\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\nqmd上は上記書き方のみで「実行×|出力×|コード〇（チャンク表示）」が実現できる\n\nただし解説目的で上記出力に{{r}}を表示させるためには,````(4 backticks)で囲んで{{{r}}}と書く必要がある\n\n\nチャンク表示\n```{r}\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```"
   },
   {
     "objectID": "basic.html#脚注",
@@ -98,11 +98,18 @@
     "text": "1.5 図表へのリンク\n\n\n\n\n\n\n\n見え方\n書き方\n\n\n\n\nFigure 2.1 を参照\n@fig-zu を参照\n\n\n図 2.1 を参照\n[図 -@fig-zu] を参照\n\n\nTable 2.1 を参照\n@tbl-hyo を参照\n\n\n表 2.1を参照\n[表 -@tbl-hyo]を参照"
   },
   {
+    "objectID": "basic.html#コールアウト",
+    "href": "basic.html#コールアウト",
+    "title": "1  マークダウンの基本",
+    "section": "1.6 コールアウト",
+    "text": "1.6 コールアウト\n\n公式ドキュメントの参照箇所\n\nCallout Blocks\n\n\n\n1.6.1 基本の型\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nNote\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nTip\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nWarning\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nCaution\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nImportant\n\n\n\nここにテキスト\n\n\n\n\n1.6.2 見え方の変更\n::: {.callout-note}\n## メモ\nタイトルを変更\n:::\n\n\n\n\n\n\nメモ\n\n\n\nタイトルを変更\n\n\n::: {.callout-note collapse=\"true\"}\n## 折りたたみもできる\nここにテキスト\n:::\n\n\n\n\n\n\n折りたたみもできる\n\n\n\n\n\nここにテキスト\n\n\n\n::: {.callout-note}\n## メモ\nアイコンなし\n:::\n\n\n\n\n\n\nメモ\n\n\n\nアイコンなし\n\n\n::: {.callout-note appearance=\"simple\"}\n## シンプルに\nここにテキスト\n:::\n\n\n\n\n\n\nシンプルに\n\n\n\nここにテキスト\n\n\n::: {.callout-note appearance=\"minimal\"}\n## アイコンなし\nここにテキスト\n:::\n\n\n\n\n\n\nシンプルでアイコンなし\n\n\n\nここにテキスト\n\n\n\n\n\n1.6.3 コールアウトへのリンク\n\n\n\n\n\n\nアイコンなし\n\n\n\nここにテキスト\n\n\n参照 (nte-example?)"
+  },
+  {
     "objectID": "basic.html#macのpcのキーボード記号の意味",
     "href": "basic.html#macのpcのキーボード記号の意味",
     "title": "1  マークダウンの基本",
-    "section": "1.6 MacのPCのキーボード記号の意味",
-    "text": "1.6 MacのPCのキーボード記号の意味\n\nQuartoの公式ドキュメントでは，当たり前のように使われているので，知らないと読み解けない\nApple公式の説明\n\nMacのメニューに表示される記号\nMac のキーボードショートカット (記号がコピペできる)\n\n\n\n\n\n意味\n記号\n\n\n\n\nCommandキー\n⌘\n\n\nShiftキー\n⇧\n\n\nOptionキー\n⌥\n\n\nControlキー\n⌃"
+    "section": "1.7 MacのPCのキーボード記号の意味",
+    "text": "1.7 MacのPCのキーボード記号の意味\n\nQuartoの公式ドキュメントでは，当たり前のように使われているので，知らないと読み解けない\nApple公式の説明\n\nMacのメニューに表示される記号\nMac のキーボードショートカット (記号がコピペできる)\n\n\n\n\n\n意味\n記号\n\n\n\n\nCommandキー\n⌘\n\n\nShiftキー\n⇧\n\n\nOptionキー\n⌥\n\n\nControlキー\n⌃"
   },
   {
     "objectID": "basic.html#footnotes",
