@@ -448,25 +448,25 @@ ggplot(df) +
 
 ``` markdown
 ::: {.callout-note}
-## メモ
+#### メモ
 タイトルを変更
 :::
 
 ```
 ::: {.callout-note}
-## メモ
+#### メモ
 タイトルを変更
 :::
 
 ``` markdown
 ::: {.callout-note collapse="true"}
-## 折りたたみもできる
+#### 折りたたみもできる
 ここにテキスト
 :::
 
 ``` 
 ::: {.callout-note collapse="true"}
-## 折りたたみもできる
+#### 折りたたみもできる
 ここにテキスト
 :::
 
@@ -474,7 +474,7 @@ ggplot(df) +
 
 ``` markdown
 ::: {.callout-note}
-## メモ
+#### メモ
 アイコンなし
 :::
 
@@ -482,7 +482,7 @@ ggplot(df) +
 
 
 ::: {.callout-note icon=false}
-## メモ
+#### メモ
 アイコンなし
 :::
 
@@ -490,43 +490,41 @@ ggplot(df) +
 
 ``` markdown
 ::: {.callout-note appearance="simple"}
-## シンプルに
+#### シンプルに
 ここにテキスト
 :::
 
 ``` 
 
 ::: {.callout-note appearance="simple"}
-## シンプルに
+#### シンプルに
 ここにテキスト
 :::
 
 
 ``` markdown
 ::: {.callout-note appearance="minimal"}
-## アイコンなし
+#### シンプルでアイコンなし
 ここにテキスト
 :::
 
 ``` 
 ::: {.callout-note appearance="minimal"}
-## シンプルでアイコンなし
+#### シンプルでアイコンなし
 ここにテキスト
 :::
 
 
 
-``` markdown
-``` 
+<!-- 動かないので保留 -->
+<!-- ### コールアウトへのリンク  -->
 
+<!-- ::: {#nte-example .callout-note} -->
+<!-- ここにテキスト -->
+<!-- ::: -->
 
-### コールアウトへのリンク 
+<!-- 参照 @nte-example -->
 
-::: {#nte-example .callout-note}
-ここにテキスト
-:::
-
-参照 @nte-example
 
 ## MacのPCのキーボード記号の意味
 

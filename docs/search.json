@@ -46,7 +46,7 @@
     "href": "index.html#執筆環境",
     "title": "技術系同人誌テンプレート",
     "section": "執筆環境",
-    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.3.450\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-03-18\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0"
+    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.3.450\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-03-20\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0"
   },
   {
     "objectID": "index.html#使用上の注意など",
@@ -102,7 +102,7 @@
     "href": "basic.html#コールアウト",
     "title": "1  マークダウンの基本",
     "section": "1.6 コールアウト",
-    "text": "1.6 コールアウト\n\n公式ドキュメントの参照箇所\n\nCallout Blocks\n\n\n\n1.6.1 基本の型\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nNote\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nTip\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nWarning\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nCaution\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nImportant\n\n\n\nここにテキスト\n\n\n\n\n1.6.2 見え方の変更\n::: {.callout-note}\n## メモ\nタイトルを変更\n:::\n\n\n\n\n\n\nメモ\n\n\n\nタイトルを変更\n\n\n::: {.callout-note collapse=\"true\"}\n## 折りたたみもできる\nここにテキスト\n:::\n\n\n\n\n\n\n折りたたみもできる\n\n\n\n\n\nここにテキスト\n\n\n\n::: {.callout-note}\n## メモ\nアイコンなし\n:::\n\n\n\n\n\n\nメモ\n\n\n\nアイコンなし\n\n\n::: {.callout-note appearance=\"simple\"}\n## シンプルに\nここにテキスト\n:::\n\n\n\n\n\n\nシンプルに\n\n\n\nここにテキスト\n\n\n::: {.callout-note appearance=\"minimal\"}\n## アイコンなし\nここにテキスト\n:::\n\n\n\n\n\n\nシンプルでアイコンなし\n\n\n\nここにテキスト\n\n\n\n\n\n1.6.3 コールアウトへのリンク\n\n\n\n\n\n\nアイコンなし\n\n\n\nここにテキスト\n\n\n参照 (nte-example?)"
+    "text": "1.6 コールアウト\n\n公式ドキュメントの参照箇所\n\nCallout Blocks\n\n\n\n1.6.1 基本の型\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nNote\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nTip\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nWarning\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nCaution\n\n\n\nここにテキスト\n\n\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nImportant\n\n\n\nここにテキスト\n\n\n\n\n1.6.2 見え方の変更\n::: {.callout-note}\n#### メモ\nタイトルを変更\n:::\n\n\n\n\n\n\nメモ\n\n\n\nタイトルを変更\n\n\n::: {.callout-note collapse=\"true\"}\n#### 折りたたみもできる\nここにテキスト\n:::\n\n\n\n\n\n\n折りたたみもできる\n\n\n\n\n\nここにテキスト\n\n\n\n::: {.callout-note}\n#### メモ\nアイコンなし\n:::\n\n\n\n\n\n\nメモ\n\n\n\nアイコンなし\n\n\n::: {.callout-note appearance=\"simple\"}\n#### シンプルに\nここにテキスト\n:::\n\n\n\n\n\n\nシンプルに\n\n\n\nここにテキスト\n\n\n::: {.callout-note appearance=\"minimal\"}\n#### シンプルでアイコンなし\nここにテキスト\n:::\n\n\n\n\n\n\nシンプルでアイコンなし\n\n\n\nここにテキスト"
   },
   {
     "objectID": "basic.html#macのpcのキーボード記号の意味",
@@ -140,10 +140,17 @@
     "text": "奇数ページだと1ページ白紙になるので，偶数ページにしないとだめ\n前半，後半部分は，PDFとして作成するときはページ数増えるので不要かも"
   },
   {
-    "objectID": "sanko.html",
-    "href": "sanko.html",
+    "objectID": "sanko.html#webサイト",
+    "href": "sanko.html#webサイト",
     "title": "4  参考資料",
-    "section": "",
-    "text": "Quarto Booksのドキュメント"
+    "section": "4.1 webサイト",
+    "text": "4.1 webサイト\n\nQuarto Booksのドキュメント\n\n公式ドキュメント内のBooksの部分"
+  },
+  {
+    "objectID": "sanko.html#引用文献の書き方",
+    "href": "sanko.html#引用文献の書き方",
+    "title": "4  参考資料",
+    "section": "4.2 引用文献の書き方",
+    "text": "4.2 引用文献の書き方\nまずプロジェクトフォルダ内にreferences.bibファイルを作成する。引用する文献をGoogle ScholarやPubMedで検索し，BibTeX形式で表示してコピーし，ファイル内にペーストしていく\nそして，YAMLヘッダー内に，つまりBooksの時は`_quarto.yml``内に，以下を書く\n---\nbibliography: references.bib\n---\n引用文献はこちら Wickham, Çetinkaya-Rundel, and Grolemund (2023) Wickham et al. (2019)\n引用文献リストの例\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.\n“Welcome to the Tidyverse.” Journal of Open Source\nSoftware 4 (43): 1686.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science. \" O’Reilly Media, Inc.\".\n\n\n---\nbibliography: references.bib\ncsl: nature.csl\n---"
   }
 ]
