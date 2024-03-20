@@ -399,7 +399,7 @@ ggplot(df) +
 
 
 ``` markdown
-::: {.callout-note}
+::: {.callout-tip}
 ここにテキスト
 :::
 
@@ -410,7 +410,7 @@ ggplot(df) +
 :::
 
 ``` markdown
-::: {.callout-note}
+::: {.callout-warning}
 ここにテキスト
 :::
 
@@ -421,7 +421,7 @@ ggplot(df) +
 :::
 
 ``` markdown
-::: {.callout-note}
+::: {.callout-caution}
 ここにテキスト
 :::
 
@@ -433,7 +433,7 @@ ggplot(df) +
 :::
 
 ``` markdown
-::: {.callout-note}
+::: {.callout-important}
 ここにテキスト
 :::
 
