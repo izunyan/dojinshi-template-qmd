@@ -1,19 +1,20 @@
-# 参考資料 {#sec-sanko}
+# 参考資料と引用文献 {#sec-sanko}
 
 ## webサイト
 
-* [Quarto Booksのドキュメント](https://quarto.org/docs/books/)
+-   [Quarto Booksのドキュメント](https://quarto.org/docs/books/)
 
 公式ドキュメント内のBooksの部分
 
-
 ## 引用文献の書き方
 
-まずプロジェクトフォルダ内に`references.bib`ファイルを作成する。引用する文献をGoogle ScholarやPubMedで検索し，BibTeX形式で表示してコピーし，ファイル内にペーストしていく
+まずプロジェクトフォルダ内に`references.bib`ファイルを作成する。自ら記入していくこともできるが，引用する文献を[Google Scholar](https://scholar.google.com/)で検索し @fig-gscholar ，BibTeX形式で表示してコピーし @fig-gscholar-cite ，ファイル内にペーストしていくと簡単である。
 
+![文献を表示して引用をクリックする](images/google-scholar.png){#fig-gscholar width="610"}
 
-そして，YAMLヘッダー内に，つまりBooksの時は`_quarto.yml`内に，以下を書く
+![BibTeXをクリックする](images/google-scholar-cite.png){#fig-gscholar-cite width="482"}
 
+次にYAMLヘッダー内に，つまりBooksの時は`_quarto.yml`内に，以下を書く
 
 ``` yaml
 ---
@@ -21,15 +22,16 @@ bibliography: references.bib
 ---
 ```
 
-引用文献はこちら    
-@wickham2023r    
-@wickham2019welcome    
+引用文献はこちら\
+@wickham2023r\
+@wickham2019welcome
 
 引用文献リストの例
 
 ::: {#refs}
 :::
 
+本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内に`csl:対応するcslファイル`を追記する
 
 ``` yaml
 ---

@@ -516,14 +516,13 @@ ggplot(df) +
 
 
 
-<!-- 動かないので保留 -->
-<!-- ### コールアウトへのリンク  -->
+### コールアウトへのリンク
 
-<!-- ::: {#nte-example .callout-note} -->
-<!-- ここにテキスト -->
-<!-- ::: -->
+::: {#nte-example .callout-note}
+ここにテキスト
+:::
 
-<!-- 参照 @nte-example -->
+@nte-example を参照
 
 
 ## MacのPCのキーボード記号の意味
