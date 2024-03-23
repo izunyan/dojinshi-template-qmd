@@ -39,3 +39,5 @@ bibliography: references.bib
 csl: nature.csl
 ---
 ```
+
+入手先：[nature.csl](https://github.com/citation-style-language/styles/blob/master/nature.csl)

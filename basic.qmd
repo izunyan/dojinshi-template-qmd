@@ -2,10 +2,10 @@
 
 ## 準備
 
-* 本書で使う処理のため，まず`tidyverse`パッケージを読み込む
-* 使用するデータは`palmerpenguins`パッケージの`penguins`データ
-    + ここではオブジェクトの名前を`df`として格納する。
-    + `パッケージ名::パッケージ中のデータ`，`パッケージ名::関数()`で`library(パッケージ名)`で読み込んでいなくても直に読み出せる，
+-   本書で使う処理のため，まず`tidyverse`パッケージを読み込む
+-   使用するデータは`palmerpenguins`パッケージの`penguins`データ
+    -   ここではオブジェクトの名前を`df`として格納する。
+    -   `パッケージ名::パッケージ中のデータ`，`パッケージ名::関数()`で`library(パッケージ名)`で読み込んでいなくても直に読み出せる，
 
 ```{r}
 library(tidyverse)
@@ -16,21 +16,23 @@ df <-
 
 ## コードと結果の表示に関するチャンクオプションの設定
 
-　技術系同人誌では，コードとその実行結果について，全て示したい場合や一部だけ示したい場合がある。ここでは，考えられるパターンのそれぞれについてQuartoでどう指定するかを解説する。
+　技術系同人誌では，コードとその実行結果を解説する機会が多いだろう。その場合，コードの実行の有無，出力の有無，コードの表示／非表示について，柔軟に切り替えられると便利である。ここでは，考えられるパターンのそれぞれについて指定する方法を解説する。
 
-* 公式ドキュメントの参照箇所
-    + [Chunk options](https://r4ds.hadley.nz/quarto.html#chunk-options)
-    + [Execution options](https://quarto.org/docs/reference/formats/html.html#execution)
-    + [Code Output](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output)
+-   公式ドキュメントの参照箇所
+    -   [Chunk
+        options](https://r4ds.hadley.nz/quarto.html#chunk-options)
+    -   [Execution
+        options](https://quarto.org/docs/reference/formats/html.html#execution)
+    -   [Code
+        Output](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output)
 
 <!-- * [HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html) -->
- 
- チャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。〇はあり，×はなしであることを示している。
 
-* チャンクオプションの記述例
-    + `#| eval: false`のように，`#|`の後にオプションとのその`true`または`false`などを指定する
-    
-    
+チャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。
+
+-   チャンクオプションの記述例
+    -   `#| eval: false`のように，`#|`の後にオプションとのその`true`または`false`などを指定する
+
 ```{r}
 #| echo: fenced
 #| eval: false
@@ -41,34 +43,31 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-* チャンクオプションと実行後パターンの対応一覧
+-   チャンクオプションと実行後パターンの対応一覧
+    -   〇はあり，×はなしであることを示している。
 
-| チャンクオプション            | 実行 | 出力      | コード| 
-|-------------------------------|------|-----------|-------|
-| echo: false                   |〇    |〇         |×      |
-| results: hide                 |〇    |×(図はあり)|〇     |
-| results: hide fig-show: hide  |〇    |×          |〇(1)  |
-| output: false                 |〇    |×          |〇(2)  |
-| include: false                |〇    |×          |×      |
-| eval: false                   |×     |×          |〇     |   
-| echo: fenced                  |〇    |×          |〇（チャンク）|    
-| `{{r}}`                       |×     |×          |〇（チャンク）|    |
-|                                       |                                        |
+| チャンクオプション           | 実行 | 出力        | コード         |
+|------------------------------|------|-------------|----------------|
+| echo: false                  | 〇   | 〇          | ×              |
+| include: false               | 〇   | ×           | ×              |
+| results: hide                | 〇   | ×(図はあり) | 〇             |
+| results: hide fig-show: hide | 〇   | ×           | 〇(1)          |
+| output: false                | 〇   | ×           | 〇(2)          |
+| echo: fenced                 | 〇   | ×           | 〇（チャンク） |
+| eval: false                  | ×    | ×           | 〇             |
+| `{{{r}}}`                      | ×    | ×           | 〇（チャンク） |
 
-     
-
----
+------------------------------------------------------------------------
 
 **様々なパターンの記述例**
 
-::: {.panel-tabset}
-
-
+::: panel-tabset
 ### 実行〇|出力〇|コード〇
 
-* デフォルトの設定なので，必要なチャンクオプション特になし
+-   デフォルトの設定なので，必要なチャンクオプション特になし
 
 **コード表示**
+
 ```{r}
 1 + 1
 
@@ -76,9 +75,10 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-###  実行〇|出力〇|コード×
+### 実行〇|出力〇|コード×
 
 **チャンクでの書き方**
+
 ```{{r}}
 #| echo: false
 
@@ -88,8 +88,10 @@ ggplot(df) +
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
+
 
 **コード表示**：なし
+
 ```{r}
 #| echo: false
 
@@ -99,87 +101,6 @@ ggplot(df) +
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
-
-
-
-
-### 実行〇|出力×（図はあり）|コード〇
- 
-**チャンクでの書き方**
-```{{r}}
-#| results: hide
-
-1 + 1
-
-
-ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
-```
-
-**コード表示**
-```{r}
-#| results: hide
-
-1 + 1
-
-
-ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
-```
-
-### 実行〇|出力×|コード〇(1)
-
-**チャンクでの書き方**
-```{{r}}
-#| results: hide
-#| fig-show: hide
-
-1 + 1
-
-
-ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
-```
-
-**コード表示**
-```{r}
-#| results: hide
-#| fig-show: hide
-
-1 + 1
-
-
-ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
-```
-
-
-
-### 実行〇|出力×|コード〇(2)
-
-**チャンクでの書き方**
-```{{r}}
-#| output: false
-
-1 + 1
-
-
-ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
-```
-
-**コード表示**
-```{r}
-#| output: false
-
-1 + 1
-
-
-ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
-```
-
-
 
 ### 実行〇|出力×|コード×
 
@@ -194,7 +115,9 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
+
 **コード表示**：なし
+
 ```{r}
 #| include: false
 
@@ -205,13 +128,11 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行×|出力×|コード〇
-
-* 単にコードを表示したいだけの時に便利
+### 実行〇|出力×（図はあり）|コード〇
 
 **チャンクでの書き方**
 ```{{r}}
-#| eval: false
+#| results: hide
 
 1 + 1
 
@@ -221,8 +142,64 @@ ggplot(df) +
 ```
 
 **コード表示**
+
 ```{r}
-#| eval: false  
+#| results: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+### 実行〇|出力×|コード〇(1)
+
+**チャンクでの書き方**
+
+```{{r}}
+#| results: hide
+#| fig-show: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
+**コード表示**
+
+```{r}
+#| results: hide
+#| fig-show: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+### 実行〇|出力×|コード〇(2)
+
+**チャンクでの書き方**
+```{{r}}
+#| output: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
+**コード表示**
+
+```{r}
+#| output: false
 
 1 + 1
 
@@ -233,8 +210,8 @@ ggplot(df) +
 
 ### 実行〇|出力×|コード〇（チャンク）
 
-
-* 公式ドキュメント[Fenced Echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)を参照
+-   公式ドキュメント[Fenced
+    Echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)を参照
 
 **チャンクでの書き方**
 ```{{r}}
@@ -247,7 +224,9 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
+
 **チャンク表示**
+
 ```{r}
 #| echo: fenced
 
@@ -258,15 +237,41 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
+### 実行×|出力×|コード〇
+
+-   単にコードを表示したいだけの時に便利
+
+**チャンクでの書き方**
+```{{r}}
+#| echo: fenced
+
+1 + 1
 
 
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
+**コード表示**
+
+```{r}
+#| eval: false  
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
 
 ### 実行×|出力×|コード〇（チャンク）
 
-* `{r}`をさらに`{}`で囲んで`{{r}}`と2重に書く
+-   `{{r}}`をさらに`{}`で囲んで`{{{r}}}`と2重に書く
 
 **チャンクでの書き方**
-````
+
+
 ```{{{r}}}
 
 
@@ -277,11 +282,12 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-````
 
-* qmd上は上記書き方のみで「実行×|出力×|コード〇（チャンク表示）」が実現できる
-  + ただし解説目的で上記出力に`{{r}}`を表示させるためには,````(4 backticks)で囲んで{{{r}}}と書く必要がある
-
+-   qmd上は上記書き方のみで「実行×|出力×|コード〇（チャンク表示）」が実現できる
+    -   ただし解説目的で上記出力に`{{{r}}}`を表示させるためには,`{{{{r}}}}`と書く必要がある
+    -   参照:[Unexecuted Blocks](https://quarto.org/docs/computations/execution-options.html#unexecuted-blocks); [Executable Blocks](https://quarto.org/docs/output-formats/html-code.html#executable-blocks)
+    
+<!-- ````(4 backticks)と{{{{r}}}}   -->
 
 **チャンク表示**
 
@@ -294,29 +300,41 @@ ggplot(df) +
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
+:::
 
-
-::: 
-
-
-## 脚注 
+## 脚注
 
 本文中に`[^ここに数字や文字]`と書き，別途内容を記述することで，脚注(footnote)をつけることができる。
 
+| 見え方                                           | 書き方                                       |
+|----------------------------------|--------------------------------------|
+| 基本の脚注[^basic-1]                             | `基本の脚注[^1]`                             |
+| [　]内は文字でもよい[^basic-2]                 | `[　]内は文字でもよい[^word]`                |
+| 脚注内容を本文中に[^basic-3]                     | `脚注内容を本文中に^[直接[ ]内に内容を書く]` |
+| 見え方と書き方で脚注番号が異なることも[^basic-4] | `見え方と書き方で脚注番号が異なることも[^2]` |
+| 脚注を複数行に分ける[^basic-5]                   | `脚注を複数行に分ける[^multiple]`            |
 
-| 見え方                             | 書き方                                 |
-|------------------------------------|----------------------------------------|
-|基本の脚注[^1]                      | `基本の脚注[^1]`                       |
-|[　]内は文字でもよい[^word]         | `[　]内は文字でもよい[^word]`          |
-|脚注内容を本文中に^[直接[ ]内に内容を書く]  | `脚注内容を本文中に^[直接[ ]内に内容を書く]`  |
-|見え方と書き方で脚注番号が異なることも[^2]  |`見え方と書き方で脚注番号が異なることも[^2]` |
-|脚注を複数行に分ける[^multiple]     | `脚注を複数行に分ける[^multiple]`          |
+[^basic-1]: １行のみの脚注
+
+[^basic-2]: 文字でも脚注番号に変換される
+
+[^basic-3]: 直接[ ]内に内容を書く
+
+[^basic-4]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される
+
+[^basic-5]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり
+
+    2段落目
+
+    3段落目
+
+    4段落目
+
 <!-- |同じ文字数字を書くとどうなるか[^1]  |`同じ文字数字を書くとどうなるか[^1]`| -->
-
 
 脚注内容 <!-- 記述部分を表示させるために``` ```で囲んである -->
 
-```
+```         
 [^1]: 脚注の内容を本文とは別に書く
 [^word]:文字でも脚注番号に変換される 
 [^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される
@@ -335,77 +353,65 @@ ggplot(df) +
 > { }でコードも書ける 
 
 >    { 1+1 }
-
 ```
 
 ここが脚注の記述内容
 
-[^1]: １行のみの脚注
-[^word]:文字でも脚注番号に変換される
-[^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される
-[^multiple]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり
-
-      2段落目
-      
-      3段落目
-      
-      4段落目
-
 <!-- 【ここは備忘録用メモ】 -->
+
 <!-- ↓これをやると^1の脚注内容が上書きされてしまうので不可 -->
+
 <!-- [^1]: 自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい -->
-     
 
 ## セクションへのリンク
 
-| 見え方                             | 書き方                                 |
-|------------------------------------|----------------------------------------|
-| [@sec-caution]                     | `[@sec-caution]`             |
-| [-@sec-caution]                    | `[-@sec-caution]`            |
-| [セクション -@sec-caution]         | `[セクション -@sec-caution]` |
-| [-@sec-caution]章                  | `[-@sec-caution]章`          |
-| [-@sec-caution 章]                 | `[-@sec-caution 章]`         |
-| [注意事項](#sec-caution)           | `[注意事項](#sec-caution)`   |
-|                                    |                                        |
-|                                    |                                        |
+| 見え方                     | 書き方                       |
+|----------------------------|------------------------------|
+| [@sec-caution]             | `[@sec-caution]`             |
+| [-@sec-caution]            | `[-@sec-caution]`            |
+| [セクション -@sec-caution] | `[セクション -@sec-caution]` |
+| [-@sec-caution]章          | `[-@sec-caution]章`          |
+| [-@sec-caution 章]         | `[-@sec-caution 章]`         |
+| [注意事項](#sec-caution)   | `[注意事項](#sec-caution)`   |
+|                            |                              |
+|                            |                              |
 
 ## 図表へのリンク
 
-| 見え方                           | 書き方                                 |
-|----------------------------------|----------------------------------------|
-| @fig-zu を参照                   | `@fig-zu を参照`             |
-| [図 -@fig-zu] を参照             | `[図 -@fig-zu] を参照`             |
-| @tbl-hyo を参照                  | `@tbl-hyo を参照`             |
-| [表 -@tbl-hyo]を参照             | ` [表 -@tbl-hyo]を参照`             |
-
+| 見え方               | 書き方                 |
+|----------------------|------------------------|
+| @fig-zu を参照       | `@fig-zu を参照`       |
+| [図 -@fig-zu] を参照 | `[図 -@fig-zu] を参照` |
+| @tbl-hyo を参照      | `@tbl-hyo を参照`      |
+| [表 -@tbl-hyo]を参照 | `[表 -@tbl-hyo]を参照` |
 
 ## コールアウト
 
-* 公式ドキュメントの参照箇所
-    + [Callout Blocks](https://quarto.org/docs/authoring/callouts.html)
-
+-   公式ドキュメントの参照箇所
+    -   [Callout
+        Blocks](https://quarto.org/docs/authoring/callouts.html)
 
 ### 基本の型
+
+
+
 ``` markdown
 ::: {.callout-note}
 ここにテキスト
 :::
-
 ```
 
-::: {.callout-note}
+::: callout-note
 ここにテキスト
 :::
-
 
 ``` markdown
 ::: {.callout-tip}
 ここにテキスト
 :::
-
 ```
 
-::: {.callout-tip}
+::: callout-tip
 ここにテキスト
 :::
 
@@ -413,10 +419,9 @@ ggplot(df) +
 ::: {.callout-warning}
 ここにテキスト
 :::
-
 ```
 
-::: {.callout-warning}
+::: callout-warning
 ここにテキスト
 :::
 
@@ -424,11 +429,9 @@ ggplot(df) +
 ::: {.callout-caution}
 ここにテキスト
 :::
-
 ```
 
-
-::: {.callout-caution}
+::: callout-caution
 ここにテキスト
 :::
 
@@ -436,85 +439,87 @@ ggplot(df) +
 ::: {.callout-important}
 ここにテキスト
 :::
-
 ```
 
-::: {.callout-important}
+::: callout-important
 ここにテキスト
 :::
-
 
 ### 見え方の変更
 
+**書き方**
+
 ``` markdown
 ::: {.callout-note}
 #### メモ
 タイトルを変更
 :::
-
 ```
+
 ::: {.callout-note}
 #### メモ
 タイトルを変更
 :::
+
+**書き方**
 
 ``` markdown
 ::: {.callout-note collapse="true"}
 #### 折りたたみもできる
 ここにテキスト
 :::
+```
 
-``` 
 ::: {.callout-note collapse="true"}
 #### 折りたたみもできる
+
 ここにテキスト
 :::
 
-
+**書き方**
 
 ``` markdown
 ::: {.callout-note}
 #### メモ
 アイコンなし
 :::
-
 ```
 
-
-::: {.callout-note icon=false}
+::: {.callout-note icon="false"}
 #### メモ
+
 アイコンなし
 :::
 
-
+**書き方**
 
 ``` markdown
 ::: {.callout-note appearance="simple"}
 #### シンプルに
 ここにテキスト
 :::
-
-``` 
+```
 
 ::: {.callout-note appearance="simple"}
 #### シンプルに
+
 ここにテキスト
 :::
 
+**書き方**
 
 ``` markdown
 ::: {.callout-note appearance="minimal"}
 #### シンプルでアイコンなし
 ここにテキスト
 :::
+```
 
-``` 
 ::: {.callout-note appearance="minimal"}
 #### シンプルでアイコンなし
+
 ここにテキスト
 :::
-
-
 
 ### コールアウトへのリンク
 
@@ -527,19 +532,18 @@ ggplot(df) +
 
 ## MacのPCのキーボード記号の意味
 
-* Quartoの公式ドキュメントでは，当たり前のように使われているので，知らないと読み解けない
+-   Quartoの公式ドキュメントでは，当たり前のように使われているので，知らないと読み解けない
 
-* Apple公式の説明
-    + [Macのメニューに表示される記号](https://support.apple.com/ja-jp/guide/mac-help/cpmh0011/mac)
-    + [Mac のキーボードショートカット](https://support.apple.com/ja-jp/HT201236) (記号がコピペできる)
-    
+-   Apple公式の説明
 
-| 意味         | 記号   |
-|--------------|--------|
-|Commandキー   |⌘      |
-|Shiftキー     |⇧       |
-|Optionキー    |⌥      |
-|Controlキー   |⌃       |
+    -   [Macのメニューに表示される記号](https://support.apple.com/ja-jp/guide/mac-help/cpmh0011/mac)
+    -   [Mac
+        のキーボードショートカット](https://support.apple.com/ja-jp/HT201236)
+        (記号がコピペできる)
 
-
-
+| 意味        | 記号 |
+|-------------|------|
+| Commandキー | ⌘    |
+| Shiftキー   | ⇧    |
+| Optionキー  | ⌥    |
+| Controlキー | ⌃    |

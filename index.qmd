@@ -97,7 +97,7 @@ knitr::include_graphics("images/cover.png")
 
 ## 各章の紹介
 
-* [-@sec-basic]章では
+* [-@sec-basic]では
 
 ## 執筆環境
 
@@ -109,12 +109,12 @@ knitr::include_graphics("images/cover.png")
 * rstudioだけなぜか表示されないので手動で…
   + バージョン RStudio 2023.09.0+463 "Desert Sunflower"
 
+
 ```{r}
 #| echo: false
 
-
 # rstudioapi::versionInfo()$version
-# rstudioapi::versionInfo()$release_name 
+# rstudioapi::versionInfo()$release_name
 
 # or
 
