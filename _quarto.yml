@@ -28,6 +28,7 @@ book:
     - fig_table.qmd
     - caution.qmd
     - sanko.qmd
+    - references.qmd
     
     # 1部などと区切りたい場合
     # - part: zenhan.qmd

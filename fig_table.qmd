@@ -3,6 +3,7 @@
 ## 図
 
 ```{r}
+#| echo: fenced	
 #| label: fig-zu
 #| fig-cap: "散布図"
 

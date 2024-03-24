@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>技術系同人誌テンプレート - 2&nbsp; 図表</title>
+<title>技術系同人誌テンプレート - 4&nbsp; 参考資料と引用文献</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -64,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./caution.html" rel="next">
-<link href="./basic.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./caution.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="技術系同人誌テンプレート - 2&nbsp; 図表">
+<meta property="og:title" content="技術系同人誌テンプレート - 4&nbsp; 参考資料と引用文献">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="技術系同人誌テンプレート">
 </head>
@@ -118,7 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fig_table.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">図表</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sanko.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">参考資料と引用文献</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -160,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fig_table.html" class="sidebar-item-text sidebar-link active">
+  <a href="./fig_table.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">図表</span></span></a>
   </div>
 </li>
@@ -172,8 +192,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sanko.html" class="sidebar-item-text sidebar-link">
+  <a href="./sanko.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">参考資料と引用文献</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">引用文献</span></span></a>
   </div>
 </li>
     </ul>
@@ -186,8 +212,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#図" id="toc-図" class="nav-link active" data-scroll-target="#図"><span class="header-section-number">2.1</span> 図</a></li>
-  <li><a href="#表" id="toc-表" class="nav-link" data-scroll-target="#表"><span class="header-section-number">2.2</span> 表</a></li>
+  <li><a href="#webサイト" id="toc-webサイト" class="nav-link active" data-scroll-target="#webサイト"><span class="header-section-number">4.1</span> webサイト</a></li>
+  <li><a href="#引用文献の書き方" id="toc-引用文献の書き方" class="nav-link" data-scroll-target="#引用文献の書き方"><span class="header-section-number">4.2</span> 引用文献の書き方</a></li>
   </ul>
 </nav>
     </div>
@@ -196,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-caution" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">図表</span></span></h1>
+<h1 class="title"><span id="sec-sanko" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">参考資料と引用文献</span></span></h1>
 </div>
 
 
@@ -213,62 +239,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="図" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="図"><span class="header-section-number">2.1</span> 図</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars) <span class="sc">+</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(mpg,disp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-zu" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-zu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="fig_table_files/figure-html/fig-zu-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.1: 散布図
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p><a href="#fig-zu" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> を参照</p>
+<section id="webサイト" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="webサイト"><span class="header-section-number">4.1</span> webサイト</h2>
+<ul>
+<li><a href="https://quarto.org/docs/books/">Quarto Booksのドキュメント</a></li>
+</ul>
+<p>公式ドキュメント内のBooksの部分</p>
 </section>
-<section id="表" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="表"><span class="header-section-number">2.2</span> 表</h2>
-<div id="tbl-hyo" class="quarto-float anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hyo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.1: 表タイトル
-</figcaption>
-<div aria-describedby="tbl-hyo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
-<thead>
-<tr class="header">
-<th>Col1</th>
-<th>Col2</th>
-<th>Col3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>x</td>
-<td>1</td>
-<td>10</td>
-</tr>
-<tr class="even">
-<td>y</td>
-<td>0</td>
-<td>20</td>
-</tr>
-</tbody>
-</table>
+<section id="引用文献の書き方" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="引用文献の書き方"><span class="header-section-number">4.2</span> 引用文献の書き方</h2>
+<p>まずプロジェクトフォルダ内に<code>references.bib</code>ファイルを作成する。自ら記入していくこともできるが，引用する文献を<a href="https://scholar.google.com/">Google Scholar</a>で検索し <a href="#fig-gscholar" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-gscholar</span></a> ，BibTeX形式で表示してコピーし <a href="#fig-gscholar-cite" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-gscholar-cite</span></a> ，ファイル内にペーストしていくと簡単である。</p>
+<div id="fig-gscholar" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gscholar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/google-scholar.png" class="img-fluid figure-img" width="610">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gscholar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: 文献を表示して引用をクリックする
+</figcaption>
 </figure>
 </div>
-<p><a href="#tbl-hyo" class="quarto-xref">Table&nbsp;<span>2.1</span></a> を参照</p>
+<div id="fig-gscholar-cite" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gscholar-cite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/google-scholar-cite.png" class="img-fluid figure-img" width="482">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gscholar-cite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: BibTeXをクリックする
+</figcaption>
+</figure>
+</div>
+<p>次にYAMLヘッダー内に，つまりBooksの時は<code>_quarto.yml</code>内に，以下を書く</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>文献を引用したい箇所に以下のように記述する。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>引用文献はこちら<span class="co">[</span><span class="ot">@wickham2023r;@wickham2019welcome</span><span class="co">]</span>  </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Wickham<span class="co">[</span><span class="ot">@wickham2023r</span><span class="co">]</span>は述べた  </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>@wickham2023r は述べた  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>出力例</strong></p>
+<p>引用文献はこちら <span class="citation" data-cites="wickham2023r wickham2019welcome">(<a href="#ref-wickham2023r" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>; <a href="#ref-wickham2019welcome" role="doc-biblioref">Wickham et al. 2019</a>)</span><br>
+Wickham <span class="citation" data-cites="wickham2023r">(<a href="#ref-wickham2023r" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span>は述べた<br>
+<span class="citation" data-cites="wickham2023r">Wickham, Çetinkaya-Rundel, and Grolemund (<a href="#ref-wickham2023r" role="doc-biblioref">2023</a>)</span> は述べた</p>
+<!-- 引用文献リストの例 -->
+<!-- ::: {#refs} -->
+<!-- ::: -->
+<p>本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内に<code>csl:対応するcslファイル</code>を追記する</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> nature.csl</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>入手先：<a href="https://github.com/citation-style-language/styles/blob/master/nature.csl">nature.csl</a></p>
+<p><strong>出力例</strong></p>
+<blockquote class="blockquote">
+<p>引用文献はこちら<sup>1,2</sup><br>
+wickham<sup>1</sup>は述べた<br>
+<sup>1</sup> は述べた</p>
+</blockquote>
+<p>文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 引用文献</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>:::{#refs}</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-wickham2019welcome" class="csl-entry" role="listitem">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the Tidyverse.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686.
+</div>
+<div id="ref-wickham2023r" class="csl-entry" role="listitem">
+Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science</em>. " O’Reilly Media, Inc.".
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -683,13 +726,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./basic.html" class="pagination-link" aria-label="マークダウンの基本">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">マークダウンの基本</span></span>
+      <a href="./caution.html" class="pagination-link" aria-label="注意事項">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">注意事項</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./caution.html" class="pagination-link" aria-label="注意事項">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">注意事項</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="引用文献">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">引用文献</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

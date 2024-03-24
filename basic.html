@@ -176,6 +176,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">参考資料と引用文献</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">引用文献</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -634,27 +640,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="caution.html" class="quarto-xref"><span>Chapter 3</span></a></td>
+<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref">sec-caution</span></a></td>
 <td><code>[@sec-caution]</code></td>
 </tr>
 <tr class="even">
-<td><a href="caution.html" class="quarto-xref"><span>3</span></a></td>
+<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a></td>
 <td><code>[-@sec-caution]</code></td>
 </tr>
 <tr class="odd">
-<td><a href="caution.html" class="quarto-xref">セクション&nbsp;<span>3</span></a></td>
+<td><a href="#sec-caution" class="quarto-xref">セクション&nbsp;<span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a></td>
 <td><code>[セクション -@sec-caution]</code></td>
 </tr>
 <tr class="even">
-<td><a href="caution.html" class="quarto-xref"><span>3</span></a>章</td>
+<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a>章</td>
 <td><code>[-@sec-caution]章</code></td>
 </tr>
 <tr class="odd">
-<td><a href="caution.html" class="quarto-xref"><span>3</span></a></td>
+<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a></td>
 <td><code>[-@sec-caution 章]</code></td>
 </tr>
 <tr class="even">
-<td><a href="fig_table.html">注意事項</a></td>
+<td><a href="#sec-caution">注意事項</a></td>
 <td><code>[注意事項](#sec-caution)</code></td>
 </tr>
 <tr class="odd">
@@ -679,19 +685,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="fig_table.html#fig-zu" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> を参照</td>
+<td><a href="#fig-zu" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-zu</span></a> を参照</td>
 <td><code>@fig-zu を参照</code></td>
 </tr>
 <tr class="even">
-<td><a href="fig_table.html#fig-zu" class="quarto-xref">図&nbsp;<span>2.1</span></a> を参照</td>
+<td><a href="#fig-zu" class="quarto-xref">図&nbsp;<span class="quarto-unresolved-ref ref-noprefix">fig-zu</span></a> を参照</td>
 <td><code>[図 -@fig-zu] を参照</code></td>
 </tr>
 <tr class="odd">
-<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">Table&nbsp;<span>2.1</span></a> を参照</td>
+<td><a href="#tbl-hyo" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-hyo</span></a> を参照</td>
 <td><code>@tbl-hyo を参照</code></td>
 </tr>
 <tr class="even">
-<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">表&nbsp;<span>2.1</span></a>を参照</td>
+<td><a href="#tbl-hyo" class="quarto-xref">表&nbsp;<span class="quarto-unresolved-ref ref-noprefix">tbl-hyo</span></a>を参照</td>
 <td><code>[表 -@tbl-hyo]を参照</code></td>
 </tr>
 </tbody>
@@ -790,29 +796,20 @@ Important
 </section>
 <section id="見え方の変更" class="level3" data-number="1.6.2">
 <h3 data-number="1.6.2" class="anchored" data-anchor-id="見え方の変更"><span class="header-section-number">1.6.2</span> 見え方の変更</h3>
+<p><strong>書き方</strong></p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### メモ</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>タイトルを変更</span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-メモ
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>タイトルを変更</p>
-</div>
-</div>
+<p><strong>出力</strong> ::: {.callout-note} #### メモ タイトルを変更 :::</p>
+<p><strong>書き方</strong></p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 折りたたみもできる</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>ここにテキスト</span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>出力</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -821,16 +818,18 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>ここにテキスト</p>
 </div>
 </div>
 </div>
+<p><strong>書き方</strong></p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### メモ</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>アイコンなし</span>
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>出力</strong></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -844,10 +843,12 @@ Important
 <p>アイコンなし</p>
 </div>
 </div>
+<p><strong>書き方</strong></p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple"}</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### シンプルに</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>ここにテキスト</span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>出力</strong></p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -861,10 +862,12 @@ Important
 <p>ここにテキスト</p>
 </div>
 </div>
+<p><strong>書き方</strong></p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="minimal"}</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### シンプルでアイコンなし</span></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>ここにテキスト</span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>出力</strong></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -894,7 +897,8 @@ Note&nbsp;1.1
 <p>ここにテキスト</p>
 </div>
 </div>
-<p><a href="#nte-example" class="quarto-xref">Note&nbsp;<span>1.1</span></a> を参照</p>
+<p><a href="#nte-example" class="quarto-xref">Note&nbsp;<span class="quarto-unresolved-ref">nte-example</span></a> を参照</p>
+<p>https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes</p>
 </section>
 </section>
 <section id="macのpcのキーボード記号の意味" class="level2" data-number="1.7">

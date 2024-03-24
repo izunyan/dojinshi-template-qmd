@@ -22,14 +22,28 @@ bibliography: references.bib
 ---
 ```
 
-引用文献はこちら\
-@wickham2023r\
-@wickham2019welcome
+文献を引用したい箇所に以下のように記述する。
 
-引用文献リストの例
 
-::: {#refs}
-:::
+``` markdown
+引用文献はこちら[@wickham2023r;@wickham2019welcome]  
+Wickham[@wickham2023r]は述べた  
+@wickham2023r は述べた  
+
+```
+**出力例**
+
+引用文献はこちら [@wickham2023r;@wickham2019welcome]  
+Wickham [@wickham2023r]は述べた  
+@wickham2023r は述べた  
+
+
+
+
+<!-- 引用文献リストの例 -->
+
+<!-- ::: {#refs} -->
+<!-- ::: -->
 
 本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内に`csl:対応するcslファイル`を追記する
 
@@ -41,3 +55,21 @@ csl: nature.csl
 ```
 
 入手先：[nature.csl](https://github.com/citation-style-language/styles/blob/master/nature.csl)
+
+**出力例**
+
+> 引用文献はこちら^1,2^  
+> wickham^1^は述べた  
+> ^1^ は述べた  
+
+文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。
+
+``` markdown
+## 引用文献
+
+:::{#refs}
+
+:::
+```
+
+  

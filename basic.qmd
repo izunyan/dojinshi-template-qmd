@@ -455,7 +455,7 @@ ggplot(df) +
 タイトルを変更
 :::
 ```
-
+**出力**
 ::: {.callout-note}
 #### メモ
 タイトルを変更
@@ -469,6 +469,7 @@ ggplot(df) +
 ここにテキスト
 :::
 ```
+**出力**
 
 ::: {.callout-note collapse="true"}
 #### 折りたたみもできる
@@ -484,6 +485,7 @@ ggplot(df) +
 アイコンなし
 :::
 ```
+**出力**
 
 ::: {.callout-note icon="false"}
 #### メモ
@@ -499,6 +501,7 @@ ggplot(df) +
 ここにテキスト
 :::
 ```
+**出力**
 
 ::: {.callout-note appearance="simple"}
 #### シンプルに
@@ -514,6 +517,7 @@ ggplot(df) +
 ここにテキスト
 :::
 ```
+**出力**
 
 ::: {.callout-note appearance="minimal"}
 #### シンプルでアイコンなし
@@ -529,6 +533,8 @@ ggplot(df) +
 
 @nte-example を参照
 
+
+https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes
 
 ## MacのPCのキーボード記号の意味
 
