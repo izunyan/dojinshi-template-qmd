@@ -1,6 +1,6 @@
 # 参考資料と引用文献 {#sec-sanko}
 
-## webサイト
+## 参考webサイト
 
 -   [Quarto Booksのドキュメント](https://quarto.org/docs/books/)
 

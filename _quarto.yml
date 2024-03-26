@@ -2,6 +2,8 @@ project:
   type: book
   output-dir: docs # pdfの出力先
 
+
+
 # 全体に反映するチャンクオプション
 execute:           
   warning: false
@@ -46,7 +48,9 @@ format:
   html:
     toc: true
     # code-fold: true # コードを折りたたんだ状態で表示
-    theme: cosmo
+    theme:
+      light: flatly
+      dark: darkly  # ダークモード
   pdf:
     documentclass: bxjsbook                     # 日本語pdf
     classoption: xelatex, ja=standard           # 
