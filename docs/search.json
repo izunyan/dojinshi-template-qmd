@@ -1,0 +1,252 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "技術系同人誌テンプレート",
+    "section": "",
+    "text": "はじめに\nはじめにの文章:ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#テンプレートの説明",
+    "href": "index.html#テンプレートの説明",
+    "title": "技術系同人誌テンプレート",
+    "section": "テンプレートの説明",
+    "text": "テンプレートの説明\n\nQuartoで同人誌の原稿を書くためのテンプレート\n\nbookdownパッケージでR Markdownで書く解説はこちら\n\nRender Bookすればhtmlとpdfがそのままできる\n\npdfは目次から始まり，ページ番号が1から始まる\n\n\n\n実行方法\n\nBuildタブで\n\nRender Book &gt; HTML Format\nRender Book &gt; PDF Format\n\n\n\n\nbookdown版でとてもお世話になったサイト\n\nBookdownによる技術系同人誌執筆",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#概要",
+    "href": "index.html#概要",
+    "title": "技術系同人誌テンプレート",
+    "section": "概要",
+    "text": "概要\n\n本書の目的\n\n説明\n\n本書の内容\n\n説明\n\n執筆動機\n\n説明\n\n今後の展望\n\n\n\n本書の内容は、githubレポジトリですべて公開",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#本書の特徴",
+    "href": "index.html#本書の特徴",
+    "title": "技術系同人誌テンプレート",
+    "section": "本書の特徴",
+    "text": "本書の特徴\n\n本書の強み",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#想定読者",
+    "href": "index.html#想定読者",
+    "title": "技術系同人誌テンプレート",
+    "section": "想定読者",
+    "text": "想定読者\n\nRとRStudioをダウンロードしてPCにインストールまでできることが最低条件",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#各章の紹介",
+    "href": "index.html#各章の紹介",
+    "title": "技術系同人誌テンプレート",
+    "section": "各章の紹介",
+    "text": "各章の紹介\n\n1  マークダウンの基本では",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#執筆環境",
+    "href": "index.html#執筆環境",
+    "title": "技術系同人誌テンプレート",
+    "section": "執筆環境",
+    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.4.551\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-03-27\n\n\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#使用上の注意など",
+    "href": "index.html#使用上の注意など",
+    "title": "技術系同人誌テンプレート",
+    "section": "使用上の注意など",
+    "text": "使用上の注意など\n\n本書の内容はすべてwindows環境を想定\nこの本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできない。使用する際は、自己責任で利用すること",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#ライセンス",
+    "href": "index.html#ライセンス",
+    "title": "技術系同人誌テンプレート",
+    "section": "ライセンス",
+    "text": "ライセンス",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "index.html#test",
+    "href": "index.html#test",
+    "title": "技術系同人誌テンプレート",
+    "section": "test",
+    "text": "test\n引用文献はこちら (Wickham, Çetinkaya-Rundel, and Grolemund 2023; Wickham et al. 2019)\n\n\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the Tidyverse.” Journal of Open Source Software 4 (43): 1686.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science. \" O’Reilly Media, Inc.\".",
+    "crumbs": [
+      "はじめに"
+    ]
+  },
+  {
+    "objectID": "basic.html",
+    "href": "basic.html",
+    "title": "1  マークダウンの基本",
+    "section": "",
+    "text": "1.1 準備\nlibrary(tidyverse)\n\ndf &lt;- \n  palmerpenguins::penguins",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#準備",
+    "href": "basic.html#準備",
+    "title": "1  マークダウンの基本",
+    "section": "",
+    "text": "本書で使う処理のため，まずtidyverseパッケージを読み込む\n使用するデータはpalmerpenguinsパッケージのpenguinsデータ\n\nここではオブジェクトの名前をdfとして格納する。\nパッケージ名::パッケージ中のデータ，パッケージ名::関数()でlibrary(パッケージ名)で読み込んでいなくても直に読み出せる，",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#コードと結果の表示に関するチャンクオプションの設定",
+    "href": "basic.html#コードと結果の表示に関するチャンクオプションの設定",
+    "title": "1  マークダウンの基本",
+    "section": "1.2 コードと結果の表示に関するチャンクオプションの設定",
+    "text": "1.2 コードと結果の表示に関するチャンクオプションの設定\n　技術系同人誌では，コードとその実行結果を解説する機会が多いだろう。その場合，コードの実行の有無，出力の有無，コードの表示／非表示について，柔軟に切り替えられると便利である。ここでは，考えられるパターンのそれぞれについて指定する方法を解説する。\n\n公式ドキュメントの参照箇所\n\nChunk options\nExecution options\nCode Output\n\n\n\nチャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。\n\nチャンクオプションの記述例\n\n#| eval: falseのように，#|の後にオプションとのそのtrueまたはfalseなどを指定する\n\n\n\n```{r}\n#| eval: false\n\n1 + 1\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\n\nチャンクオプションと実行後パターンの対応一覧\n\n〇はあり，×はなしであることを示している。\n\n\n\n\n\nチャンクオプション\n実行\n出力\nコード\n\n\n\n\necho: false\n〇\n〇\n×\n\n\ninclude: false\n〇\n×\n×\n\n\nresults: hide\n〇\n×(図はあり)\n〇\n\n\nresults: hide fig-show: hide\n〇\n×\n〇(1)\n\n\noutput: false\n〇\n×\n〇(2)\n\n\necho: fenced\n〇\n×\n〇（チャンク）\n\n\neval: false\n×\n×\n〇\n\n\n{{r}}\n×\n×\n〇（チャンク）\n\n\n\n\n様々なパターンの記述例\n\n実行〇|出力〇|コード〇実行〇|出力〇|コード×実行〇|出力×|コード×実行〇|出力×（図はあり）|コード〇実行〇|出力×|コード〇(1)実行〇|出力×|コード〇(2)実行〇|出力×|コード〇（チャンク）実行×|出力×|コード〇実行×|出力×|コード〇（チャンク）\n\n\n\nデフォルトの設定なので，必要なチャンクオプション特になし\n\nコード表示\n\n1 + 1\n\n[1] 2\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| echo: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示：なし\n\n\n[1] 2\n\n\n\n\n\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| include: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示：なし\n\n\nチャンクでの書き方\n```{r}\n#| results: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| results: hide\n#| fig-show: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\nチャンクでの書き方\n```{r}\n#| output: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n公式ドキュメントFenced Echoを参照\n\nチャンクでの書き方\n```{r}\n#| echo: fenced\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nチャンク表示\n\n```{r}\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\n[1] 2\n\n\n\n\n\n\n\n\n\n\n\n\n単にコードを表示したいだけの時に便利\n\nチャンクでの書き方\n```{r}\n#| echo: fenced\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n\n\n\n\n{r}をさらに{}で囲んで{{r}}と2重に書く\n\nチャンクでの書き方\n```{{r}}\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```\n\nqmd上は上記書き方のみで「実行×|出力×|コード〇（チャンク表示）」が実現できる\n\nただし解説目的で上記出力に{{r}}を表示させるためには,{{{r}}}と書く必要がある\n参照:Unexecuted Blocks; Executable Blocks\n\n\n\nチャンク表示\n```{r}\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_length_mm, bill_depth_mm))\n```",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#脚注",
+    "href": "basic.html#脚注",
+    "title": "1  マークダウンの基本",
+    "section": "1.3 脚注",
+    "text": "1.3 脚注\n本文中に[^ここに数字や文字]と書き，別途内容を記述することで，脚注(footnote)をつけることができる。\n\n\n\n\n\n\n\n見え方\n書き方\n\n\n\n\n基本の脚注1\n基本の脚注[^1]\n\n\n[　]内は文字でもよい2\n[　]内は文字でもよい[^word]\n\n\n脚注内容を本文中に3\n脚注内容を本文中に^[直接[ ]内に内容を書く]\n\n\n見え方と書き方で脚注番号が異なることも4\n見え方と書き方で脚注番号が異なることも[^2]\n\n\n脚注を複数行に分ける5\n脚注を複数行に分ける[^multiple]\n\n\n\n\n脚注内容 \n[^1]: 脚注の内容を本文とは別に書く\n[^word]:文字でも脚注番号に変換される \n[^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される\n[^multiple]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり。\n\n      2段落目\n      \n      3段落目\n      \n      4段落目  \n\n\n【補足】\n本来は[^multiple]で以下のように書きたかったが，pdfでエラーになるので省略\n\n&gt; { }でコードも書ける \n\n&gt;    { 1+1 }\nここが脚注の記述内容",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#セクションへのリンク",
+    "href": "basic.html#セクションへのリンク",
+    "title": "1  マークダウンの基本",
+    "section": "1.4 セクションへのリンク",
+    "text": "1.4 セクションへのリンク\n\n\n\n見え方\n書き方\n\n\n\n\nChapter 3\n[@sec-caution]\n\n\n3\n[-@sec-caution]\n\n\nセクション 3\n[セクション -@sec-caution]\n\n\n3章\n[-@sec-caution]章\n\n\n3\n[-@sec-caution 章]\n\n\n注意事項\n[注意事項](#sec-caution)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#図表へのリンク",
+    "href": "basic.html#図表へのリンク",
+    "title": "1  マークダウンの基本",
+    "section": "1.5 図表へのリンク",
+    "text": "1.5 図表へのリンク\n\n\n\n見え方\n書き方\n\n\n\n\nFigure 2.1 を参照\n@fig-zu を参照\n\n\n図 2.1 を参照\n[図 -@fig-zu] を参照\n\n\nTable 2.1 を参照\n@tbl-hyo を参照\n\n\n表 2.1を参照\n[表 -@tbl-hyo]を参照",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#コールアウト",
+    "href": "basic.html#コールアウト",
+    "title": "1  マークダウンの基本",
+    "section": "1.6 コールアウト",
+    "text": "1.6 コールアウト\n\n公式ドキュメントの参照箇所\n\nCallout Blocks\n\n\n\n1.6.1 基本の型\n::: {.callout-note}\nここにテキスト\n:::\n\n\n\n\n\n\nNote\n\n\n\nここにテキスト\n\n\n::: {.callout-tip}\nここにテキスト\n:::\n\n\n\n\n\n\nTip\n\n\n\nここにテキスト\n\n\n::: {.callout-warning}\nここにテキスト\n:::\n\n\n\n\n\n\nWarning\n\n\n\nここにテキスト\n\n\n::: {.callout-caution}\nここにテキスト\n:::\n\n\n\n\n\n\nCaution\n\n\n\nここにテキスト\n\n\n::: {.callout-important}\nここにテキスト\n:::\n\n\n\n\n\n\nImportant\n\n\n\nここにテキスト\n\n\n\n\n1.6.2 見え方の変更\n書き方\n::: {.callout-note}\n#### メモ\nタイトルを変更\n:::\n出力\n\n\n\n\n\n\nメモ\n\n\n\nタイトルを変更\n\n\n書き方\n::: {.callout-note collapse=\"true\"}\n#### 折りたたみもできる\nここにテキスト\n:::\n出力\n\n\n\n\n\n\n折りたたみもできる\n\n\n\n\n\nここにテキスト\n\n\n\n書き方\n::: {.callout-note}\n#### メモ\nアイコンなし\n:::\n出力\n\n\n\n\n\n\nメモ\n\n\n\nアイコンなし\n\n\n書き方\n::: {.callout-note appearance=\"simple\"}\n#### シンプルに\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nシンプルに\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-note appearance=\"minimal\"}\n#### シンプルでアイコンなし\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nシンプルでアイコンなし\n\n\n\nここにテキスト\n\n\n\n\n1.6.3 コールアウトへのリンク\n\n\n\n\n\n\nNote 1.1\n\n\n\nここにテキスト\n\n\nNote 1.1 を参照\nhttps://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#macのpcのキーボード記号の意味",
+    "href": "basic.html#macのpcのキーボード記号の意味",
+    "title": "1  マークダウンの基本",
+    "section": "1.7 MacのPCのキーボード記号の意味",
+    "text": "1.7 MacのPCのキーボード記号の意味\n\nQuartoの公式ドキュメントでは，当たり前のように使われているので，知らないと読み解けない\nApple公式の説明\n\nMacのメニューに表示される記号\nMac のキーボードショートカット (記号がコピペできる)\n\n\n\n\n\n意味\n記号\n\n\n\n\nCommandキー\n⌘\n\n\nShiftキー\n⇧\n\n\nOptionキー\n⌥\n\n\nControlキー\n⌃",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "basic.html#footnotes",
+    "href": "basic.html#footnotes",
+    "title": "1  マークダウンの基本",
+    "section": "",
+    "text": "１行のみの脚注↩︎\n文字でも脚注番号に変換される↩︎\n直接[ ]内に内容を書く↩︎\nこれまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される↩︎\n複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり\n2段落目\n3段落目\n4段落目↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
+    "objectID": "fig_table.html",
+    "href": "fig_table.html",
+    "title": "2  図表",
+    "section": "",
+    "text": "2.1 図\n```{r}\n#| label: fig-zu\n#| fig-cap: \"散布図\"\n\nlibrary(ggplot2)\nggplot(mtcars) +\n  geom_point(aes(mpg,disp))\n```\n\n\n\n\n\n\n\nFigure 2.1: 散布図\nFigure 2.1 を参照",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>図表</span>"
+    ]
+  },
+  {
+    "objectID": "fig_table.html#表",
+    "href": "fig_table.html#表",
+    "title": "2  図表",
+    "section": "2.2 表",
+    "text": "2.2 表\n\n\n\nTable 2.1: 表タイトル\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nx\n1\n10\n\n\ny\n0\n20\n\n\n\n\n\n\nTable 2.1 を参照",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>図表</span>"
+    ]
+  },
+  {
+    "objectID": "caution.html",
+    "href": "caution.html",
+    "title": "3  注意事項",
+    "section": "",
+    "text": "奇数ページだと1ページ白紙になるので，偶数ページにしないとだめ\n前半，後半部分は，PDFとして作成するときはページ数増えるので不要かも",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>注意事項</span>"
+    ]
+  },
+  {
+    "objectID": "sanko.html",
+    "href": "sanko.html",
+    "title": "4  参考資料と引用文献",
+    "section": "",
+    "text": "4.1 参考webサイト\n公式ドキュメント内のBooksの部分",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>参考資料と引用文献</span>"
+    ]
+  },
+  {
+    "objectID": "sanko.html#参考webサイト",
+    "href": "sanko.html#参考webサイト",
+    "title": "4  参考資料と引用文献",
+    "section": "",
+    "text": "Quarto Booksのドキュメント",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>参考資料と引用文献</span>"
+    ]
+  },
+  {
+    "objectID": "sanko.html#引用文献の書き方",
+    "href": "sanko.html#引用文献の書き方",
+    "title": "4  参考資料と引用文献",
+    "section": "4.2 引用文献の書き方",
+    "text": "4.2 引用文献の書き方\nまずプロジェクトフォルダ内にreferences.bibファイルを作成する。自ら記入していくこともできるが，引用する文献をGoogle Scholarで検索し Figure 4.1 ，BibTeX形式で表示してコピーし Figure 4.2 ，ファイル内にペーストしていくと簡単である。\n\n\n\n\n\n\nFigure 4.1: 文献を表示して引用をクリックする\n\n\n\n\n\n\n\n\n\nFigure 4.2: BibTeXをクリックする\n\n\n\n次にYAMLヘッダー内に，つまりBooksの時は_quarto.yml内に，以下を書く\n---\nbibliography: references.bib\n---\n文献を引用したい箇所に以下のように記述する。\n引用文献はこちら[@wickham2023r;@wickham2019welcome]  \nWickham[@wickham2023r]は述べた  \n@wickham2023r は述べた  \n出力例\n引用文献はこちら (Wickham, Çetinkaya-Rundel, and Grolemund 2023; Wickham et al. 2019)\nWickham (Wickham, Çetinkaya-Rundel, and Grolemund 2023)は述べた\nWickham, Çetinkaya-Rundel, and Grolemund (2023) は述べた\n\n\n\n本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内にcsl:対応するcslファイルを追記する\n---\nbibliography: references.bib\ncsl: nature.csl\n---\n入手先：nature.csl\n出力例\n\n引用文献はこちら1,2\nwickham1は述べた\n1 は述べた\n\n文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。\n## 引用文献\n\n:::{#refs}\n\n:::\n\n\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.\n“Welcome to the Tidyverse.” Journal of Open Source\nSoftware 4 (43): 1686.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science. \" O’Reilly Media, Inc.\".",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>参考資料と引用文献</span>"
+    ]
+  }
+]

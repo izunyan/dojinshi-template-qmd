@@ -71,10 +71,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -136,6 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <a href="./">技術系同人誌テンプレート</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/izunyan/gisho12" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -640,27 +643,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref">sec-caution</span></a></td>
+<td><a href="caution.html" class="quarto-xref"><span>Chapter 3</span></a></td>
 <td><code>[@sec-caution]</code></td>
 </tr>
 <tr class="even">
-<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a></td>
+<td><a href="caution.html" class="quarto-xref"><span>3</span></a></td>
 <td><code>[-@sec-caution]</code></td>
 </tr>
 <tr class="odd">
-<td><a href="#sec-caution" class="quarto-xref">セクション&nbsp;<span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a></td>
+<td><a href="caution.html" class="quarto-xref">セクション&nbsp;<span>3</span></a></td>
 <td><code>[セクション -@sec-caution]</code></td>
 </tr>
 <tr class="even">
-<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a>章</td>
+<td><a href="caution.html" class="quarto-xref"><span>3</span></a>章</td>
 <td><code>[-@sec-caution]章</code></td>
 </tr>
 <tr class="odd">
-<td><a href="#sec-caution" class="quarto-xref"><span class="quarto-unresolved-ref ref-noprefix">sec-caution</span></a></td>
+<td><a href="caution.html" class="quarto-xref"><span>3</span></a></td>
 <td><code>[-@sec-caution 章]</code></td>
 </tr>
 <tr class="even">
-<td><a href="#sec-caution">注意事項</a></td>
+<td><a href="fig_table.html">注意事項</a></td>
 <td><code>[注意事項](#sec-caution)</code></td>
 </tr>
 <tr class="odd">
@@ -685,19 +688,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="#fig-zu" class="quarto-xref">Figure&nbsp;<span class="quarto-unresolved-ref">fig-zu</span></a> を参照</td>
+<td><a href="fig_table.html#fig-zu" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> を参照</td>
 <td><code>@fig-zu を参照</code></td>
 </tr>
 <tr class="even">
-<td><a href="#fig-zu" class="quarto-xref">図&nbsp;<span class="quarto-unresolved-ref ref-noprefix">fig-zu</span></a> を参照</td>
+<td><a href="fig_table.html#fig-zu" class="quarto-xref">図&nbsp;<span>2.1</span></a> を参照</td>
 <td><code>[図 -@fig-zu] を参照</code></td>
 </tr>
 <tr class="odd">
-<td><a href="#tbl-hyo" class="quarto-xref">Table&nbsp;<span class="quarto-unresolved-ref">tbl-hyo</span></a> を参照</td>
+<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">Table&nbsp;<span>2.1</span></a> を参照</td>
 <td><code>@tbl-hyo を参照</code></td>
 </tr>
 <tr class="even">
-<td><a href="#tbl-hyo" class="quarto-xref">表&nbsp;<span class="quarto-unresolved-ref ref-noprefix">tbl-hyo</span></a>を参照</td>
+<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">表&nbsp;<span>2.1</span></a>を参照</td>
 <td><code>[表 -@tbl-hyo]を参照</code></td>
 </tr>
 </tbody>
@@ -801,7 +804,20 @@ Important
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### メモ</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>タイトルを変更</span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>出力</strong> ::: {.callout-note} #### メモ タイトルを変更 :::</p>
+<p><strong>出力</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+メモ
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>タイトルを変更</p>
+</div>
+</div>
 <p><strong>書き方</strong></p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 折りたたみもできる</span></span>
@@ -809,7 +825,7 @@ Important
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>出力</strong></p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -818,7 +834,7 @@ Important
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>ここにテキスト</p>
 </div>
@@ -897,7 +913,7 @@ Note&nbsp;1.1
 <p>ここにテキスト</p>
 </div>
 </div>
-<p><a href="#nte-example" class="quarto-xref">Note&nbsp;<span class="quarto-unresolved-ref">nte-example</span></a> を参照</p>
+<p><a href="#nte-example" class="quarto-xref">Note&nbsp;<span>1.1</span></a> を参照</p>
 <p>https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes</p>
 </section>
 </section>
@@ -975,6 +991,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
