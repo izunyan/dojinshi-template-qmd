@@ -1,10 +1,6 @@
-# 参考資料と引用文献 {#sec-sanko}
+# 引用文献の書き方 {#sec-sanko}
 
-## 参考webサイト
 
--   [Quarto Booksのドキュメント](https://quarto.org/docs/books/)
-
-公式ドキュメント内のBooksの部分
 
 ## 引用文献の書き方
 

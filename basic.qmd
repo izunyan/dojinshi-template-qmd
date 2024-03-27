@@ -554,3 +554,8 @@ https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes
 | Shiftキー   | ⇧    |
 | Optionキー  | ⌥    |
 | Controlキー | ⌃    |
+
+## 日付の書式
+
+https://github.com/quarto-dev/quarto-cli/discussions/4636
+https://quarto.org/docs/reference/dates.html

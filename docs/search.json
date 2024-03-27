@@ -14,7 +14,7 @@
     "href": "index.html#テンプレートの説明",
     "title": "技術系同人誌テンプレート",
     "section": "テンプレートの説明",
-    "text": "テンプレートの説明\n\nQuartoで同人誌の原稿を書くためのテンプレート\n\nbookdownパッケージでR Markdownで書く解説はこちら\n\nRender Bookすればhtmlとpdfがそのままできる\n\npdfは目次から始まり，ページ番号が1から始まる\n\n\n\n実行方法\n\nBuildタブで\n\nRender Book &gt; HTML Format\nRender Book &gt; PDF Format\n\n\n\n\nbookdown版でとてもお世話になったサイト\n\nBookdownによる技術系同人誌執筆",
+    "text": "テンプレートの説明\n\nQuartoで同人誌の原稿を書くためのテンプレート\n\nbookdownパッケージでR Markdownで書く解説はこちら\n\nRender Bookすればhtmlとpdfがそのままできる\n\npdfは目次から始まり，ページ番号が1から始まる設定\n\n\n\n実行方法\n\nBuildタブで\n\nRender Book &gt; HTML Format\nRender Book &gt; PDF Format\n\n\n\n\n参考資料\n\nQuarto Booksのドキュメント\n\n公式ドキュメント内のBooksの部分\n\nBookdownによる技術系同人誌執筆\n\nbookdown版でとてもお世話になったサイト",
     "crumbs": [
       "はじめに"
     ]
@@ -64,7 +64,7 @@
     "href": "index.html#執筆環境",
     "title": "技術系同人誌テンプレート",
     "section": "執筆環境",
-    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.4.551\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-03-27\n\n\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0",
+    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.4.551\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-03-28\n\n\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0",
     "crumbs": [
       "はじめに"
     ]
@@ -180,6 +180,16 @@
     ]
   },
   {
+    "objectID": "basic.html#日付の書式",
+    "href": "basic.html#日付の書式",
+    "title": "1  マークダウンの基本",
+    "section": "1.8 日付の書式",
+    "text": "1.8 日付の書式\nhttps://github.com/quarto-dev/quarto-cli/discussions/4636 https://quarto.org/docs/reference/dates.html",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>マークダウンの基本</span>"
+    ]
+  },
+  {
     "objectID": "basic.html#footnotes",
     "href": "basic.html#footnotes",
     "title": "1  マークダウンの基本",
@@ -222,31 +232,21 @@
   {
     "objectID": "sanko.html",
     "href": "sanko.html",
-    "title": "4  参考資料と引用文献",
+    "title": "4  引用文献の書き方",
     "section": "",
-    "text": "4.1 参考webサイト\n公式ドキュメント内のBooksの部分",
+    "text": "4.1 引用文献の書き方\nまずプロジェクトフォルダ内にreferences.bibファイルを作成する。自ら記入していくこともできるが，引用する文献をGoogle Scholarで検索し Figure 4.1 ，BibTeX形式で表示してコピーし Figure 4.2 ，ファイル内にペーストしていくと簡単である。\n次にYAMLヘッダー内に，つまりBooksの時は_quarto.yml内に，以下を書く\n文献を引用したい箇所に以下のように記述する。\n出力例\n引用文献はこちら (Wickham, Çetinkaya-Rundel, and Grolemund 2023; Wickham et al. 2019)\nWickham (Wickham, Çetinkaya-Rundel, and Grolemund 2023)は述べた\nWickham, Çetinkaya-Rundel, and Grolemund (2023) は述べた\n本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内にcsl:対応するcslファイルを追記する\n入手先：nature.csl\n出力例\n文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>参考資料と引用文献</span>"
-    ]
-  },
-  {
-    "objectID": "sanko.html#参考webサイト",
-    "href": "sanko.html#参考webサイト",
-    "title": "4  参考資料と引用文献",
-    "section": "",
-    "text": "Quarto Booksのドキュメント",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>参考資料と引用文献</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>引用文献の書き方</span>"
     ]
   },
   {
     "objectID": "sanko.html#引用文献の書き方",
     "href": "sanko.html#引用文献の書き方",
-    "title": "4  参考資料と引用文献",
-    "section": "4.2 引用文献の書き方",
-    "text": "4.2 引用文献の書き方\nまずプロジェクトフォルダ内にreferences.bibファイルを作成する。自ら記入していくこともできるが，引用する文献をGoogle Scholarで検索し Figure 4.1 ，BibTeX形式で表示してコピーし Figure 4.2 ，ファイル内にペーストしていくと簡単である。\n\n\n\n\n\n\nFigure 4.1: 文献を表示して引用をクリックする\n\n\n\n\n\n\n\n\n\nFigure 4.2: BibTeXをクリックする\n\n\n\n次にYAMLヘッダー内に，つまりBooksの時は_quarto.yml内に，以下を書く\n---\nbibliography: references.bib\n---\n文献を引用したい箇所に以下のように記述する。\n引用文献はこちら[@wickham2023r;@wickham2019welcome]  \nWickham[@wickham2023r]は述べた  \n@wickham2023r は述べた  \n出力例\n引用文献はこちら (Wickham, Çetinkaya-Rundel, and Grolemund 2023; Wickham et al. 2019)\nWickham (Wickham, Çetinkaya-Rundel, and Grolemund 2023)は述べた\nWickham, Çetinkaya-Rundel, and Grolemund (2023) は述べた\n\n\n\n本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内にcsl:対応するcslファイルを追記する\n---\nbibliography: references.bib\ncsl: nature.csl\n---\n入手先：nature.csl\n出力例\n\n引用文献はこちら1,2\nwickham1は述べた\n1 は述べた\n\n文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。\n## 引用文献\n\n:::{#refs}\n\n:::\n\n\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.\n“Welcome to the Tidyverse.” Journal of Open Source\nSoftware 4 (43): 1686.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science. \" O’Reilly Media, Inc.\".",
+    "title": "4  引用文献の書き方",
+    "section": "",
+    "text": "Figure 4.1: 文献を表示して引用をクリックする\n\n\n\n\n\n\n\n\n\nFigure 4.2: BibTeXをクリックする\n\n\n\n\n---\nbibliography: references.bib\n---\n\n引用文献はこちら[@wickham2023r;@wickham2019welcome]  \nWickham[@wickham2023r]は述べた  \n@wickham2023r は述べた  \n\n\n\n\n\n\n---\nbibliography: references.bib\ncsl: nature.csl\n---\n\n\n\n引用文献はこちら1,2\nwickham1は述べた\n1 は述べた\n\n\n## 引用文献\n\n:::{#refs}\n\n:::\n\n\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy\nD’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.\n“Welcome to the Tidyverse.” Journal of Open Source\nSoftware 4 (43): 1686.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.\nR for Data Science. \" O’Reilly Media, Inc.\".",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>参考資料と引用文献</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>引用文献の書き方</span>"
     ]
   }
 ]

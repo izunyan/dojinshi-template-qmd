@@ -12,10 +12,11 @@ execute:
 toc-title: 目次
 
 book:
-  ##### PDF作成時は以下3行コメントアウト ##### 
+  ##### PDF作成時は以下4行コメントアウト ##### 
   title: "技術系同人誌テンプレート"
   author: "やわらかクジラ"
-  date: "2024/1/2"
+  date: today
+  date-format: iso
   ##### PDF作成時のコメントアウトここまで #####
   
   cover-image: "images/cover.png" # 表紙画像

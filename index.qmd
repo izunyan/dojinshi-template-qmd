@@ -53,7 +53,7 @@ knitr::include_graphics("images/cover.png")
 
 * Render Bookすればhtmlとpdfがそのままできる
 
-  + pdfは目次から始まり，ページ番号が1から始まる
+  + pdfは目次から始まり，ページ番号が1から始まる設定
 
 ### 実行方法
 
@@ -61,9 +61,13 @@ knitr::include_graphics("images/cover.png")
   + Render Book > HTML Format
   + Render Book > PDF Format
 
-### bookdown版でとてもお世話になったサイト
+### 参考資料
 
--   [Bookdownによる技術系同人誌執筆](https://teastat.blogspot.com/2019/01/bookdown.html)
+- [Quarto Booksのドキュメント](https://quarto.org/docs/books/)
+     - 公式ドキュメント内のBooksの部分
+
+- [Bookdownによる技術系同人誌執筆](https://teastat.blogspot.com/2019/01/bookdown.html)
+     - bookdown版でとてもお世話になったサイト
 
 
 
