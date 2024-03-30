@@ -287,7 +287,7 @@ ggplot(df) +
     -   ただし解説目的で上記出力に`{{{r}}}`を表示させるためには,`{{{{r}}}}`と書く必要がある
     -   参照:[Unexecuted Blocks](https://quarto.org/docs/computations/execution-options.html#unexecuted-blocks); [Executable Blocks](https://quarto.org/docs/output-formats/html-code.html#executable-blocks)
     
-<!-- ````(4 backticks)と{{{{r}}}}   -->
+<!-- 書きかけメモ ````(4 backticks)と{{{{r}}}}   -->
 
 **チャンク表示**
 
@@ -301,6 +301,50 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 :::
+
+<!-- ## コードのアノテーション（注釈） -->
+
+<!-- コードの１行および複数行単位で数字の注釈をつけることができる。デフォルトのHTMLのスタイルやPDFなどではチャンクの下に対応する数字と注釈内容が表示されるが，他のスタイルではチャンク中の注釈数字の上にカーソルを持っていくことで内容が表示される。 -->
+
+<!-- [公式ドキュメント：Code Annotation](https://quarto.org/docs/authoring/code-annotation.html) -->
+
+<!-- 注釈をつけたい行末に`# <数字>`をつけて，その内容をチャンクの下に`数字. 注釈の内容`というように書くことで反映される -->
+
+<!-- **記載例** -->
+
+<!-- ```` markdown -->
+<!-- ```r -->
+<!-- df |>  -->
+<!--   summarise(across(bill_length_mm,                         # <1>                    -->
+<!--                    list(mean = \(x) mean(x, na.rm = TRUE), # <2> -->
+<!--                         sd   = \(x) mean(x, na.rm = TRUE)) # <2> -->
+<!--                    ), -->
+<!--             .by = species)                                 # <3> -->
+
+<!-- ``` -->
+
+<!-- 1. 対象となる変数 -->
+<!-- 2. 計算部分 -->
+<!-- 3. グループ別に出すときに指定 -->
+
+<!-- ```` -->
+
+
+<!-- **出力例** -->
+
+<!-- ```{r} -->
+<!-- df |>  -->
+<!--   summarise(across(bill_length_mm,                         # <1>                    -->
+<!--                    list(mean = \(x) mean(x, na.rm = TRUE), # <2> -->
+<!--                         sd   = \(x) mean(x, na.rm = TRUE)) # <2> -->
+<!--                    ), -->
+<!--             .by = species)                                 # <3> -->
+
+<!-- ``` -->
+
+<!-- 1. 対象となる変数 -->
+<!-- 2. 計算部分 -->
+<!-- 3. グループ別に出すときに指定 -->
 
 ## 脚注
 
