@@ -241,6 +241,12 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
+\makeatletter
+\@ifpackageloaded{tikz}{}{\usepackage{tikz}}
+\makeatother
+        \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+          \node[shape=circle,draw,inner sep=1pt] (char) {{\scriptsize#1}};}}  
+                  
 \newcounter{quartocalloutnteno}
 \newcommand{\quartocalloutnte}[1]{\refstepcounter{quartocalloutnteno}\label{#1}}
 \ifLuaTeX
@@ -262,7 +268,7 @@
 
 \title{技術系同人誌テンプレート}
 \author{やわらかクジラ}
-\date{2024-03-28}
+\date{2024-04-04}
 
 \begin{document}
 \maketitle
@@ -479,7 +485,7 @@ os & Windows 10 x64 (build 19045)\\
 \hline
 system & x86\_64, mingw32\\
 \hline
-date & 2024-03-28\\
+date & 2024-04-04\\
 \hline
 \end{tabular}
 \end{table}
@@ -885,12 +891,6 @@ eval: false & × & × & 〇 \\
 
 \subsection{実行×\textbar 出力×\textbar コード〇（チャンク）}
 
-\begin{itemize}
-\tightlist
-\item
-  \texttt{\{r\}}をさらに\texttt{\{\}}で囲んで\texttt{\{\{r\}\}}と2重に書く
-\end{itemize}
-
 \textbf{チャンクでの書き方}
 
 \begin{Shaded}
@@ -939,6 +939,68 @@ eval: false & × & × & 〇 \\
 \InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
 \end{Highlighting}
 \end{Shaded}
+
+\section{コードのアノテーション（注釈）}\label{ux30b3ux30fcux30c9ux306eux30a2ux30ceux30c6ux30fcux30b7ux30e7ux30f3ux6ce8ux91c8}
+
+コードの１行および複数行単位で数字の注釈をつけることができる。デフォルトのHTMLのスタイルやPDFなどではチャンクの下に対応する数字と注釈内容が表示されるが，他のスタイルではチャンク中の注釈数字の上にカーソルを持っていくことで内容が表示される。
+
+\href{https://quarto.org/docs/authoring/code-annotation.html}{公式ドキュメント：Code
+Annotation}
+
+注釈をつけたい行末に\texttt{\#\ \textless{}数字\textgreater{}}をつけて，その内容をチャンクの下に\texttt{数字.\ 注釈の内容}というように書くことで反映される
+
+\textbf{記載例}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}r}
+\NormalTok{df }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{summarise}\NormalTok{(}\FunctionTok{across}\NormalTok{(bill\_length\_mm,                         }\hspace*{\fill}\NormalTok{\circled{1}}
+                   \FunctionTok{list}\NormalTok{(}\AttributeTok{mean =}\NormalTok{ \textbackslash{}(x) }\FunctionTok{mean}\NormalTok{(x, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{), }\hspace*{\fill}\NormalTok{\circled{2}}
+                        \AttributeTok{sd   =}\NormalTok{ \textbackslash{}(x) }\FunctionTok{sd}\NormalTok{(x, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))   }
+\NormalTok{                   ),}
+            \AttributeTok{.by =}\NormalTok{ species)                                 }\hspace*{\fill}\NormalTok{\circled{3}}
+
+\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+
+\SpecialStringTok{1. }\NormalTok{対象となる変数}
+\SpecialStringTok{2. }\NormalTok{計算部分}
+\SpecialStringTok{3. }\NormalTok{グループ別に出すときに指定}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{出力例}
+
+\phantomsection\label{annotated-cell-4}%
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{summarise}\NormalTok{(}\FunctionTok{across}\NormalTok{(bill\_length\_mm, }\hspace*{\fill}\NormalTok{\circled{1}}
+                   \FunctionTok{list}\NormalTok{(}\AttributeTok{mean =}\NormalTok{ \textbackslash{}(x) }\FunctionTok{mean}\NormalTok{(x, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{), }\hspace*{\fill}\NormalTok{\circled{2}}
+                        \AttributeTok{sd   =}\NormalTok{ \textbackslash{}(x) }\FunctionTok{sd}\NormalTok{(x, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)) }
+\NormalTok{                   ),}
+            \AttributeTok{.by =}\NormalTok{ species) }\hspace*{\fill}\NormalTok{\circled{3}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{description}
+\tightlist
+\item[\circled{1}]
+対象となる変数
+\item[\circled{2}]
+計算部分
+\item[\circled{3}]
+グループ別に出すときに指定
+\end{description}
+
+\begin{verbatim}
+# A tibble: 3 x 3
+  species   bill_length_mm_mean bill_length_mm_sd
+  <fct>                   <dbl>             <dbl>
+1 Adelie                   38.8              2.66
+2 Gentoo                   47.5              3.08
+3 Chinstrap                48.8              3.34
+\end{verbatim}
 
 \section{脚注}\label{ux811aux6ce8}
 
@@ -1059,7 +1121,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 ここにテキスト
 
@@ -1073,7 +1135,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-tip-color-frame, colback=white, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-tip-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 ここにテキスト
 
@@ -1087,7 +1149,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-warning-color-frame, colback=white, colbacktitle=quarto-callout-warning-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-warning-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-warning-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 ここにテキスト
 
@@ -1101,7 +1163,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Caution}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-caution-color-frame, colback=white, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-caution-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-caution-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Caution}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 ここにテキスト
 
@@ -1115,7 +1177,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-important-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-important-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 ここにテキスト
 
@@ -1136,7 +1198,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 
 \textbf{出力}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{メモ}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{メモ}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 タイトルを変更
 
@@ -1155,7 +1217,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 
 \textbf{出力}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{折りたたみもできる}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{折りたたみもできる}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 ここにテキスト
 
@@ -1174,7 +1236,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 
 \textbf{出力}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title={メモ}, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, title={メモ}, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 アイコンなし
 
@@ -1193,7 +1255,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 
 \textbf{出力}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colback=white, toprule=.15mm, opacityback=0, breakable, arc=.35mm, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, arc=.35mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, breakable, toprule=.15mm, colback=white, left=2mm]
 \begin{minipage}[t]{5.5mm}
 \textcolor{quarto-callout-note-color}{\faInfo}
 \end{minipage}%
@@ -1219,7 +1281,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 
 \textbf{出力}
 
-\begin{tcolorbox}[enhanced jigsaw, colframe=quarto-callout-note-color-frame, colback=white, toprule=.15mm, opacityback=0, breakable, arc=.35mm, bottomrule=.15mm, leftrule=.75mm, rightrule=.15mm, left=2mm]
+\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, arc=.35mm, colframe=quarto-callout-note-color-frame, leftrule=.75mm, bottomrule=.15mm, opacityback=0, breakable, toprule=.15mm, colback=white, left=2mm]
 
 \vspace{-3mm}\textbf{シンプルでアイコンなし}\vspace{3mm}
 
@@ -1229,7 +1291,7 @@ Table~\ref{tbl-hyo} を参照 & \texttt{@tbl-hyo\ を参照} \\
 
 \subsection{コールアウトへのリンク}\label{ux30b3ux30fcux30ebux30a2ux30a6ux30c8ux3078ux306eux30eaux30f3ux30af}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, toptitle=1mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note \ref*{nte-example} }, breakable, arc=.35mm, opacitybacktitle=0.6, leftrule=.75mm, rightrule=.15mm, colframe=quarto-callout-note-color-frame, colback=white, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, coltitle=black, left=2mm, titlerule=0mm, bottomrule=.15mm, opacityback=0]
+\begin{tcolorbox}[enhanced jigsaw, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, colback=white, rightrule=.15mm, toptitle=1mm, titlerule=0mm, arc=.35mm, colframe=quarto-callout-note-color-frame, bottomtitle=1mm, leftrule=.75mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note \ref*{nte-example} }, bottomrule=.15mm, opacityback=0, breakable, left=2mm, opacitybacktitle=0.6, coltitle=black]
 
 \quartocalloutnte{nte-example} 
 
@@ -1271,6 +1333,11 @@ Shiftキー & ⇧ \\
 Optionキー & ⌥ \\
 Controlキー & ⌃ \\
 \end{longtable}
+
+\section{日付の書式}\label{ux65e5ux4ed8ux306eux66f8ux5f0f}
+
+https://github.com/quarto-dev/quarto-cli/discussions/4636
+https://quarto.org/docs/reference/dates.html
 
 \bookmarksetup{startatroot}
 
