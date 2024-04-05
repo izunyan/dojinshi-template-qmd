@@ -243,7 +243,7 @@ ggplot(df) +
 
 **チャンクでの書き方**
 ```{{r}}
-#| echo: fenced
+#| eval: false  
 
 1 + 1
 
@@ -310,7 +310,7 @@ ggplot(df) +
 
 注釈をつけたい行末に`# <数字>`をつけて，その内容をチャンクの下に`数字. 注釈の内容`というように書くことで反映される
 
-**記載例**
+**記述例**
 
 {{< include _code-annotation.md >}}
 
@@ -318,7 +318,11 @@ ggplot(df) +
 
 **出力例**
 
+- チャンクの下の丸数字をクリックすると，該当行がハイライトされる
+
 ```{r}
+#| echo: fenced
+
 df |>
   summarise(across(bill_length_mm,                         # <1>
                    list(mean = \(x) mean(x, na.rm = TRUE), # <2>
@@ -334,7 +338,7 @@ df |>
 
 
 ::: callout-note
-記載例の部分をこのqmdファイル内に書くと，その下から認識されなくなってしまう現象が起こるので，別途.mdファイルに書き出して，`{{< include _ファイル名.md >}}`として読み込んでいる。この時のファイル名には先頭にアンダーバー(_)をつけて区別することが推奨されている
+記述例の部分をこのqmdファイル内に書くと，その下から認識されなくなってしまう現象が起こるので，別途.mdファイルに書き出して，`{{< include _ファイル名.md >}}`として読み込んでいる。この時のファイル名には先頭にアンダーバー( _ )をつけることで，render時に自動的に通常のファイルと区別される（[公式ドキュメント：Includes > contents](https://quarto.org/docs/authoring/includes.html#content)）
 :::
 
 ## 脚注
@@ -427,7 +431,7 @@ df |>
 
 ### 基本の型
 
-
+**書き方**
 
 ``` markdown
 ::: {.callout-note}
@@ -435,29 +439,39 @@ df |>
 :::
 ```
 
+**出力**
+
 ::: callout-note
 ここにテキスト
 :::
+
+**書き方**
 
 ``` markdown
 ::: {.callout-tip}
 ここにテキスト
 :::
 ```
+**出力**
 
 ::: callout-tip
 ここにテキスト
 :::
+
+**書き方**
 
 ``` markdown
 ::: {.callout-warning}
 ここにテキスト
 :::
 ```
+**出力**
 
 ::: callout-warning
 ここにテキスト
 :::
+
+**書き方**
 
 ``` markdown
 ::: {.callout-caution}
@@ -465,15 +479,20 @@ df |>
 :::
 ```
 
+**出力**
+
 ::: callout-caution
 ここにテキスト
 :::
+
+**書き方**
 
 ``` markdown
 ::: {.callout-important}
 ここにテキスト
 :::
 ```
+**出力**
 
 ::: callout-important
 ここにテキスト
@@ -591,5 +610,5 @@ https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes
 
 ## 日付の書式
 
-https://github.com/quarto-dev/quarto-cli/discussions/4636
-https://quarto.org/docs/reference/dates.html
+[](https://github.com/quarto-dev/quarto-cli/discussions/4636)
+[公式ドキュメント：date](https://quarto.org/docs/reference/dates.html)

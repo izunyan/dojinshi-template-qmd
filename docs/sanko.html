@@ -215,7 +215,9 @@ div.csl-indent {
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#引用文献の書き方" id="toc-引用文献の書き方" class="nav-link active" data-scroll-target="#引用文献の書き方"><span class="header-section-number">4.1</span> 引用文献の書き方</a></li>
+  <li><a href="#文献情報の用意" id="toc-文献情報の用意" class="nav-link active" data-scroll-target="#文献情報の用意"><span class="header-section-number">4.1</span> 文献情報の用意</a></li>
+  <li><a href="#本文内での引用" id="toc-本文内での引用" class="nav-link" data-scroll-target="#本文内での引用"><span class="header-section-number">4.2</span> 本文内での引用</a></li>
+  <li><a href="#文献リストの位置" id="toc-文献リストの位置" class="nav-link" data-scroll-target="#文献リストの位置"><span class="header-section-number">4.3</span> 文献リストの位置</a></li>
   </ul>
 </nav>
     </div>
@@ -241,8 +243,8 @@ div.csl-indent {
 </header>
 
 
-<section id="引用文献の書き方" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="引用文献の書き方"><span class="header-section-number">4.1</span> 引用文献の書き方</h2>
+<section id="文献情報の用意" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="文献情報の用意"><span class="header-section-number">4.1</span> 文献情報の用意</h2>
 <p>まずプロジェクトフォルダ内に<code>references.bib</code>ファイルを作成する。自ら記入していくこともできるが，引用する文献を<a href="https://scholar.google.com/">Google Scholar</a>で検索し <a href="#fig-gscholar" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> ，BibTeX形式で表示してコピーし <a href="#fig-gscholar-cite" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> ，ファイル内にペーストしていくと簡単である。</p>
 <div id="fig-gscholar" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -268,17 +270,18 @@ Figure&nbsp;4.2: BibTeXをクリックする
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="本文内での引用" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="本文内での引用"><span class="header-section-number">4.2</span> 本文内での引用</h2>
 <p>文献を引用したい箇所に以下のように記述する。</p>
+<p><strong>記述例</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>引用文献はこちら<span class="co">[</span><span class="ot">@wickham2023r;@wickham2019welcome</span><span class="co">]</span>  </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Wickham<span class="co">[</span><span class="ot">@wickham2023r</span><span class="co">]</span>は述べた  </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>@wickham2023r は述べた  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>出力例</strong></p>
-<p>引用文献はこちら <span class="citation" data-cites="wickham2023r wickham2019welcome">(<a href="sanko.html#ref-wickham2023r" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>; <a href="sanko.html#ref-wickham2019welcome" role="doc-biblioref">Wickham et al. 2019</a>)</span><br>
-Wickham <span class="citation" data-cites="wickham2023r">(<a href="sanko.html#ref-wickham2023r" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span>は述べた<br>
-<span class="citation" data-cites="wickham2023r">Wickham, Çetinkaya-Rundel, and Grolemund (<a href="sanko.html#ref-wickham2023r" role="doc-biblioref">2023</a>)</span> は述べた</p>
-<!-- 引用文献リストの例 -->
-<!-- ::: {#refs} -->
-<!-- ::: -->
+<p>引用文献はこちら <span class="citation" data-cites="wickham2023r wickham2019welcome">(<a href="references.html#ref-wickham2023r" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>; <a href="references.html#ref-wickham2019welcome" role="doc-biblioref">Wickham et al. 2019</a>)</span><br>
+Wickham <span class="citation" data-cites="wickham2023r">(<a href="references.html#ref-wickham2023r" role="doc-biblioref">Wickham, Çetinkaya-Rundel, and Grolemund 2023</a>)</span>は述べた<br>
+<span class="citation" data-cites="wickham2023r">Wickham, Çetinkaya-Rundel, and Grolemund (<a href="references.html#ref-wickham2023r" role="doc-biblioref">2023</a>)</span> は述べた</p>
 <p>本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内に<code>csl:対応するcslファイル</code>を追記する</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
@@ -291,6 +294,9 @@ Wickham <span class="citation" data-cites="wickham2023r">(<a href="sanko.html#re
 wickham<sup>1</sup>は述べた<br>
 <sup>1</sup> は述べた</p>
 </blockquote>
+</section>
+<section id="文献リストの位置" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="文献リストの位置"><span class="header-section-number">4.3</span> 文献リストの位置</h2>
 <p>文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 引用文献</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -299,16 +305,12 @@ wickham<sup>1</sup>は述べた<br>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-wickham2019welcome" class="csl-entry" role="listitem">
-Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy
-D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019.
-<span>“Welcome to the Tidyverse.”</span> <em>Journal of Open Source
-Software</em> 4 (43): 1686.
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the Tidyverse.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686.
 </div>
 <div id="ref-wickham2023r" class="csl-entry" role="listitem">
-Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023.
-<em>R for Data Science</em>. " O’Reilly Media, Inc.".
+Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. <em>R for Data Science</em>. " O’Reilly Media, Inc.".
 </div>
 </div>
 </section>

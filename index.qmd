@@ -63,8 +63,8 @@ knitr::include_graphics("images/cover.png")
 
 ### 参考資料
 
-- [Quarto Booksのドキュメント](https://quarto.org/docs/books/)
-     - 公式ドキュメント内のBooksの部分
+- [Creating a Book](https://quarto.org/docs/books/)
+     - 公式ドキュメント内のBooks形式の説明
 
 - [Bookdownによる技術系同人誌執筆](https://teastat.blogspot.com/2019/01/bookdown.html)
      - bookdown版でとてもお世話になったサイト
