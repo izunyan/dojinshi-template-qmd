@@ -50,8 +50,9 @@ format:
     toc: true
     # code-fold: true # コードを折りたたんだ状態で表示
     theme:
+      dark: darkly  # ダークモード;themeで先に来た方がdefaultに
       light: flatly
-      dark: darkly  # ダークモード
+
   pdf:
     documentclass: bxjsbook                     # 日本語pdf
     classoption: xelatex, ja=standard           # 

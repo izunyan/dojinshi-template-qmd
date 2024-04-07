@@ -64,7 +64,7 @@
     "href": "index.html#執筆環境",
     "title": "技術系同人誌テンプレート",
     "section": "執筆環境",
-    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.4.551\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-04-06\n\n\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0",
+    "text": "執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.4.551\n\n\n\nRおよびRStudio、パッケージのバージョン\n\nrstudioだけなぜか表示されないので手動で…\n\nバージョン RStudio 2023.09.0+463 “Desert Sunflower”\n\n\n\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.3.0 (2023-04-21 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2024-04-08\n\n\n\n\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0",
     "crumbs": [
       "はじめに"
     ]
