@@ -1,4 +1,4 @@
-# マークダウンの基本 {#sec-basic}
+# 基本事項 {#sec-basic}
 
 ## 準備
 
@@ -43,8 +43,8 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
--   チャンクオプションと実行後パターンの対応一覧
-    -   〇はあり，×はなしであることを示している。
+**チャンクオプションと実行後パターンの対応一覧**
+-   〇はあり，×はなしであることを示している。
 
 | チャンクオプション           | 実行 | 出力        | コード         |
 |------------------------------|------|-------------|----------------|
@@ -321,7 +321,7 @@ ggplot(df) +
 - チャンクの下の丸数字をクリックすると，該当行がハイライトされる
 
 ```{r}
-#| echo: fenced
+#| eval: false 
 
 df |>
   summarise(across(bill_length_mm,                         # <1>
@@ -338,7 +338,7 @@ df |>
 
 
 ::: callout-note
-記述例の部分をこのqmdファイル内に書くと，その下から認識されなくなってしまう現象が起こるので，別途.mdファイルに書き出して，`{{< include _ファイル名.md >}}`として読み込んでいる。この時のファイル名には先頭にアンダーバー( _ )をつけることで，render時に自動的に通常のファイルと区別される（[公式ドキュメント：Includes > contents](https://quarto.org/docs/authoring/includes.html#content)）
+アノテーションの記述例の部分をこのqmdファイル内に書くと，その下から認識されなくなってしまう現象が起こるので，別途.mdファイルに書き出して，`{{< include _ファイル名.md >}}`として読み込んでいる。この時のファイル名には先頭にアンダーバー( _ )をつけることで，render時に自動的に通常のファイルと区別される（[公式ドキュメント：Includes > contents](https://quarto.org/docs/authoring/includes.html#content)）
 :::
 
 ## 脚注
@@ -424,6 +424,8 @@ df |>
 | [表 -@tbl-hyo]を参照 | `[表 -@tbl-hyo]を参照` |
 
 ## コールアウト
+
+-  本文の流れを損なわずに，詳細や注意点などを解説したいときに便利
 
 -   公式ドキュメントの参照箇所
     -   [Callout
@@ -612,3 +614,13 @@ https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes
 
 [](https://github.com/quarto-dev/quarto-cli/discussions/4636)
 [公式ドキュメント：date](https://quarto.org/docs/reference/dates.html)
+
+
+
+本書のHTML版では以下の設定を使用
+``` yaml
+---
+book:
+  date: today
+  date-format: iso
+---
