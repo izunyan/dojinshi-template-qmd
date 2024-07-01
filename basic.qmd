@@ -55,7 +55,8 @@ ggplot(df) +
 | output: false                | 〇   | ×           | 〇(2)          |
 | echo: fenced                 | 〇   | ×           | 〇（チャンク） |
 | eval: false                  | ×    | ×           | 〇             |
-| `{{{r}}}`                      | ×    | ×           | 〇（チャンク） |
+| `{{{r}}}`                    | ×    | ×           | 〇（チャンク） |
+| eval: false include: false   |  ×   | ×           | ×              |
 
 ------------------------------------------------------------------------
 
@@ -300,6 +301,41 @@ ggplot(df) +
 ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
+
+### 実行×|出力×|コード×
+
+- Rマークダウンのチャンクに選択肢としてあったshow nothing(don't run code)の書き方
+
+
+
+**チャンクでの書き方**
+```{{r}}
+#| eval: false 
+#| include: false
+
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
+**コード表示**
+
+```{r}
+#| eval: false
+#| include: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_length_mm, bill_depth_mm))
+```
+
+
 :::
 
 ## コードのアノテーション（注釈）
