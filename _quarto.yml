@@ -15,8 +15,8 @@ book:
   ##### PDF作成時は以下4行コメントアウト ##### 
   title: "技術系同人誌テンプレート"
   author: "やわらかクジラ"
-  date: today
-  date-format: iso
+  # date: today
+  # date-format: iso
   ##### PDF作成時のコメントアウトここまで #####
   
   cover-image: "images/cover.png" # 表紙画像
@@ -27,6 +27,7 @@ book:
   # 作成するページのgmdファイル名を順番に指定
   chapters:
     - index.qmd
+    - introduction.qmd
     - basic.qmd
     - fig_table.qmd
     - caution.qmd
@@ -52,6 +53,7 @@ format:
     theme:
       dark: darkly  # ダークモード;themeで先に来た方がdefaultに
       light: flatly
+
 
   pdf:
     documentclass: bxjsbook                     # 日本語pdf

@@ -62,8 +62,12 @@ ggplot(df) +
 
 **様々なパターンの記述例**
 
+下記タブはそれぞれ「**実行|出力|コード**」の〇×を示す
+（例：〇×〇　→　実行〇|出力×|コード〇）
+
 ::: panel-tabset
-### 実行〇|出力〇|コード〇
+### 〇〇〇
+<!-- ### 実行〇|出力〇|コード〇 -->
 
 -   デフォルトの設定なので，必要なチャンクオプション特になし
 
@@ -76,7 +80,8 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行〇|出力〇|コード×
+### 〇〇×
+<!-- ### 実行〇|出力〇|コード× -->
 
 **チャンクでの書き方**
 
@@ -103,7 +108,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行〇|出力×|コード×
+### 〇××
 
 **チャンクでの書き方**
 ```{{r}}
@@ -129,7 +134,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行〇|出力×（図はあり）|コード〇
+### 〇×（図あり）〇
 
 **チャンクでの書き方**
 ```{{r}}
@@ -154,7 +159,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行〇|出力×|コード〇(1)
+### 〇×〇(1)
 
 **チャンクでの書き方**
 
@@ -183,7 +188,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行〇|出力×|コード〇(2)
+### 〇×〇(2)
 
 **チャンクでの書き方**
 ```{{r}}
@@ -209,7 +214,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行〇|出力×|コード〇（チャンク）
+### 〇×〇（チャンク）
 
 -   公式ドキュメント[Fenced
     Echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)を参照
@@ -238,7 +243,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行×|出力×|コード〇
+### ××〇
 
 -   単にコードを表示したいだけの時に便利
 
@@ -266,7 +271,7 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行×|出力×|コード〇（チャンク）
+### ××〇（チャンク）
 
 <!-- -   `{{r}}`をさらに`{}`で囲んで`{{{r}}}`と2重に書く -->
 
@@ -302,9 +307,9 @@ ggplot(df) +
   geom_point(aes(bill_length_mm, bill_depth_mm))
 ```
 
-### 実行×|出力×|コード×
+### ×××
 
-- Rマークダウンのチャンクに選択肢としてあったshow nothing(don't run code)の書き方
+- Rマークダウンのチャンクに選択肢としてあった`show nothing(don't run code)`の書き方
 
 
 
@@ -625,8 +630,9 @@ df |>
 
 @nte-example を参照
 
-
+https://quarto.org/docs/authoring/callouts.html#cross-references
 https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes
+
 
 ## MacのPCのキーボード記号の意味
 

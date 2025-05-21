@@ -1,0 +1,118 @@
+# はじめに
+
+## テンプレートの説明
+
+* Quartoで同人誌の原稿を書くためのテンプレート
+  + bookdownパッケージでR Markdownで書く解説は[こちら](https://izunyan.github.io/dojinshi-template-rmd/)
+
+* Render Bookすればhtmlとpdfがそのままできる
+
+  + pdfは目次から始まり，ページ番号が1から始まる設定
+
+### 実行方法
+
+* Buildタブで
+  + Render Book > HTML Format
+  + Render Book > PDF Format
+
+### 参考資料
+
+- [Creating a Book](https://quarto.org/docs/books/)
+     - 公式ドキュメント内のBooks形式の説明
+
+- [Bookdownによる技術系同人誌執筆](https://teastat.blogspot.com/2019/01/bookdown.html)
+     - bookdown版でとてもお世話になったサイト
+
+
+
+
+
+<!-- 以下，同人誌の構成案 -->
+
+## 概要
+* 本書の目的
+  + 説明
+
+* 本書の内容
+  + 説明
+
+* 執筆動機
+  + 説明
+
+* 今後の展望
+  + 
+
+* 本書の内容は、[githubレポジトリ](url)ですべて公開
+
+## 本書の特徴
+
+* 本書の強み
+  + 
+
+## 想定読者
+
+* RとRStudioをダウンロードしてPCにインストールまでできることが最低条件
+
+## 各章の紹介
+
+* [-@sec-basic]では
+
+## 執筆環境
+
+- 本書は[Quarto](https://quarto.org/)にて執筆
+  - バージョン`r quarto::quarto_version()`
+
+### RおよびRStudio、パッケージのバージョン
+
+```{r}
+#| echo: false
+
+# rstudioapi::versionInfo()$version
+# rstudioapi::versionInfo()$release_name
+
+# or
+
+# RStudio.Version()$version
+
+```
+
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+
+sessioninfo::session_info()$platform |> 
+  stack() |>
+  tibble::as_tibble() |>
+  dplyr::relocate(ind) |>
+  dplyr::mutate(ind = as.character(ind)) |>
+  dplyr::filter(ind %in% c("version", "os", "system", "date", "rstudio")) |>
+  knitr::kable() |>
+  kableExtra::kable_styling(position = "center")
+
+sessioninfo::session_info()$packages |> 
+  tibble::as_tibble() |> 
+  dplyr::select(package, loadedversion) |> 
+  dplyr::filter(package %in% c("tidyverse")) |>
+  knitr::kable() |>
+  kableExtra::kable_styling(position = "center")
+```
+
+
+* RstudioのバージョンはRenderすると表示されないので手動で確認して転記
+  + RStudio 2024.9.1.394
+
+```{r}
+#| eval: false 
+ rstudioapi::versionInfo()$version
+```
+
+
+
+
+## 使用上の注意など
+
+* 本書の内容はすべてwindows環境を想定
+
+* この本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできない。使用する際は、自己責任で利用すること

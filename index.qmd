@@ -25,7 +25,7 @@ options(tibble_opt)
 
 <!-- 全体の設定ここまで -->
 
-# はじめに {.unnumbered}
+# ようこそ {.unnumbered}
 
 <!-- 表紙画像をここに -->
 
@@ -43,127 +43,27 @@ knitr::include_graphics("images/cover.png")
 * こちらは随時updateされていく予定
 
 
-はじめにの文章:ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-
-
-## テンプレートの説明
-
-* Quartoで同人誌の原稿を書くためのテンプレート
-  + bookdownパッケージでR Markdownで書く解説は[こちら](https://izunyan.github.io/dojinshi-template-rmd/)
-
-* Render Bookすればhtmlとpdfがそのままできる
-
-  + pdfは目次から始まり，ページ番号が1から始まる設定
-
-### 実行方法
-
-* Buildタブで
-  + Render Book > HTML Format
-  + Render Book > PDF Format
-
-### 参考資料
-
-- [Creating a Book](https://quarto.org/docs/books/)
-     - 公式ドキュメント内のBooks形式の説明
-
-- [Bookdownによる技術系同人誌執筆](https://teastat.blogspot.com/2019/01/bookdown.html)
-     - bookdown版でとてもお世話になったサイト
+ようこその文章:あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ(310文字)
 
 
 
 
-
-<!-- 以下，同人誌の構成案 -->
-
-## 概要
-* 本書の目的
-  + 説明
-
-* 本書の内容
-  + 説明
-
-* 執筆動機
-  + 説明
-
-* 今後の展望
-  + 
-
-* 本書の内容は、[githubレポジトリ](url)ですべて公開
-
-## 本書の特徴
-
-* 本書の強み
-  + 
-
-## 想定読者
-
-* RとRStudioをダウンロードしてPCにインストールまでできることが最低条件
-
-## 各章の紹介
-
-* [-@sec-basic]では
-
-## 執筆環境
-
-- 本書は[Quarto](https://quarto.org/)にて執筆
-  - バージョン`r quarto::quarto_version()`
-
-### RおよびRStudio、パッケージのバージョン
-
-* rstudioだけなぜか表示されないので手動で…
-  + バージョン RStudio 2023.09.0+463 "Desert Sunflower"
-
-
-```{r}
-#| echo: false
-
-# rstudioapi::versionInfo()$version
-# rstudioapi::versionInfo()$release_name
-
-# or
-
-# RStudio.Version()$version
-
-```
-
-
-```{r}
-#| echo: false
-
-library(tidyverse)
-
-sessioninfo::session_info()$platform |> 
-  stack() |>
-  tibble::as_tibble() |>
-  dplyr::relocate(ind) |>
-  dplyr::mutate(ind = as.character(ind)) |>
-  dplyr::filter(ind %in% c("version", "os", "system", "date", "rstudio")) |>
-  knitr::kable() |>
-  kableExtra::kable_styling(position = "center")
-
-sessioninfo::session_info()$packages |> 
-  tibble::as_tibble() |> 
-  dplyr::select(package, loadedversion) |> 
-  dplyr::filter(package %in% c("tidyverse")) |>
-  knitr::kable() |>
-  kableExtra::kable_styling(position = "center")
-```
-
-## 使用上の注意など
-
-* 本書の内容はすべてwindows環境を想定
-
-* この本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできない。使用する際は、自己責任で利用すること
 
 
 ## ライセンス
 
-<!-- * 本webサイトは [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) -->
-<!--   + 引用例：やわらかクジラ（2021）『がんばらないデータ加工　Rによるくり返し作業入門　前編』. （サークル名：ヤサイゼリー）, オンライン版:https://izunyan.github.io/gisho12/ -->
-<!--   + ただし，ライセンスの適用は本書での著作部分のみとなり，用いているデータやパッケージや画像などはそれぞれのライセンスに準じる -->
+* 本webサイトは [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+* 引用例：やわらかクジラ（2025）技術系同人誌テンプレート
+
+<!-- * 引用例：やわらかクジラ（2021）『がんばらないデータ加工　Rによるくり返し作業入門　前編』. （サークル名：ヤサイゼリー）, オンライン版:https://izunyan.github.io/gisho12/ -->
+
+  + ただし，ライセンスの適用は本書での著作部分のみとなり，用いているデータやパッケージや画像などはそれぞれのライセンスに準じる
 
 
-## test
+## 更新履歴
+2025-05-21: 最初の公開 
+
+
 
 引用文献はこちら [@wickham2023r;@wickham2019welcome]  
 
