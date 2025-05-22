@@ -51,11 +51,13 @@ format:
     toc: true
     # code-fold: true # コードを折りたたんだ状態で表示
     theme:
-      dark: darkly  # ダークモード;themeで先に来た方がdefaultに
+      dark: darkly # ダークモード;themeで先に来た方がdefaultに
       light: flatly
 
 
   pdf:
+    toc: true
+    toc-depth: 3
     documentclass: bxjsbook                     # 日本語pdf
     classoption: xelatex, ja=standard           # 
     papersize: b5                               # サイズ指定(b5paperはA4になってしまう)
