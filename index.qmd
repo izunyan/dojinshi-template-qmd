@@ -61,9 +61,5 @@ knitr::include_graphics("images/cover.png")
 
 
 ## 更新履歴
-2025-05-21: 最初の公開 
-
-
-
-引用文献はこちら [@wickham2023r;@wickham2019welcome]  
+2025-05-24: 最初の公開 
 

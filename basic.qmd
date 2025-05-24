@@ -1,17 +1,16 @@
 # 基本事項 {#sec-basic}
 
+このページは自分がQuartoで知りたかった事項を詰め込んでいる
+
 ## 準備
 
 -   本書で使う処理のため，まず`tidyverse`パッケージを読み込む
--   使用するデータは`palmerpenguins`パッケージの`penguins`データ
+-   使用するデータはR 4.5以降でデフォルトで読める`penguins`データ
     -   ここではオブジェクトの名前を`df`として格納する。
-    -   `パッケージ名::パッケージ中のデータ`，`パッケージ名::関数()`で`library(パッケージ名)`で読み込んでいなくても直に読み出せる，
-
 ```{r}
 library(tidyverse)
 
-df <- 
-  palmerpenguins::penguins
+df <- penguins
 ```
 
 ## コードと結果の表示に関するチャンクオプションの設定
@@ -40,10 +39,11 @@ df <-
 1 + 1
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-**チャンクオプションと実行後パターンの対応一覧**
+### チャンクオプションと実行後パターンの対応一覧
+
 -   〇はあり，×はなしであることを示している。
 
 | チャンクオプション           | 実行 | 出力        | コード         |
@@ -60,13 +60,13 @@ ggplot(df) +
 
 ------------------------------------------------------------------------
 
-**様々なパターンの記述例**
+#### 様々なパターンの記述例
 
-下記タブはそれぞれ「**実行|出力|コード**」の〇×を示す
+次のセクション（htmlではタブ）はそれぞれ「**実行|出力|コード**」の〇×を示す
 （例：〇×〇　→　実行〇|出力×|コード〇）
 
 ::: panel-tabset
-### 〇〇〇
+##### 〇〇〇
 <!-- ### 実行〇|出力〇|コード〇 -->
 
 -   デフォルトの設定なので，必要なチャンクオプション特になし
@@ -77,10 +77,10 @@ ggplot(df) +
 1 + 1
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### 〇〇×
+##### 〇〇×
 <!-- ### 実行〇|出力〇|コード× -->
 
 **チャンクでの書き方**
@@ -92,7 +92,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -105,10 +105,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### 〇××
+###### 〇××
 
 **チャンクでの書き方**
 ```{{r}}
@@ -118,7 +118,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -131,10 +131,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### 〇×（図あり）〇
+##### 〇×（図あり）〇
 
 **チャンクでの書き方**
 ```{{r}}
@@ -144,7 +144,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 **コード表示**
@@ -156,10 +156,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### 〇×〇(1)
+##### 〇×〇(1)
 
 **チャンクでの書き方**
 
@@ -171,7 +171,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -185,10 +185,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### 〇×〇(2)
+##### 〇×〇(2)
 
 **チャンクでの書き方**
 ```{{r}}
@@ -198,7 +198,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -211,10 +211,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### 〇×〇（チャンク）
+##### 〇×〇（チャンク）
 
 -   公式ドキュメント[Fenced
     Echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)を参照
@@ -227,7 +227,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -240,10 +240,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### ××〇
+##### ××〇
 
 -   単にコードを表示したいだけの時に便利
 
@@ -255,7 +255,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -268,10 +268,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### ××〇（チャンク）
+##### ××〇（チャンク）
 
 <!-- -   `{{r}}`をさらに`{}`で囲んで`{{{r}}}`と2重に書く -->
 
@@ -285,7 +285,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -304,10 +304,10 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
-### ×××
+##### ×××
 
 - Rマークダウンのチャンクに選択肢としてあった`show nothing(don't run code)`の書き方
 
@@ -323,7 +323,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -337,7 +337,7 @@ ggplot(df) +
 
 
 ggplot(df) +
-  geom_point(aes(bill_length_mm, bill_depth_mm))
+  geom_point(aes(bill_len, bill_dep))
 ```
 
 
@@ -365,7 +365,7 @@ ggplot(df) +
 #| eval: false 
 
 df |>
-  summarise(across(bill_length_mm,                         # <1>
+  summarise(across(bill_len,                         # <1>
                    list(mean = \(x) mean(x, na.rm = TRUE), # <2>
                         sd   = \(x) sd(x, na.rm = TRUE))   # <2>
                    ),
@@ -384,7 +384,7 @@ df |>
 
 ## 脚注
 
-本文中に`[^ここに数字や文字]`と書き，別途内容を記述することで，脚注(footnote)をつけることができる。
+本文中に`[^ここに数字や文字]`と書き，別途内容を記述することで，脚注(footnote)をつけることができる。出現場所はこのページの最下部。
 
 | 見え方                                           | 書き方                                       |
 |----------------------------------|--------------------------------------|
@@ -630,8 +630,9 @@ df |>
 
 @nte-example を参照
 
-https://quarto.org/docs/authoring/callouts.html#cross-references
-https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes
+- 公式docでの解説
+[Callout Blocks > Cross-References](https://quarto.org/docs/authoring/callouts.html#cross-references)
+[Table 1: Prefixes for callout cross-references](https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes)
 
 
 ## MacのPCのキーボード記号の意味
@@ -654,15 +655,18 @@ https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes
 
 ## 日付の書式
 
-[](https://github.com/quarto-dev/quarto-cli/discussions/4636)
 [公式ドキュメント：date](https://quarto.org/docs/reference/dates.html)
+[date: field, valid entries #4636](https://github.com/quarto-dev/quarto-cli/discussions/4636)
 
 
 
-本書のHTML版では以下の設定を使用
+- 例えば本日の日付として2025-05-24の表示にしたい場合は，YAMLヘッダーに次のように書く
+
 ``` yaml
 ---
 book:
   date: today
   date-format: iso
 ---
+```
+

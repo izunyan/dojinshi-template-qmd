@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 
-doc/*.pdf
+docs/*.pdf
 /.quarto/

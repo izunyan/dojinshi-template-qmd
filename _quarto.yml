@@ -11,6 +11,10 @@ execute:
 # 目次タイトル名の指定。デフォルトはtable of contents
 toc-title: 目次
 
+# 番号をつける深さ
+number-depth: 2
+
+
 book:
   ##### PDF作成時は以下4行コメントアウト ##### 
   title: "技術系同人誌テンプレート"
@@ -58,6 +62,7 @@ format:
   pdf:
     toc: true
     toc-depth: 3
+    number-depth: 2
     documentclass: bxjsbook                     # 日本語pdf
     classoption: xelatex, ja=standard           # 
     papersize: b5                               # サイズ指定(b5paperはA4になってしまう)
