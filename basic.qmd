@@ -1,0 +1,672 @@
+# 基本事項 {#sec-basic}
+
+このページは自分がQuartoで知りたかった事項を詰め込んでいる
+
+## 準備
+
+-   本書で使う処理のため，まず`tidyverse`パッケージを読み込む
+-   使用するデータはR 4.5以降でデフォルトで読める`penguins`データ
+    -   ここではオブジェクトの名前を`df`として格納する。
+```{r}
+library(tidyverse)
+
+df <- penguins
+```
+
+## コードと結果の表示に関するチャンクオプションの設定
+
+　技術系同人誌では，コードとその実行結果を解説する機会が多いだろう。その場合，コードの実行の有無，出力の有無，コードの表示／非表示について，柔軟に切り替えられると便利である。ここでは，考えられるパターンのそれぞれについて指定する方法を解説する。
+
+-   公式ドキュメントの参照箇所
+    -   [Chunk
+        options](https://r4ds.hadley.nz/quarto.html#chunk-options)
+    -   [Execution
+        options](https://quarto.org/docs/reference/formats/html.html#execution)
+    -   [Code
+        Output](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output)
+
+<!-- * [HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html) -->
+
+チャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。
+
+-   チャンクオプションの記述例
+    -   `#| eval: false`のように，`#|`の後にオプションとのその`true`または`false`などを指定する
+
+```{r}
+#| echo: fenced
+#| eval: false
+
+1 + 1
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+### チャンクオプションと実行後パターンの対応一覧
+
+-   〇はあり，×はなしであることを示している。
+
+| チャンクオプション           | 実行 | 出力        | コード         |
+|------------------------------|------|-------------|----------------|
+| echo: false                  | 〇   | 〇          | ×              |
+| include: false               | 〇   | ×           | ×              |
+| results: hide                | 〇   | ×(図はあり) | 〇             |
+| results: hide fig-show: hide | 〇   | ×           | 〇(1)          |
+| output: false                | 〇   | ×           | 〇(2)          |
+| echo: fenced                 | 〇   | ×           | 〇（チャンク） |
+| eval: false                  | ×    | ×           | 〇             |
+| `{{{r}}}`                    | ×    | ×           | 〇（チャンク） |
+| eval: false include: false   |  ×   | ×           | ×              |
+
+------------------------------------------------------------------------
+
+#### 様々なパターンの記述例
+
+次のセクション（htmlではタブ）はそれぞれ「**実行|出力|コード**」の〇×を示す
+（例：〇×〇　→　実行〇|出力×|コード〇）
+
+::: panel-tabset
+##### 〇〇〇
+<!-- ### 実行〇|出力〇|コード〇 -->
+
+-   デフォルトの設定なので，必要なチャンクオプション特になし
+
+**コード表示**
+
+```{r}
+1 + 1
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### 〇〇×
+<!-- ### 実行〇|出力〇|コード× -->
+
+**チャンクでの書き方**
+
+```{{r}}
+#| echo: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+**コード表示**：なし
+
+```{r}
+#| echo: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+###### 〇××
+
+**チャンクでの書き方**
+```{{r}}
+#| include: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+**コード表示**：なし
+
+```{r}
+#| include: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### 〇×（図あり）〇
+
+**チャンクでの書き方**
+```{{r}}
+#| results: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+**コード表示**
+
+```{r}
+#| results: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### 〇×〇(1)
+
+**チャンクでの書き方**
+
+```{{r}}
+#| results: hide
+#| fig-show: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+**コード表示**
+
+```{r}
+#| results: hide
+#| fig-show: hide
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### 〇×〇(2)
+
+**チャンクでの書き方**
+```{{r}}
+#| output: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+**コード表示**
+
+```{r}
+#| output: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### 〇×〇（チャンク）
+
+-   公式ドキュメント[Fenced
+    Echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)を参照
+
+**チャンクでの書き方**
+```{{r}}
+#| echo: fenced
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+**チャンク表示**
+
+```{r}
+#| echo: fenced
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### ××〇
+
+-   単にコードを表示したいだけの時に便利
+
+**チャンクでの書き方**
+```{{r}}
+#| eval: false  
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+**コード表示**
+
+```{r}
+#| eval: false  
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### ××〇（チャンク）
+
+<!-- -   `{{r}}`をさらに`{}`で囲んで`{{{r}}}`と2重に書く -->
+
+**チャンクでの書き方**
+
+
+```{{{r}}}
+
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+-   qmd上は上記書き方のみで「実行×|出力×|コード〇（チャンク表示）」が実現できる
+    -   ただし解説目的で上記出力に`{{{r}}}`を表示させるためには,`{{{{r}}}}`と書く必要がある
+    -   参照:[Unexecuted Blocks](https://quarto.org/docs/computations/execution-options.html#unexecuted-blocks); [Executable Blocks](https://quarto.org/docs/output-formats/html-code.html#executable-blocks)
+    
+<!-- 書きかけメモ ````(4 backticks)と{{{{r}}}}   -->
+
+**チャンク表示**
+
+```{{r}}
+
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+##### ×××
+
+- Rマークダウンのチャンクに選択肢としてあった`show nothing(don't run code)`の書き方
+
+
+
+**チャンクでの書き方**
+```{{r}}
+#| eval: false 
+#| include: false
+
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+**コード表示**
+
+```{r}
+#| eval: false
+#| include: false
+
+1 + 1
+
+
+ggplot(df) +
+  geom_point(aes(bill_len, bill_dep))
+```
+
+
+:::
+
+## コードのアノテーション（注釈）
+
+コードの１行および複数行単位で数字の注釈をつけることができる。デフォルトのHTMLのスタイルやPDFなどではチャンクの下に対応する数字と注釈内容が表示されるが，他のスタイルではチャンク中の注釈数字の上にカーソルを持っていくことで内容が表示される。
+
+[公式ドキュメント：Code Annotation](https://quarto.org/docs/authoring/code-annotation.html)
+
+注釈をつけたい行末に`# <数字>`をつけて，その内容をチャンクの下に`数字. 注釈の内容`というように書くことで反映される
+
+**記述例**
+
+{{< include _code-annotation.md >}}
+
+
+
+**出力例**
+
+- チャンクの下の丸数字をクリックすると，該当行がハイライトされる
+
+```{r}
+#| eval: false 
+
+df |>
+  summarise(across(bill_len,                         # <1>
+                   list(mean = \(x) mean(x, na.rm = TRUE), # <2>
+                        sd   = \(x) sd(x, na.rm = TRUE))   # <2>
+                   ),
+            .by = species)                                 # <3>
+
+```
+
+1. 対象となる変数
+2. 計算部分
+3. グループ別に出すときに指定
+
+
+::: callout-note
+アノテーションの記述例の部分をこのqmdファイル内に書くと，その下から認識されなくなってしまう現象が起こるので，別途.mdファイルに書き出して，`{{< include _ファイル名.md >}}`として読み込んでいる。この時のファイル名には先頭にアンダーバー( _ )をつけることで，render時に自動的に通常のファイルと区別される（[公式ドキュメント：Includes > contents](https://quarto.org/docs/authoring/includes.html#content)）
+:::
+
+## 脚注
+
+本文中に`[^ここに数字や文字]`と書き，別途内容を記述することで，脚注(footnote)をつけることができる。出現場所はこのページの最下部。
+
+| 見え方                                           | 書き方                                       |
+|----------------------------------|--------------------------------------|
+| 基本の脚注[^basic-1]                             | `基本の脚注[^1]`                             |
+| [　]内は文字でもよい[^basic-2]                 | `[　]内は文字でもよい[^word]`                |
+| 脚注内容を本文中に[^basic-3]                     | `脚注内容を本文中に^[直接[ ]内に内容を書く]` |
+| 見え方と書き方で脚注番号が異なることも[^basic-4] | `見え方と書き方で脚注番号が異なることも[^2]` |
+| 脚注を複数行に分ける[^basic-5]                   | `脚注を複数行に分ける[^multiple]`            |
+
+[^basic-1]: １行のみの脚注
+
+[^basic-2]: 文字でも脚注番号に変換される
+
+[^basic-3]: 直接[ ]内に内容を書く
+
+[^basic-4]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される
+
+[^basic-5]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり
+
+    2段落目
+
+    3段落目
+
+    4段落目
+
+<!-- |同じ文字数字を書くとどうなるか[^1]  |`同じ文字数字を書くとどうなるか[^1]`| -->
+
+脚注内容 <!-- 記述部分を表示させるために``` ```で囲んである -->
+
+```         
+[^1]: 脚注の内容を本文とは別に書く
+[^word]:文字でも脚注番号に変換される 
+[^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される
+[^multiple]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり。
+
+      2段落目
+      
+      3段落目
+      
+      4段落目  
+
+
+【補足】
+本来は[^multiple]で以下のように書きたかったが，pdfでエラーになるので省略
+
+> { }でコードも書ける 
+
+>    { 1+1 }
+```
+
+
+<!-- 【ここは備忘録用メモ】 -->
+
+<!-- ↓これをやると^1の脚注内容が上書きされてしまうので不可 -->
+
+<!-- [^1]: 自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい -->
+
+## セクションへのリンク
+
+| 見え方                     | 書き方                       |
+|----------------------------|------------------------------|
+| [@sec-caution]             | `[@sec-caution]`             |
+| [-@sec-caution]            | `[-@sec-caution]`            |
+| [セクション -@sec-caution] | `[セクション -@sec-caution]` |
+| [-@sec-caution]章          | `[-@sec-caution]章`          |
+| [-@sec-caution 章]         | `[-@sec-caution 章]`         |
+| [注意事項](#sec-caution)   | `[注意事項](#sec-caution)`   |
+|                            |                              |
+|                            |                              |
+
+## 図表へのリンク
+
+| 見え方               | 書き方                 |
+|----------------------|------------------------|
+| @fig-zu を参照       | `@fig-zu を参照`       |
+| [図 -@fig-zu] を参照 | `[図 -@fig-zu] を参照` |
+| @tbl-hyo を参照      | `@tbl-hyo を参照`      |
+| [表 -@tbl-hyo]を参照 | `[表 -@tbl-hyo]を参照` |
+
+## コールアウト
+
+-  本文の流れを損なわずに，詳細や注意点などを解説したいときに便利
+
+-   公式ドキュメントの参照箇所
+    -   [Callout
+        Blocks](https://quarto.org/docs/authoring/callouts.html)
+
+### 基本の型
+
+**書き方**
+
+``` markdown
+::: {.callout-note}
+ここにテキスト
+:::
+```
+
+**出力**
+
+::: callout-note
+ここにテキスト
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-tip}
+ここにテキスト
+:::
+```
+**出力**
+
+::: callout-tip
+ここにテキスト
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-warning}
+ここにテキスト
+:::
+```
+**出力**
+
+::: callout-warning
+ここにテキスト
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-caution}
+ここにテキスト
+:::
+```
+
+**出力**
+
+::: callout-caution
+ここにテキスト
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-important}
+ここにテキスト
+:::
+```
+**出力**
+
+::: callout-important
+ここにテキスト
+:::
+
+### 見え方の変更
+
+**書き方**
+
+``` markdown
+::: {.callout-note}
+#### メモ
+タイトルを変更
+:::
+```
+**出力**
+
+::: {.callout-note}
+#### メモ
+タイトルを変更
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-note collapse="true"}
+#### 折りたたみもできる
+ここにテキスト
+:::
+```
+**出力**
+
+::: {.callout-note collapse="true"}
+#### 折りたたみもできる
+
+ここにテキスト
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-note}
+#### メモ
+アイコンなし
+:::
+```
+**出力**
+
+::: {.callout-note icon="false"}
+#### メモ
+
+アイコンなし
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-note appearance="simple"}
+#### シンプルに
+ここにテキスト
+:::
+```
+**出力**
+
+::: {.callout-note appearance="simple"}
+#### シンプルに
+
+ここにテキスト
+:::
+
+**書き方**
+
+``` markdown
+::: {.callout-note appearance="minimal"}
+#### シンプルでアイコンなし
+ここにテキスト
+:::
+```
+**出力**
+
+::: {.callout-note appearance="minimal"}
+#### シンプルでアイコンなし
+
+ここにテキスト
+:::
+
+### コールアウトへのリンク
+
+::: {#nte-example .callout-note}
+ここにテキスト
+:::
+
+@nte-example を参照
+
+- 公式docでの解説
+[Callout Blocks > Cross-References](https://quarto.org/docs/authoring/callouts.html#cross-references)
+[Table 1: Prefixes for callout cross-references](https://quarto.org/docs/authoring/callouts.html#tbl-callout-prefixes)
+
+
+## MacのPCのキーボード記号の意味
+
+-   Quartoの公式ドキュメントでは，当たり前のように使われているので，知らないと読み解けない
+
+-   Apple公式の説明
+
+    -   [Macのメニューに表示される記号](https://support.apple.com/ja-jp/guide/mac-help/cpmh0011/mac)
+    -   [Mac
+        のキーボードショートカット](https://support.apple.com/ja-jp/HT201236)
+        (記号がコピペできる)
+
+| 意味        | 記号 |
+|-------------|------|
+| Commandキー | ⌘    |
+| Shiftキー   | ⇧    |
+| Optionキー  | ⌥    |
+| Controlキー | ⌃    |
+
+## 日付の書式
+
+[公式ドキュメント：date](https://quarto.org/docs/reference/dates.html)
+[date: field, valid entries #4636](https://github.com/quarto-dev/quarto-cli/discussions/4636)
+
+
+
+- 例えば本日の日付として2025-05-24の表示にしたい場合は，YAMLヘッダーに次のように書く
+
+``` yaml
+---
+book:
+  date: today
+  date-format: iso
+---
+```
+

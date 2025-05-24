@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; 注意事項 – 技術系同人誌テンプレート</title>
+<title>1&nbsp; はじめに – 技術系同人誌テンプレート</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./sanko.html" rel="next">
-<link href="./fig_table.html" rel="prev">
+<link href="./basic.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,9 +106,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
-<meta property="og:title" content="4&nbsp; 注意事項 – 技術系同人誌テンプレート">
+
+<meta property="og:title" content="1&nbsp; はじめに – 技術系同人誌テンプレート">
 <meta property="og:site_name" content="技術系同人誌テンプレート">
 </head>
 
@@ -246,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caution.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">注意事項</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">はじめに</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -283,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">はじめに</span></span></a>
   </div>
 </li>
@@ -301,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./caution.html" class="sidebar-item-text sidebar-link active">
+  <a href="./caution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">注意事項</span></span></a>
   </div>
 </li>
@@ -322,8 +361,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#テンプレートの説明" id="toc-テンプレートの説明" class="nav-link active" data-scroll-target="#テンプレートの説明"><span class="header-section-number">1.1</span> テンプレートの説明</a>
+  <ul class="collapse">
+  <li><a href="#実行方法" id="toc-実行方法" class="nav-link" data-scroll-target="#実行方法">実行方法</a></li>
+  <li><a href="#参考資料" id="toc-参考資料" class="nav-link" data-scroll-target="#参考資料">参考資料</a></li>
+  </ul></li>
+  <li><a href="#概要" id="toc-概要" class="nav-link" data-scroll-target="#概要"><span class="header-section-number">1.2</span> 概要</a></li>
+  <li><a href="#本書の特徴" id="toc-本書の特徴" class="nav-link" data-scroll-target="#本書の特徴"><span class="header-section-number">1.3</span> 本書の特徴</a></li>
+  <li><a href="#想定読者" id="toc-想定読者" class="nav-link" data-scroll-target="#想定読者"><span class="header-section-number">1.4</span> 想定読者</a></li>
+  <li><a href="#各章の紹介" id="toc-各章の紹介" class="nav-link" data-scroll-target="#各章の紹介"><span class="header-section-number">1.5</span> 各章の紹介</a></li>
+  <li><a href="#執筆環境" id="toc-執筆環境" class="nav-link" data-scroll-target="#執筆環境"><span class="header-section-number">1.6</span> 執筆環境</a>
+  <ul class="collapse">
+  <li><a href="#rおよびrstudioパッケージのバージョン" id="toc-rおよびrstudioパッケージのバージョン" class="nav-link" data-scroll-target="#rおよびrstudioパッケージのバージョン">RおよびRStudio、パッケージのバージョン</a></li>
+  </ul></li>
+  <li><a href="#使用上の注意など" id="toc-使用上の注意など" class="nav-link" data-scroll-target="#使用上の注意など"><span class="header-section-number">1.7</span> 使用上の注意など</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -331,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-caution" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">注意事項</span></span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">はじめに</span></h1>
 </div>
 
 
@@ -348,13 +406,188 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="テンプレートの説明" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="テンプレートの説明"><span class="header-section-number">1.1</span> テンプレートの説明</h2>
 <ul>
-<li>奇数ページだと1ページ白紙になるので，偶数ページにしないとだめ</li>
-<li>前半，後半部分は，PDFとして作成するときはページ数増えるので不要かも</li>
+<li>Quartoで同人誌の原稿を書くためのテンプレート
+<ul>
+<li>bookdownパッケージでR Markdownで書く解説は<a href="https://izunyan.github.io/dojinshi-template-rmd/">こちら</a></li>
+</ul></li>
+<li>Render Bookすればhtmlとpdfがそのままできる</li>
 </ul>
-<!-- ## ヘッダー {#sec-caution-header} -->
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>ただし，htmlの作成仕様にしているため，このままではpdfでタイトルと著者の表示ページが出てきてしまう
+<ul>
+<li>同人誌として表紙を別につけて不要なタイトルページをなくすためには，目次から始まるpdf出力にする必要がある</li>
+<li>pdfを目次から始まり，ページ番号が1から始まる設定にするためには，<code>_quarto.yml</code>で以下の<code>title:</code>と<code>author:</code>の行をコメントアウトする必要がある</li>
+<li><code>date:</code>と<code>date-format:</code>は最初htmlで出るようにしていたが，色々なbookを参考にすると，つけなくてもよさそうだったのでコメントアウトしている</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">book</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">  ##### PDF作成時は以下4行コメントアウト ##### </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"技術系同人誌テンプレート"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"やわらかクジラ"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  # date: today</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  # date-format: iso</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  ##### PDF作成時のコメントアウトここまで #####</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<section id="実行方法" class="level3">
+<h3 class="anchored" data-anchor-id="実行方法">実行方法</h3>
+<ul>
+<li>Buildタブで
+<ul>
+<li>Render Book &gt; HTML Format</li>
+<li>Render Book &gt; PDF Format</li>
+</ul></li>
+</ul>
+</section>
+<section id="参考資料" class="level3">
+<h3 class="anchored" data-anchor-id="参考資料">参考資料</h3>
+<ul>
+<li><a href="https://quarto.org/docs/books/">Creating a Book</a>
+<ul>
+<li>公式ドキュメント内のBooks形式の説明</li>
+</ul></li>
+<li><a href="https://teastat.blogspot.com/2019/01/bookdown.html">Bookdownによる技術系同人誌執筆</a>
+<ul>
+<li>bookdown版でとてもお世話になったサイト</li>
+</ul></li>
+</ul>
+<!-- 以下，同人誌の構成案 -->
+</section>
+</section>
+<section id="概要" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="概要"><span class="header-section-number">1.2</span> 概要</h2>
+<ul>
+<li>本書の目的
+<ul>
+<li>説明</li>
+</ul></li>
+<li>本書の内容
+<ul>
+<li>説明</li>
+</ul></li>
+<li>執筆動機
+<ul>
+<li>説明</li>
+</ul></li>
+<li>今後の展望
+<ul>
+<li></li>
+</ul></li>
+<li>本書の内容は、<a href="url">githubレポジトリ</a>ですべて公開</li>
+</ul>
+</section>
+<section id="本書の特徴" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="本書の特徴"><span class="header-section-number">1.3</span> 本書の特徴</h2>
+<ul>
+<li>本書の強み
+<ul>
+<li></li>
+</ul></li>
+</ul>
+</section>
+<section id="想定読者" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="想定読者"><span class="header-section-number">1.4</span> 想定読者</h2>
+<ul>
+<li>RとRStudioをダウンロードしてPCにインストールまでできることが最低条件</li>
+</ul>
+</section>
+<section id="各章の紹介" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="各章の紹介"><span class="header-section-number">1.5</span> 各章の紹介</h2>
+<ul>
+<li><a href="basic.html" class="quarto-xref"><span>2</span></a>では</li>
+</ul>
+</section>
+<section id="執筆環境" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="執筆環境"><span class="header-section-number">1.6</span> 執筆環境</h2>
+<ul>
+<li>本書は<a href="https://quarto.org/">Quarto</a>にて執筆
+<ul>
+<li>バージョン1.7.30</li>
+</ul></li>
+</ul>
+<section id="rおよびrstudioパッケージのバージョン" class="level3">
+<h3 class="anchored" data-anchor-id="rおよびrstudioパッケージのバージョン">RおよびRStudio、パッケージのバージョン</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">ind</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">version</td>
+<td style="text-align: left;">R version 4.5.0 (2025-04-11 ucrt)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">os</td>
+<td style="text-align: left;">Windows 10 x64 (build 19045)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">system</td>
+<td style="text-align: left;">x86_64, mingw32</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">2025-05-24</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">package</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">loadedversion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">tidyverse</td>
+<td style="text-align: left;">2.0.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>RstudioのバージョンはRenderすると表示されないので手動で確認して転記
+<ul>
+<li>RStudio 2024.9.1.394</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a> rstudioapi<span class="sc">::</span><span class="fu">versionInfo</span>()<span class="sc">$</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="使用上の注意など" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="使用上の注意など"><span class="header-section-number">1.7</span> 使用上の注意など</h2>
+<ul>
+<li><p>本書の内容はすべてwindows環境を想定</p></li>
+<li><p>この本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできない。使用する際は、自己責任で利用すること</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -771,13 +1004,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./fig_table.html" class="pagination-link" aria-label="図表">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">図表</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="ようこそ">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ようこそ</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./sanko.html" class="pagination-link" aria-label="引用文献の書き方">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">引用文献の書き方</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./basic.html" class="pagination-link" aria-label="基本事項">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">基本事項</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

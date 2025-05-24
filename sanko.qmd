@@ -1,0 +1,63 @@
+# 引用文献の書き方 {#sec-sanko}
+
+
+
+## 文献情報の用意
+
+まずプロジェクトフォルダ内に`references.bib`ファイルを作成する。自ら記入していくこともできるが，引用する文献を[Google Scholar](https://scholar.google.com/)で検索し @fig-gscholar ，BibTeX形式で表示してコピーし @fig-gscholar-cite ，ファイル内にペーストしていくと簡単である。
+
+![文献を表示して引用をクリックする](images/google-scholar.png){#fig-gscholar width="610"}
+
+![BibTeXをクリックする](images/google-scholar-cite.png){#fig-gscholar-cite width="482"}
+
+次にYAMLヘッダー内に，つまりBooksの時は`_quarto.yml`内に，以下を書く
+
+``` yaml
+---
+bibliography: references.bib
+---
+```
+## 本文内での引用
+文献を引用したい箇所に以下のように記述する。
+
+**記述例**
+
+``` markdown
+引用文献はこちら[@wickham2023r;@wickham2019welcome]  
+Wickham[@wickham2023r]は述べた  
+@wickham2023r は述べた  
+
+```
+**出力例**
+
+引用文献はこちら [@wickham2023r;@wickham2019welcome]  
+Wickham [@wickham2023r]は述べた  
+@wickham2023r は述べた  
+
+
+
+本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内に`csl:対応するcslファイル`を追記する
+
+``` yaml
+---
+bibliography: references.bib
+csl: nature.csl
+---
+```
+
+入手先：[nature.csl](https://github.com/citation-style-language/styles/blob/master/nature.csl)
+
+**出力例**
+
+> 引用文献はこちら^1,2^  
+> wickham^1^は述べた  
+> ^1^ は述べた  
+
+## 文献リストの位置
+文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。
+
+
+{{< include _ref.md >}}
+
+
+  

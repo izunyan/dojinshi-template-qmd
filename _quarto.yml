@@ -1,0 +1,75 @@
+project:
+  type: book
+  output-dir: docs # pdfの出力先
+
+
+
+# 全体に反映するチャンクオプション
+execute:           
+  warning: false
+
+# 目次タイトル名の指定。デフォルトはtable of contents
+toc-title: 目次
+
+# 番号をつける深さ
+number-depth: 2
+
+
+book:
+  ##### PDF作成時は以下4行コメントアウト ##### 
+  title: "技術系同人誌テンプレート"
+  author: "やわらかクジラ"
+  # date: today
+  # date-format: iso
+  ##### PDF作成時のコメントアウトここまで #####
+  
+  cover-image: "images/cover.png" # 表紙画像
+  open-graph: true                # 他メディアでのサムネイル表示のため
+  search: true                    # 検索フォーム付与
+  repo-url: https://github.com/izunyan/gisho12 # GithubリポジトリのURL
+  
+  # 作成するページのgmdファイル名を順番に指定
+  chapters:
+    - index.qmd
+    - introduction.qmd
+    - basic.qmd
+    - fig_table.qmd
+    - caution.qmd
+    - sanko.qmd
+    - references.qmd
+    
+    # 1部などと区切りたい場合
+    # - part: zenhan.qmd
+    #   chapters: 
+    #     - basic.qmd
+    #     - fig_table.qmd
+    # - part: kohan.qmd
+    #   chapters:
+    #     - caution.qmd
+
+bibliography: references.bib
+
+# 出力する形式ごとのオプション指定
+format:
+  html:
+    toc: true
+    # code-fold: true # コードを折りたたんだ状態で表示
+    theme:
+      dark: darkly # ダークモード;themeで先に来た方がdefaultに
+      light: flatly
+
+
+  pdf:
+    toc: true
+    toc-depth: 3
+    number-depth: 2
+    documentclass: bxjsbook                     # 日本語pdf
+    classoption: xelatex, ja=standard           # 
+    papersize: b5                               # サイズ指定(b5paperはA4になってしまう)
+    pandoc_args: --top-level-division=chapter   # ?
+    include-in-header: preamble.tex             # プリアンブル：色々指定するファイル
+    include-after-body: after.tex               # 奥付のファイル
+  epub: default
+
+
+
