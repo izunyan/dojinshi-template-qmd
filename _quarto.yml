@@ -26,7 +26,7 @@ book:
   cover-image: "images/cover.png" # 表紙画像
   open-graph: true                # 他メディアでのサムネイル表示のため
   search: true                    # 検索フォーム付与
-  repo-url: https://github.com/izunyan/gisho12 # GithubリポジトリのURL
+  repo-url: https://github.com/izunyan/dojinshi-template-qmd # GithubリポジトリのURL
   
   # 作成するページのgmdファイル名を順番に指定
   chapters:
