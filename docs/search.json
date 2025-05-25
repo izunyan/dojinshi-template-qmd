@@ -94,7 +94,7 @@
     "href": "introduction.html#執筆環境",
     "title": "1  はじめに",
     "section": "1.6 執筆環境",
-    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\nRおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-05-24\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
+    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\nRおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-05-25\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "basic.html#コールアウト",
     "title": "2  基本事項",
     "section": "2.7 コールアウト",
-    "text": "2.7 コールアウト\n\n本文の流れを損なわずに，詳細や注意点などを解説したいときに便利\n公式ドキュメントの参照箇所\n\nCallout Blocks\n\n\n\n基本の型\n書き方\n::: {.callout-note}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nNote\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-tip}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nTip\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-warning}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nWarning\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-caution}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nCaution\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-important}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nImportant\n\n\n\nここにテキスト\n\n\n\n\n見え方の変更\n書き方\n::: {.callout-note}\n#### メモ\nタイトルを変更\n:::\n出力\n\n\n\n\n\n\nメモ\n\n\n\nタイトルを変更\n\n\n書き方\n::: {.callout-note collapse=\"true\"}\n#### 折りたたみもできる\nここにテキスト\n:::\n出力\n\n\n\n\n\n\n折りたたみもできる\n\n\n\n\n\nここにテキスト\n\n\n\n書き方\n::: {.callout-note}\n#### メモ\nアイコンなし\n:::\n出力\n\n\n\n\n\n\nメモ\n\n\n\nアイコンなし\n\n\n書き方\n::: {.callout-note appearance=\"simple\"}\n#### シンプルに\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nシンプルに\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-note appearance=\"minimal\"}\n#### シンプルでアイコンなし\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nシンプルでアイコンなし\n\n\n\nここにテキスト\n\n\n\n\nコールアウトへのリンク\n\n\n\n\n\n\nNote 2.1\n\n\n\nここにテキスト\n\n\nNote 2.1 を参照\n\n公式docでの解説 Callout Blocks &gt; Cross-References Table 1: Prefixes for callout cross-references",
+    "text": "2.7 コールアウト\n\n本文の流れを損なわずに，詳細や注意点などを解説したいときに便利\n公式ドキュメントの参照箇所\n\nCallout Blocks\n\n\n\n基本の型\n書き方\n::: {.callout-note}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nNote\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-tip}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nTip\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-warning}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nWarning\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-caution}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nCaution\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-important}\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nImportant\n\n\n\nここにテキスト\n\n\n\n\n見え方の変更\n書き方\n::: {.callout-note}\n#### メモ\nタイトルを変更\n:::\n出力\n\n\n\n\n\n\nメモ\n\n\n\nタイトルを変更\n\n\n書き方\n::: {.callout-note collapse=\"true\"}\n#### 折りたたみもできる\nここにテキスト\n:::\n出力\n\n\n\n\n\n\n折りたたみもできる\n\n\n\n\n\nここにテキスト\n\n\n\n書き方\n::: {.callout-note icon=\"false\"}\n#### メモ\nアイコンなし\n:::\n出力\n\n\n\n\n\n\nメモ\n\n\n\nアイコンなし\n\n\n書き方\n::: {.callout-note appearance=\"simple\"}\n#### シンプルに\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nシンプルに\n\n\n\nここにテキスト\n\n\n書き方\n::: {.callout-note appearance=\"minimal\"}\n#### シンプルでアイコンなし\nここにテキスト\n:::\n出力\n\n\n\n\n\n\nシンプルでアイコンなし\n\n\n\nここにテキスト\n\n\n\n\nコールアウトへのリンク\n::: {#nte-example .callout-note}\nここにテキスト\n:::\n@nte-example を参照\n\n\n\n\n\n\nNote 2.1\n\n\n\nここにテキスト\n\n\nNote 2.1 を参照\n\n公式docでの解説 Callout Blocks &gt; Cross-References Table 1: Prefixes for callout cross-references",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>基本事項</span>"
     ]
@@ -224,7 +224,7 @@
     "href": "fig_table.html",
     "title": "3  図表",
     "section": "",
-    "text": "3.1 図\n```{r}\n#| label: fig-zu\n#| fig-cap: \"散布図\"\n\nlibrary(ggplot2)\nggplot(mtcars) +\n  geom_point(aes(mpg,disp))\n```\n\n\n\n\n\n\n\nFigure 3.1: 散布図\nFigure 3.1 を参照\n書き方 @fig-zuを参照",
+    "text": "3.1 図\n```{r}\n#| label: fig-zu\n#| fig-cap: \"散布図\"\n\nlibrary(ggplot2)\nggplot(mtcars) +\n  geom_point(aes(mpg,disp))\n```\n\n\n\n\n\n\n\nFigure 3.1: 散布図\nFigure 3.1 を参照\n書き方: @fig-zuを参照",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>図表</span>"
     ]
@@ -234,7 +234,7 @@
     "href": "fig_table.html#表",
     "title": "3  図表",
     "section": "3.2 表",
-    "text": "3.2 表\n\n\n\nTable 3.1: 表タイトル\n\n\n\n\n\n列1\n列2\n列3\n\n\n\n\nx\n1\n10\n\n\ny\n0\n20\n\n\n\n\n\n\n表の下部に以下のように記載\n: 表タイトル {#tbl-hyo}\nTable 3.1 を参照\n書き方 @tbl-hyo を参照",
+    "text": "3.2 表\n| 列1 | 列2 | 列3 |\n|------|------|------|\n| x    | 1    | 10   |\n| y    | 0    | 20   |\n\n: 表タイトル {#tbl-hyo}\n\n\n\nTable 3.1: 表タイトル\n\n\n\n\n\n列1\n列2\n列3\n\n\n\n\nx\n1\n10\n\n\ny\n0\n20\n\n\n\n\n\n\nTable 3.1 を参照\n書き方: @tbl-hyo を参照",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>図表</span>"
     ]

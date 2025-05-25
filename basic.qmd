@@ -577,7 +577,7 @@ df |>
 **書き方**
 
 ``` markdown
-::: {.callout-note}
+::: {.callout-note icon="false"}
 #### メモ
 アイコンなし
 :::
@@ -624,11 +624,20 @@ df |>
 
 ### コールアウトへのリンク
 
+``` markdown
+::: {#nte-example .callout-note}
+ここにテキスト
+:::
+``` 
+`@nte-example` を参照
+
 ::: {#nte-example .callout-note}
 ここにテキスト
 :::
 
 @nte-example を参照
+
+
 
 - 公式docでの解説
 [Callout Blocks > Cross-References](https://quarto.org/docs/authoring/callouts.html#cross-references)
