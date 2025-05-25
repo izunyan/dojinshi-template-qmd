@@ -12,7 +12,7 @@ execute:
 toc-title: 目次
 
 # 番号をつける深さ
-number-depth: 2
+number-depth: 3
 
 
 book:
