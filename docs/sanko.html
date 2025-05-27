@@ -384,9 +384,9 @@ div.csl-indent {
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#文献情報の用意" id="toc-文献情報の用意" class="nav-link active" data-scroll-target="#文献情報の用意"><span class="header-section-number">5.1</span> 文献情報の用意</a></li>
-  <li><a href="#本文内での引用" id="toc-本文内での引用" class="nav-link" data-scroll-target="#本文内での引用"><span class="header-section-number">5.2</span> 本文内での引用</a></li>
-  <li><a href="#文献リストの位置" id="toc-文献リストの位置" class="nav-link" data-scroll-target="#文献リストの位置"><span class="header-section-number">5.3</span> 文献リストの位置</a></li>
+  <li><a href="#sec-sanko-information" id="toc-sec-sanko-information" class="nav-link active" data-scroll-target="#sec-sanko-information"><span class="header-section-number">5.1</span> 文献情報の用意</a></li>
+  <li><a href="#sec-sanko-body" id="toc-sec-sanko-body" class="nav-link" data-scroll-target="#sec-sanko-body"><span class="header-section-number">5.2</span> 本文内での引用</a></li>
+  <li><a href="#sec-sanko-location" id="toc-sec-sanko-location" class="nav-link" data-scroll-target="#sec-sanko-location"><span class="header-section-number">5.3</span> 文献リストの位置</a></li>
   </ul>
 </nav>
     </div>
@@ -413,8 +413,8 @@ div.csl-indent {
 </header>
 
 
-<section id="文献情報の用意" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="文献情報の用意"><span class="header-section-number">5.1</span> 文献情報の用意</h2>
+<section id="sec-sanko-information" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-sanko-information"><span class="header-section-number">5.1</span> 文献情報の用意</h2>
 <p>まずプロジェクトフォルダ内に<code>references.bib</code>ファイルを作成する。自ら記入していくこともできるが，引用する文献を<a href="https://scholar.google.com/">Google Scholar</a>で検索し <a href="#fig-gscholar" class="quarto-xref">Figure&nbsp;<span>5.1</span></a> ，BibTeX形式で表示してコピーし <a href="#fig-gscholar-cite" class="quarto-xref">Figure&nbsp;<span>5.2</span></a> ，ファイル内にペーストしていくと簡単である。</p>
 <div id="fig-gscholar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -441,8 +441,8 @@ Figure&nbsp;5.2: BibTeXをクリックする
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="本文内での引用" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="本文内での引用"><span class="header-section-number">5.2</span> 本文内での引用</h2>
+<section id="sec-sanko-body" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-sanko-body"><span class="header-section-number">5.2</span> 本文内での引用</h2>
 <p>文献を引用したい箇所に以下のように記述する。</p>
 <p><strong>記述例</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>引用文献はこちら<span class="co">[</span><span class="ot">@wickham2023r;@wickham2019welcome</span><span class="co">]</span>  </span>
@@ -465,8 +465,8 @@ wickham<sup>1</sup>は述べた<br>
 <sup>1</sup> は述べた</p>
 </blockquote>
 </section>
-<section id="文献リストの位置" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="文献リストの位置"><span class="header-section-number">5.3</span> 文献リストの位置</h2>
+<section id="sec-sanko-location" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-sanko-location"><span class="header-section-number">5.3</span> 文献リストの位置</h2>
 <p>文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 引用文献</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>

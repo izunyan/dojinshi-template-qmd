@@ -94,7 +94,7 @@
     "href": "introduction.html#執筆環境",
     "title": "1  はじめに",
     "section": "1.6 執筆環境",
-    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-05-26\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
+    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-05-28\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
     ]
@@ -120,8 +120,8 @@
     ]
   },
   {
-    "objectID": "basic.html#準備",
-    "href": "basic.html#準備",
+    "objectID": "basic.html#sec-basic-prep",
+    "href": "basic.html#sec-basic-prep",
     "title": "2  基本事項",
     "section": "",
     "text": "本書で使う処理のため，まずtidyverseパッケージを読み込む\n使用するデータはR 4.5以降でデフォルトで読めるpenguinsデータ\n\nここではオブジェクトの名前をdfとして格納する。",
@@ -130,8 +130,8 @@
     ]
   },
   {
-    "objectID": "basic.html#コードと結果の表示に関するチャンクオプションの設定",
-    "href": "basic.html#コードと結果の表示に関するチャンクオプションの設定",
+    "objectID": "basic.html#sec-basic-chunkop",
+    "href": "basic.html#sec-basic-chunkop",
     "title": "2  基本事項",
     "section": "2.2 コードと結果の表示に関するチャンクオプションの設定",
     "text": "2.2 コードと結果の表示に関するチャンクオプションの設定\n　技術系同人誌では，コードとその実行結果を解説する機会が多いだろう。その場合，コードの実行の有無，出力の有無，コードの表示／非表示について，柔軟に切り替えられると便利である。ここでは，考えられるパターンのそれぞれについて指定する方法を解説する。\n\n公式ドキュメントの参照箇所\n\nChunk options\nExecution options\nCode Output\n\n\n\nチャンクオプションの付け方で実行の有無，出力およびコードの表示・非表示がコントロールできる。\n\nチャンクオプションの記述例\n\n#| eval: falseのように，#|の後にオプションとのそのtrueまたはfalseなどを指定する\n\n\n\n```{r}\n#| eval: false\n\n1 + 1\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\n\n\n2.2.1 チャンクオプションと実行後パターンの対応一覧\n\n〇はあり，×はなしであることを示している。\n\n\n\n\nチャンクオプション\n実行\n出力\nコード\n\n\n\n\necho: false\n〇\n〇\n×\n\n\ninclude: false\n〇\n×\n×\n\n\nresults: hide\n〇\n×(図はあり)\n〇\n\n\nresults: hide fig-show: hide\n〇\n×\n〇(1)\n\n\noutput: false\n〇\n×\n〇(2)\n\n\necho: fenced\n〇\n×\n〇（チャンク）\n\n\neval: false\n×\n×\n〇\n\n\n{{r}}\n×\n×\n〇（チャンク）\n\n\neval: false include: false\n×\n×\n×\n\n\n\n\n\n様々なパターンの記述例\n次のセクション（htmlではタブ）はそれぞれ「実行|出力|コード」の〇×を示す （例：〇×〇　→　実行〇|出力×|コード〇）\n\n〇〇〇〇〇×〇×（図あり）〇〇×〇(1)〇×〇(2)〇×〇（チャンク）××〇××〇（チャンク）×××\n\n\n\n\nデフォルトの設定なので，必要なチャンクオプション特になし\n\nコード表示\n\n1 + 1\n\n[1] 2\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n\n\n\n\n\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| echo: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nコード表示：なし\n\n\n[1] 2\n\n\n\n\n\n\n\n\n\n\n〇××\nチャンクでの書き方\n```{r}\n#| include: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nコード表示：なし\n\n\n\nチャンクでの書き方\n```{r}\n#| results: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n\n\n\n\n\n\n\n\n\n\nチャンクでの書き方\n```{r}\n#| results: hide\n#| fig-show: hide\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n\n\n\nチャンクでの書き方\n```{r}\n#| output: false\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n\n\n\n\n公式ドキュメントFenced Echoを参照\n\nチャンクでの書き方\n```{r}\n#| echo: fenced\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nチャンク表示\n\n```{r}\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\n\n[1] 2\n\n\n\n\n\n\n\n\n\n\n\n\n単にコードを表示したいだけの時に便利\n\nチャンクでの書き方\n```{r}\n#| eval: false  \n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nコード表示\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n\n\n\n\nチャンクでの書き方\n```{{r}}\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\n\nqmd上は上記書き方のみで「実行×|出力×|コード〇（チャンク表示）」が実現できる\n\nただし解説目的で上記出力に{{r}}を表示させるためには,{{{r}}}と書く必要がある\n参照:Unexecuted Blocks; Executable Blocks\n\n\n\nチャンク表示\n```{r}\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\n\n\n\nRマークダウンのチャンクに選択肢としてあったshow nothing(don't run code)の書き方\n\nチャンクでの書き方\n```{r}\n#| eval: false \n#| include: false\n\n\n1 + 1\n\n\nggplot(df) +\n  geom_point(aes(bill_len, bill_dep))\n```\nコード表示",
@@ -140,8 +140,8 @@
     ]
   },
   {
-    "objectID": "basic.html#コードのアノテーション注釈",
-    "href": "basic.html#コードのアノテーション注釈",
+    "objectID": "basic.html#sec-basic-annotation",
+    "href": "basic.html#sec-basic-annotation",
     "title": "2  基本事項",
     "section": "2.3 コードのアノテーション（注釈）",
     "text": "2.3 コードのアノテーション（注釈）\nコードの１行および複数行単位で数字の注釈をつけることができる。デフォルトのHTMLのスタイルやPDFなどではチャンクの下に対応する数字と注釈内容が表示されるが，他のスタイルではチャンク中の注釈数字の上にカーソルを持っていくことで内容が表示される。\n公式ドキュメント：Code Annotation\n注釈をつけたい行末に# &lt;数字&gt;をつけて，その内容をチャンクの下に数字. 注釈の内容というように書くことで反映される\n記述例\n```r\ndf |&gt;\n  summarise(across(bill_length_mm,                         # &lt;1&gt;\n                   list(mean = \\(x) mean(x, na.rm = TRUE), # &lt;2&gt;\n                        sd   = \\(x) sd(x, na.rm = TRUE))   # &lt;2&gt;\n                   ),\n            .by = species)                                 # &lt;3&gt;\n\n```\n\n1. 対象となる変数\n2. 計算部分\n3. グループ別に出すときに指定\n出力例\n\nチャンクの下の丸数字をクリックすると，該当行がハイライトされる\n\n\ndf |&gt;\n1  summarise(across(bill_len,\n2                   list(mean = \\(x) mean(x, na.rm = TRUE),\n                        sd   = \\(x) sd(x, na.rm = TRUE))\n                   ),\n3            .by = species)\n\n\n1\n\n対象となる変数\n\n2\n\n計算部分\n\n3\n\nグループ別に出すときに指定\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nアノテーションの記述例の部分をこのqmdファイル内に書くと，その下から認識されなくなってしまう現象が起こるので，別途.mdファイルに書き出して，{{&lt; include _ファイル名.md &gt;}}として読み込んでいる。この時のファイル名には先頭にアンダーバー( _ )をつけることで，render時に自動的に通常のファイルと区別される（公式ドキュメント：Includes &gt; contents）",
@@ -150,31 +150,31 @@
     ]
   },
   {
-    "objectID": "basic.html#脚注",
-    "href": "basic.html#脚注",
+    "objectID": "basic.html#sec-basic-footnote",
+    "href": "basic.html#sec-basic-footnote",
     "title": "2  基本事項",
     "section": "2.4 脚注",
-    "text": "2.4 脚注\n本文中に[^ここに数字や文字]と書き，別途内容を記述することで，脚注(footnote)をつけることができる。出現場所はこのページの最下部。\n\n\n\n\n\n\n\n見え方\n書き方\n\n\n\n\n基本の脚注1\n基本の脚注[^1]\n\n\n[　]内は文字でもよい2\n[　]内は文字でもよい[^word]\n\n\n脚注内容を本文中に3\n脚注内容を本文中に^[直接[ ]内に内容を書く]\n\n\n見え方と書き方で脚注番号が異なることも4\n見え方と書き方で脚注番号が異なることも[^2]\n\n\n脚注を複数行に分ける5\n脚注を複数行に分ける[^multiple]\n\n\n\n\n脚注内容 \n[^1]: 脚注の内容を本文とは別に書く\n[^word]:文字でも脚注番号に変換される \n[^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される\n[^multiple]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり。\n\n      2段落目\n      \n      3段落目\n      \n      4段落目  \n\n\n【補足】\n本来は[^multiple]で以下のように書きたかったが，pdfでエラーになるので省略\n\n&gt; { }でコードも書ける \n\n&gt;    { 1+1 }",
+    "text": "2.4 脚注\n本文中に[^ここに数字や文字]と書き，別途内容を記述することで，脚注(footnote)をつけることができる。出現場所はこのページの最下部。\n\n\n\n\n\n\n\n\n書き方\n見え方\n\n\n\n\n\n基本の脚注[^1]\n基本の脚注1\n\n\n\n[　]内は文字でもよい[^word]\n[　]内は文字でもよい2\n\n\n\n脚注内容を本文中に^[直接[ ]内に内容を書く]\n脚注内容を本文中に3\n\n\n\n見え方と書き方で脚注番号が異なることも[^2]\n見え方と書き方で脚注番号が異なることも4\n\n\n\n脚注を複数行に分ける[^multiple]\n脚注を複数行に分ける5\n\n\n\n\n\n脚注内容 \n[^1]: 脚注の内容を本文とは別に書く\n[^word]:文字でも脚注番号に変換される \n[^2]: これまでの脚注の文字数字とかぶらなければ自動で連番の数値に変換される\n[^multiple]: 複数行書くためにインデントで区別する。以下1行ずつ空ける必要あり。\n\n      2段落目\n      \n      3段落目\n      \n      4段落目  \n\n\n【補足】\n本来は[^multiple]で以下のように書きたかったが，pdfでエラーになるので省略\n\n&gt; { }でコードも書ける \n\n&gt;    { 1+1 }",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>基本事項</span>"
     ]
   },
   {
-    "objectID": "basic.html#セクションへのリンク",
-    "href": "basic.html#セクションへのリンク",
+    "objectID": "basic.html#sec-basic-section",
+    "href": "basic.html#sec-basic-section",
     "title": "2  基本事項",
     "section": "2.5 セクションへのリンク",
-    "text": "2.5 セクションへのリンク\n\n\n\n見え方\n書き方\n\n\n\n\nChapter 4\n[@sec-caution]\n\n\n4\n[-@sec-caution]\n\n\nセクション 4\n[セクション -@sec-caution]\n\n\n4章\n[-@sec-caution]章\n\n\n4\n[-@sec-caution 章]\n\n\n注意事項\n[注意事項](#sec-caution)",
+    "text": "2.5 セクションへのリンク\n\n\n\n書き方\n見え方\n\n\n\n\n[@sec-figtab]\nChapter 3\n\n\n[@sec-figtab-figure]\nSection 3.1\n\n\n[-@sec-figtab]\n3\n\n\n[セクション -@sec-figtab]\nセクション 3\n\n\n[-@sec-figtab]章\n3章\n\n\n[-@sec-figtab 章]\n3\n\n\n[図表](#sec-figtab)\n図表",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>基本事項</span>"
     ]
   },
   {
-    "objectID": "basic.html#図表へのリンク",
-    "href": "basic.html#図表へのリンク",
+    "objectID": "basic.html#sec-basic-figtab",
+    "href": "basic.html#sec-basic-figtab",
     "title": "2  基本事項",
     "section": "2.6 図表へのリンク",
-    "text": "2.6 図表へのリンク\n\n\n\n見え方\n書き方\n\n\n\n\nFigure 3.1 を参照\n@fig-zu を参照\n\n\n図 3.1 を参照\n[図 -@fig-zu] を参照\n\n\nTable 3.1 を参照\n@tbl-hyo を参照\n\n\n表 3.1を参照\n[表 -@tbl-hyo]を参照",
+    "text": "2.6 図表へのリンク\n\n\n\n書き方\n見え方\n\n\n\n\n@fig-zu を参照\nFigure 3.1 を参照\n\n\n[図 -@fig-zu] を参照\n図 3.1 を参照\n\n\n@tbl-hyo を参照\nTable 3.1 を参照\n\n\n[表 -@tbl-hyo]を参照\n表 3.1を参照",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>基本事項</span>"
     ]
@@ -230,8 +230,8 @@
     ]
   },
   {
-    "objectID": "fig_table.html#表",
-    "href": "fig_table.html#表",
+    "objectID": "fig_table.html#sec-figtab-table",
+    "href": "fig_table.html#sec-figtab-table",
     "title": "3  図表",
     "section": "3.2 表",
     "text": "3.2 表\n| 列1 | 列2 | 列3 |\n|------|------|------|\n| x    | 1    | 10   |\n| y    | 0    | 20   |\n\n: 表タイトル {#tbl-hyo}\n\n\n\nTable 3.1: 表タイトル\n\n\n\n\n\n列1\n列2\n列3\n\n\n\n\nx\n1\n10\n\n\ny\n0\n20\n\n\n\n\n\n\nTable 3.1 を参照\n書き方: @tbl-hyo を参照",
@@ -260,8 +260,8 @@
     ]
   },
   {
-    "objectID": "sanko.html#文献情報の用意",
-    "href": "sanko.html#文献情報の用意",
+    "objectID": "sanko.html#sec-sanko-information",
+    "href": "sanko.html#sec-sanko-information",
     "title": "5  引用文献の書き方",
     "section": "",
     "text": "Figure 5.1: 文献を表示して引用をクリックする\n\n\n\n\n\n\n\n\n\nFigure 5.2: BibTeXをクリックする\n\n\n\n\n---\nbibliography: references.bib\n---",
@@ -270,8 +270,8 @@
     ]
   },
   {
-    "objectID": "sanko.html#本文内での引用",
-    "href": "sanko.html#本文内での引用",
+    "objectID": "sanko.html#sec-sanko-body",
+    "href": "sanko.html#sec-sanko-body",
     "title": "5  引用文献の書き方",
     "section": "5.2 本文内での引用",
     "text": "5.2 本文内での引用\n文献を引用したい箇所に以下のように記述する。\n記述例\n引用文献はこちら[@wickham2023r;@wickham2019welcome]  \nWickham[@wickham2023r]は述べた  \n@wickham2023r は述べた  \n出力例\n引用文献はこちら (Wickham, Çetinkaya-Rundel, and Grolemund 2023; Wickham et al. 2019)\nWickham (Wickham, Çetinkaya-Rundel, and Grolemund 2023)は述べた\nWickham, Çetinkaya-Rundel, and Grolemund (2023) は述べた\n本文中の文献表示の形式を変えたい場合は，YAMLヘッダー内にcsl:対応するcslファイルを追記する\n---\nbibliography: references.bib\ncsl: nature.csl\n---\n入手先：nature.csl\n出力例\n\n引用文献はこちら1,2\nwickham1は述べた\n1 は述べた",
@@ -280,8 +280,8 @@
     ]
   },
   {
-    "objectID": "sanko.html#文献リストの位置",
-    "href": "sanko.html#文献リストの位置",
+    "objectID": "sanko.html#sec-sanko-location",
+    "href": "sanko.html#sec-sanko-location",
     "title": "5  引用文献の書き方",
     "section": "5.3 文献リストの位置",
     "text": "5.3 文献リストの位置\n文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。\n## 引用文献\n\n:::{#refs}\n\n:::\n\n\n\n\nWickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the Tidyverse.” Journal of Open Source Software 4 (43): 1686.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science. \" O’Reilly Media, Inc.\".",

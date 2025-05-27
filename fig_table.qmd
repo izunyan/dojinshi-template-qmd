@@ -1,6 +1,6 @@
-# 図表 {#sec-caution}
+# 図表 {#sec-figtab}
 
-## 図
+## 図 {#sec-figtab-figure}
 
 ```{r}
 #| echo: fenced	
@@ -19,7 +19,7 @@ ggplot(mtcars) +
 書き方: `@fig-zu `を参照
 
 
-## 表
+## 表 {#sec-figtab-table}
 
 ``` markdown
 | 列1 | 列2 | 列3 |

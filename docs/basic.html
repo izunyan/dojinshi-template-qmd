@@ -364,15 +364,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#準備" id="toc-準備" class="nav-link active" data-scroll-target="#準備"><span class="header-section-number">2.1</span> 準備</a></li>
-  <li><a href="#コードと結果の表示に関するチャンクオプションの設定" id="toc-コードと結果の表示に関するチャンクオプションの設定" class="nav-link" data-scroll-target="#コードと結果の表示に関するチャンクオプションの設定"><span class="header-section-number">2.2</span> コードと結果の表示に関するチャンクオプションの設定</a>
+  <li><a href="#sec-basic-prep" id="toc-sec-basic-prep" class="nav-link active" data-scroll-target="#sec-basic-prep"><span class="header-section-number">2.1</span> 準備</a></li>
+  <li><a href="#sec-basic-chunkop" id="toc-sec-basic-chunkop" class="nav-link" data-scroll-target="#sec-basic-chunkop"><span class="header-section-number">2.2</span> コードと結果の表示に関するチャンクオプションの設定</a>
   <ul class="collapse">
-  <li><a href="#チャンクオプションと実行後パターンの対応一覧" id="toc-チャンクオプションと実行後パターンの対応一覧" class="nav-link" data-scroll-target="#チャンクオプションと実行後パターンの対応一覧"><span class="header-section-number">2.2.1</span> チャンクオプションと実行後パターンの対応一覧</a></li>
+  <li><a href="#sec-basic-chunkop-list" id="toc-sec-basic-chunkop-list" class="nav-link" data-scroll-target="#sec-basic-chunkop-list"><span class="header-section-number">2.2.1</span> チャンクオプションと実行後パターンの対応一覧</a></li>
   </ul></li>
-  <li><a href="#コードのアノテーション注釈" id="toc-コードのアノテーション注釈" class="nav-link" data-scroll-target="#コードのアノテーション注釈"><span class="header-section-number">2.3</span> コードのアノテーション（注釈）</a></li>
-  <li><a href="#脚注" id="toc-脚注" class="nav-link" data-scroll-target="#脚注"><span class="header-section-number">2.4</span> 脚注</a></li>
-  <li><a href="#セクションへのリンク" id="toc-セクションへのリンク" class="nav-link" data-scroll-target="#セクションへのリンク"><span class="header-section-number">2.5</span> セクションへのリンク</a></li>
-  <li><a href="#図表へのリンク" id="toc-図表へのリンク" class="nav-link" data-scroll-target="#図表へのリンク"><span class="header-section-number">2.6</span> 図表へのリンク</a></li>
+  <li><a href="#sec-basic-annotation" id="toc-sec-basic-annotation" class="nav-link" data-scroll-target="#sec-basic-annotation"><span class="header-section-number">2.3</span> コードのアノテーション（注釈）</a></li>
+  <li><a href="#sec-basic-footnote" id="toc-sec-basic-footnote" class="nav-link" data-scroll-target="#sec-basic-footnote"><span class="header-section-number">2.4</span> 脚注</a></li>
+  <li><a href="#sec-basic-section" id="toc-sec-basic-section" class="nav-link" data-scroll-target="#sec-basic-section"><span class="header-section-number">2.5</span> セクションへのリンク</a></li>
+  <li><a href="#sec-basic-figtab" id="toc-sec-basic-figtab" class="nav-link" data-scroll-target="#sec-basic-figtab"><span class="header-section-number">2.6</span> 図表へのリンク</a></li>
   <li><a href="#コールアウト" id="toc-コールアウト" class="nav-link" data-scroll-target="#コールアウト"><span class="header-section-number">2.7</span> コールアウト</a>
   <ul class="collapse">
   <li><a href="#基本の型" id="toc-基本の型" class="nav-link" data-scroll-target="#基本の型"><span class="header-section-number">2.7.1</span> 基本の型</a></li>
@@ -408,8 +408,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>このページは自分がQuartoで知りたかった事項を詰め込んでいる</p>
-<section id="準備" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="準備"><span class="header-section-number">2.1</span> 準備</h2>
+<section id="sec-basic-prep" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-basic-prep"><span class="header-section-number">2.1</span> 準備</h2>
 <ul>
 <li>本書で使う処理のため，まず<code>tidyverse</code>パッケージを読み込む</li>
 <li>使用するデータはR 4.5以降でデフォルトで読める<code>penguins</code>データ
@@ -423,8 +423,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="コードと結果の表示に関するチャンクオプションの設定" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="コードと結果の表示に関するチャンクオプションの設定"><span class="header-section-number">2.2</span> コードと結果の表示に関するチャンクオプションの設定</h2>
+<section id="sec-basic-chunkop" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-basic-chunkop"><span class="header-section-number">2.2</span> コードと結果の表示に関するチャンクオプションの設定</h2>
 <p>　技術系同人誌では，コードとその実行結果を解説する機会が多いだろう。その場合，コードの実行の有無，出力の有無，コードの表示／非表示について，柔軟に切り替えられると便利である。ここでは，考えられるパターンのそれぞれについて指定する方法を解説する。</p>
 <ul>
 <li>公式ドキュメントの参照箇所
@@ -452,8 +452,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(bill_len, bill_dep))</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="チャンクオプションと実行後パターンの対応一覧" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="チャンクオプションと実行後パターンの対応一覧"><span class="header-section-number">2.2.1</span> チャンクオプションと実行後パターンの対応一覧</h3>
+<section id="sec-basic-chunkop-list" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-basic-chunkop-list"><span class="header-section-number">2.2.1</span> チャンクオプションと実行後パターンの対応一覧</h3>
 <ul>
 <li>〇はあり，×はなしであることを示している。</li>
 </ul>
@@ -524,8 +524,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <hr>
-<section id="様々なパターンの記述例" class="level4">
-<h4 class="anchored" data-anchor-id="様々なパターンの記述例">様々なパターンの記述例</h4>
+<section id="sec-basic-chunkop-ex" class="level4">
+<h4 class="anchored" data-anchor-id="sec-basic-chunkop-ex">様々なパターンの記述例</h4>
 <p>次のセクション（htmlではタブ）はそれぞれ「<strong>実行|出力|コード</strong>」の〇×を示す （例：〇×〇　→　実行〇|出力×|コード〇）</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">〇〇〇</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">〇〇×</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">〇×（図あり）〇</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">〇×〇(1)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">〇×〇(2)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">〇×〇（チャンク）</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">××〇</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">××〇（チャンク）</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false">×××</a></li></ul>
@@ -772,8 +772,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="コードのアノテーション注釈" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="コードのアノテーション注釈"><span class="header-section-number">2.3</span> コードのアノテーション（注釈）</h2>
+<section id="sec-basic-annotation" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-basic-annotation"><span class="header-section-number">2.3</span> コードのアノテーション（注釈）</h2>
 <p>コードの１行および複数行単位で数字の注釈をつけることができる。デフォルトのHTMLのスタイルやPDFなどではチャンクの下に対応する数字と注釈内容が表示されるが，他のスタイルではチャンク中の注釈数字の上にカーソルを持っていくことで内容が表示される。</p>
 <p><a href="https://quarto.org/docs/authoring/code-annotation.html">公式ドキュメント：Code Annotation</a></p>
 <p>注釈をつけたい行末に<code># &lt;数字&gt;</code>をつけて，その内容をチャンクの下に<code>数字. 注釈の内容</code>というように書くことで反映される</p>
@@ -833,40 +833,47 @@ Note
 </div>
 </div>
 </section>
-<section id="脚注" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="脚注"><span class="header-section-number">2.4</span> 脚注</h2>
+<section id="sec-basic-footnote" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-basic-footnote"><span class="header-section-number">2.4</span> 脚注</h2>
 <p>本文中に<code>[^ここに数字や文字]</code>と書き，別途内容を記述することで，脚注(footnote)をつけることができる。出現場所はこのページの最下部。</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 47%">
+<col style="width: 46%">
 <col style="width: 52%">
+<col style="width: 1%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>見え方</th>
 <th>書き方</th>
+<th>見え方</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>基本の脚注<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
 <td><code>基本の脚注[^1]</code></td>
+<td>基本の脚注<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>[　]内は文字でもよい<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
 <td><code>[　]内は文字でもよい[^word]</code></td>
+<td>[　]内は文字でもよい<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>脚注内容を本文中に<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
 <td><code>脚注内容を本文中に^[直接[ ]内に内容を書く]</code></td>
+<td>脚注内容を本文中に<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>見え方と書き方で脚注番号が異なることも<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
 <td><code>見え方と書き方で脚注番号が異なることも[^2]</code></td>
+<td>見え方と書き方で脚注番号が異なることも<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>脚注を複数行に分ける<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></td>
 <td><code>脚注を複数行に分ける[^multiple]</code></td>
+<td>脚注を複数行に分ける<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -894,76 +901,72 @@ Note
 <!-- ↓これをやると^1の脚注内容が上書きされてしまうので不可 -->
 <!-- [^1]: 自動で記載順の番号に変換される。混乱しそうなのでこういうのは避けたい -->
 </section>
-<section id="セクションへのリンク" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="セクションへのリンク"><span class="header-section-number">2.5</span> セクションへのリンク</h2>
+<section id="sec-basic-section" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-basic-section"><span class="header-section-number">2.5</span> セクションへのリンク</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>見え方</th>
 <th>書き方</th>
+<th>見え方</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="caution.html" class="quarto-xref"><span>Chapter 4</span></a></td>
-<td><code>[@sec-caution]</code></td>
+<td><code>[@sec-figtab]</code></td>
+<td><a href="fig_table.html" class="quarto-xref"><span>Chapter 3</span></a></td>
 </tr>
 <tr class="even">
-<td><a href="caution.html" class="quarto-xref"><span>4</span></a></td>
-<td><code>[-@sec-caution]</code></td>
+<td><code>[@sec-figtab-figure]</code></td>
+<td><a href="fig_table.html#sec-figtab-figure" class="quarto-xref"><span>Section 3.1</span></a></td>
 </tr>
 <tr class="odd">
-<td><a href="caution.html" class="quarto-xref">セクション&nbsp;<span>4</span></a></td>
-<td><code>[セクション -@sec-caution]</code></td>
+<td><code>[-@sec-figtab]</code></td>
+<td><a href="fig_table.html" class="quarto-xref"><span>3</span></a></td>
 </tr>
 <tr class="even">
-<td><a href="caution.html" class="quarto-xref"><span>4</span></a>章</td>
-<td><code>[-@sec-caution]章</code></td>
+<td><code>[セクション -@sec-figtab]</code></td>
+<td><a href="fig_table.html" class="quarto-xref">セクション&nbsp;<span>3</span></a></td>
 </tr>
 <tr class="odd">
-<td><a href="caution.html" class="quarto-xref"><span>4</span></a></td>
-<td><code>[-@sec-caution 章]</code></td>
+<td><code>[-@sec-figtab]章</code></td>
+<td><a href="fig_table.html" class="quarto-xref"><span>3</span></a>章</td>
 </tr>
 <tr class="even">
-<td><a href="fig_table.html">注意事項</a></td>
-<td><code>[注意事項](#sec-caution)</code></td>
+<td><code>[-@sec-figtab 章]</code></td>
+<td><a href="fig_table.html" class="quarto-xref"><span>3</span></a></td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
+<td><code>[図表](#sec-figtab)</code></td>
+<td><a href="fig_table.html">図表</a></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="図表へのリンク" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="図表へのリンク"><span class="header-section-number">2.6</span> 図表へのリンク</h2>
+<section id="sec-basic-figtab" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-basic-figtab"><span class="header-section-number">2.6</span> 図表へのリンク</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>見え方</th>
 <th>書き方</th>
+<th>見え方</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="fig_table.html#fig-zu" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> を参照</td>
 <td><code>@fig-zu を参照</code></td>
+<td><a href="fig_table.html#fig-zu" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> を参照</td>
 </tr>
 <tr class="even">
-<td><a href="fig_table.html#fig-zu" class="quarto-xref">図&nbsp;<span>3.1</span></a> を参照</td>
 <td><code>[図 -@fig-zu] を参照</code></td>
+<td><a href="fig_table.html#fig-zu" class="quarto-xref">図&nbsp;<span>3.1</span></a> を参照</td>
 </tr>
 <tr class="odd">
-<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">Table&nbsp;<span>3.1</span></a> を参照</td>
 <td><code>@tbl-hyo を参照</code></td>
+<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">Table&nbsp;<span>3.1</span></a> を参照</td>
 </tr>
 <tr class="even">
-<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">表&nbsp;<span>3.1</span></a>を参照</td>
 <td><code>[表 -@tbl-hyo]を参照</code></td>
+<td><a href="fig_table.html#tbl-hyo" class="quarto-xref">表&nbsp;<span>3.1</span></a>を参照</td>
 </tr>
 </tbody>
 </table>

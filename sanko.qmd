@@ -2,7 +2,7 @@
 
 
 
-## 文献情報の用意
+## 文献情報の用意 {#sec-sanko-information}
 
 まずプロジェクトフォルダ内に`references.bib`ファイルを作成する。自ら記入していくこともできるが，引用する文献を[Google Scholar](https://scholar.google.com/)で検索し @fig-gscholar ，BibTeX形式で表示してコピーし @fig-gscholar-cite ，ファイル内にペーストしていくと簡単である。
 
@@ -17,7 +17,7 @@
 bibliography: references.bib
 ---
 ```
-## 本文内での引用
+## 本文内での引用 {#sec-sanko-body}
 文献を引用したい箇所に以下のように記述する。
 
 **記述例**
@@ -53,7 +53,7 @@ csl: nature.csl
 > wickham^1^は述べた  
 > ^1^ は述べた  
 
-## 文献リストの位置
+## 文献リストの位置 {#sec-sanko-location}
 文献リストは，何も指定しなければ引用した箇所のセクションの最下部に作られる。巻末に作成したい場合は，引用文献のセクションを作り，そこに以下のように記述する。
 
 
