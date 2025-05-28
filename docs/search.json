@@ -94,7 +94,7 @@
     "href": "introduction.html#執筆環境",
     "title": "1  はじめに",
     "section": "1.6 執筆環境",
-    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-05-28\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
+    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-05-29\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
     ]
