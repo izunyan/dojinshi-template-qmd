@@ -119,7 +119,7 @@ ggplot(df) +
   geom_point(aes(bill_len, bill_dep))
 ```
 
-###### 〇××
+##### 〇××
 
 **チャンクでの書き方**
 ```{{r}}
