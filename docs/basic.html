@@ -374,7 +374,7 @@ gtag('config', 'G-1F7ZRPCCD8', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#sec-basic-prep" id="toc-sec-basic-prep" class="nav-link active" data-scroll-target="#sec-basic-prep"><span class="header-section-number">2.1</span> 準備</a></li>
-  <li><a href="#sec-basic-chunkop" id="toc-sec-basic-chunkop" class="nav-link" data-scroll-target="#sec-basic-chunkop"><span class="header-section-number">2.2</span> コードと結果の表示に関するチャンクオプションの設定</a>
+  <li><a href="#sec-basic-chunkop" id="toc-sec-basic-chunkop" class="nav-link" data-scroll-target="#sec-basic-chunkop"><span class="header-section-number">2.2</span> チャンクオプションの設定</a>
   <ul class="collapse">
   <li><a href="#sec-basic-chunkop-list" id="toc-sec-basic-chunkop-list" class="nav-link" data-scroll-target="#sec-basic-chunkop-list"><span class="header-section-number">2.2.1</span> チャンクオプションと実行後パターンの対応一覧</a></li>
   </ul></li>
@@ -433,7 +433,7 @@ gtag('config', 'G-1F7ZRPCCD8', { 'anonymize_ip': true});
 </div>
 </section>
 <section id="sec-basic-chunkop" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="sec-basic-chunkop"><span class="header-section-number">2.2</span> コードと結果の表示に関するチャンクオプションの設定</h2>
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-basic-chunkop"><span class="header-section-number">2.2</span> チャンクオプションの設定</h2>
 <p>　技術系同人誌では，コードとその実行結果を解説する機会が多いだろう。その場合，コードの実行の有無，出力の有無，コードの表示／非表示について，柔軟に切り替えられると便利である。ここでは，考えられるパターンのそれぞれについて指定する方法を解説する。</p>
 <ul>
 <li>公式ドキュメントの参照箇所
@@ -477,54 +477,60 @@ gtag('config', 'G-1F7ZRPCCD8', { 'anonymize_ip': true});
 </thead>
 <tbody>
 <tr class="odd">
+<td>デフォルト</td>
+<td>〇</td>
+<td>〇</td>
+<td>〇　　　　　　</td>
+</tr>
+<tr class="even">
 <td>echo: false</td>
 <td>〇</td>
 <td>〇</td>
 <td>×</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>include: false</td>
 <td>〇</td>
 <td>×</td>
 <td>×</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>results: hide</td>
 <td>〇</td>
 <td>×(図はあり)</td>
 <td>〇</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>results: hide fig-show: hide</td>
 <td>〇</td>
 <td>×</td>
 <td>〇(1)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>output: false</td>
 <td>〇</td>
 <td>×</td>
 <td>〇(2)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>echo: fenced</td>
 <td>〇</td>
 <td>×</td>
 <td>〇（チャンク）</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>eval: false</td>
 <td>×</td>
 <td>×</td>
 <td>〇</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>{{r}}</code></td>
 <td>×</td>
 <td>×</td>
 <td>〇（チャンク）</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>eval: false include: false</td>
 <td>×</td>
 <td>×</td>
