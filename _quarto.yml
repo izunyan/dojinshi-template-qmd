@@ -17,16 +17,15 @@ number-depth: 3
 
 book:
   ##### PDF作成時は以下4行コメントアウト ##### 
-  title: "技術系同人誌テンプレート"
+  title: "Quarto Booksで書く技術系同人誌テンプレート"
   author: "やわらかクジラ"
   # date: today
   # date-format: iso
   ##### PDF作成時のコメントアウトここまで #####
   
-  google-analytics: "G-1F7ZRPCCD8"
-  cover-image: "images/cover.png" # 表紙画像
-  open-graph: true                # 他メディアでのサムネイル表示のため
-  search: true                    # 検索フォーム付与
+  cover-image: "images/cover.png"  # 表紙画像
+  open-graph: true                 # 他メディアでのサムネイル表示のため
+  search: true                     # 検索フォーム付与
   repo-url: https://github.com/izunyan/dojinshi-template-qmd # GithubリポジトリのURL
   
   # 作成するページのgmdファイル名を順番に指定

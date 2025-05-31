@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "技術系同人誌テンプレート",
+    "title": "Quarto Booksで書く技術系同人誌テンプレート",
     "section": "",
-    "text": "ようこそ\nようこその文章:あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ(310文字)",
+    "text": "ようこそ\nようこその文章:〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇(310文字)",
     "crumbs": [
       "ようこそ"
     ]
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#ライセンス",
     "href": "index.html#ライセンス",
-    "title": "技術系同人誌テンプレート",
+    "title": "Quarto Booksで書く技術系同人誌テンプレート",
     "section": "ライセンス",
     "text": "ライセンス\n\n本webサイトは CC BY 4.0\n引用例：やわらかクジラ（2025）技術系同人誌テンプレート\n\n\n\nただし，ライセンスの適用は本書での著作部分のみとなり，用いているデータやパッケージや画像などはそれぞれのライセンスに準じる",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#更新履歴",
     "href": "index.html#更新履歴",
-    "title": "技術系同人誌テンプレート",
+    "title": "Quarto Booksで書く技術系同人誌テンプレート",
     "section": "更新履歴",
     "text": "更新履歴\n2025-05-24: 最初の公開",
     "crumbs": [
@@ -44,7 +44,7 @@
     "href": "introduction.html#テンプレートの説明",
     "title": "1  はじめに",
     "section": "",
-    "text": "Quartoで同人誌の原稿を書くためのテンプレート\n\nbookdownパッケージでR Markdownで書く解説はこちら\n\nRender Bookすればhtmlとpdfがそのままできる\n\n\n\n\n\n\n\nNote\n\n\n\n\nただし，htmlの作成仕様にしているため，このままではpdfでタイトルと著者の表示ページが出てきてしまう\n\n同人誌として表紙を別につけて不要なタイトルページをなくすためには，目次から始まるpdf出力にする必要がある\npdfを目次から始まり，ページ番号が1から始まる設定にするためには，_quarto.ymlで以下のtitle:とauthor:の行をコメントアウトする必要がある\ndate:とdate-format:は最初htmlで出るようにしていたが，色々なbookを参考にすると，つけなくてもよさそうだったのでコメントアウトしている\n\n\n---\nbook:\n  ##### PDF作成時は以下4行コメントアウト ##### \n  title: \"技術系同人誌テンプレート\"\n  author: \"やわらかクジラ\"\n  # date: today\n  # date-format: iso\n  ##### PDF作成時のコメントアウトここまで #####\n---\n\n\n\n1.1.1 実行方法\n\nBuildタブで\n\nRender Book &gt; HTML Format\nRender Book &gt; PDF Format\n\n\n\n\n1.1.2 参考資料\n\nCreating a Book\n\n公式ドキュメント内のBooks形式の説明\n\nBookdownによる技術系同人誌執筆\n\nbookdown版でとてもお世話になったサイト",
+    "text": "Quartoで同人誌の原稿を書くためのテンプレート\n\nbookdownパッケージでR Markdownで書く解説はこちら\n\nRender Bookすればhtmlとpdfがそのままできる\npdfではB5版の設定1\n\n\n\n\n\n\n\nNote\n\n\n\n\nただし，htmlの作成仕様にしているため，このままではpdfでタイトルと著者の表示ページが出てきてしまう\n\n同人誌として表紙を別につけて不要なタイトルページをなくすためには，目次から始まるpdf出力にする必要がある\npdfを目次から始まり，ページ番号が1から始まる設定にするためには，_quarto.ymlで以下のtitle:とauthor:の行をコメントアウトする必要がある\ndate:とdate-format:は最初htmlで出るようにしていたが，色々なbookを参考にすると，つけなくてもよさそうだったのでコメントアウトしている\n\n\n---\nbook:\n  ##### PDF作成時は以下4行コメントアウト ##### \n  title: \"技術系同人誌テンプレート\"\n  author: \"やわらかクジラ\"\n  # date: today\n  # date-format: iso\n  ##### PDF作成時のコメントアウトここまで #####\n---\n\n\n\n1.1.1 実行方法\n\nBuildタブで\n\nRender Book &gt; HTML Format\nRender Book &gt; PDF Format\n\n\n\n\n1.1.2 参考資料\n\nCreating a Book\n\n公式ドキュメント内のBooks形式の説明\n\nBookdownによる技術系同人誌執筆\n\nbookdown版でとてもお世話になったサイト",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "introduction.html#執筆環境",
     "title": "1  はじめに",
     "section": "1.6 執筆環境",
-    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-05-30\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
+    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-06-01\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
     ]
@@ -105,6 +105,16 @@
     "title": "1  はじめに",
     "section": "1.7 使用上の注意など",
     "text": "1.7 使用上の注意など\n\n本書の内容はすべてwindows環境を想定\nこの本に書いてある内容は、筆者が学習したことをまとめているものにすぎないため、正常な動作の保証はできない。使用する際は、自己責任で利用すること",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
+    ]
+  },
+  {
+    "objectID": "introduction.html#footnotes",
+    "href": "introduction.html#footnotes",
+    "title": "1  はじめに",
+    "section": "",
+    "text": "変更は_quarto.ymlの format: &gt; pdf: &gt; papersize:から可能だが，筆者はB5版しか動作確認できていない↩︎",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
     ]

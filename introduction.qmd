@@ -5,6 +5,9 @@
 * Quartoで同人誌の原稿を書くためのテンプレート
   + bookdownパッケージでR Markdownで書く解説は[こちら](https://izunyan.github.io/dojinshi-template-rmd/)
 * Render Bookすればhtmlとpdfがそのままできる
+* pdfではB5版の設定[^1]
+
+[^1]: 変更は`_quarto.yml`の `format: > pdf: > papersize:`から可能だが，筆者はB5版しか動作確認できていない
 
 
 ::: {.callout-note}
