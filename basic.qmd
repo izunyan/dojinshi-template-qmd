@@ -17,13 +17,13 @@ df <- penguins
 
 　技術系同人誌では，コードとその実行結果を解説する機会が多いだろう。その場合，コードの実行の有無，出力の有無，コードの表示／非表示について，柔軟に切り替えられると便利である。ここでは，考えられるパターンのそれぞれについて指定する方法を解説する。
 
--   公式ドキュメントの参照箇所
-    -   [Chunk
-        options](https://r4ds.hadley.nz/quarto.html#chunk-options)
+-   公式ドキュメント等の参照箇所
     -   [Execution
         options](https://quarto.org/docs/reference/formats/html.html#execution)
     -   [Code
         Output](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output)
+    -   [Chunk
+        options](https://r4ds.hadley.nz/quarto.html#chunk-options) (R for Data Science (2e))
 
 <!-- * [HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html) -->
 

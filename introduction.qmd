@@ -28,7 +28,13 @@ book:
 ---
 ```
 :::  
-  
+
+<!-- yamlチャンクの書き方参考 -->
+<!-- https://quarto.org/docs/projects/quarto-projects.html -->
+
+<!-- ``` {.yaml filename="_quarto.yml"} -->
+<!-- ``` -->
+
 
 ### 実行方法
 
