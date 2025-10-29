@@ -1,7 +1,7 @@
 # 図表 {#sec-figtab}
 
 ## 図 {#sec-figtab-figure}
-
+### チャンクで作図した場合
 ```{r}
 #| echo: fenced	
 #| label: fig-zu
@@ -18,6 +18,22 @@ ggplot(mtcars) +
 
 書き方: `@fig-zu `を参照
 
+
+### 画像ファイルを挿入した場合
+
+- 画像ファイルの挿入は以下の通り`[ ]`に画像タイトル、`( )`に画像の場所、`{ }`に相互参照する際の名前（fig-より後の部分）を入れる
+
+``` markdown
+![画像タイトル](images/sample_image.png){#fig-gazo}
+```
+![画像タイトル](images/sample_image.png){#fig-gazo}
+
+@fig-gazo を参照
+
+書き方: `@fig-gazo` を参照
+
+- 公式ドキュメント等の参照箇所
+  - [Cross References](https://quarto.org/docs/authoring/figures.html#cross-references)
 
 ## 表 {#sec-figtab-table}
 
