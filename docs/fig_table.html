@@ -364,7 +364,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">目次</h2>
    
   <ul>
-  <li><a href="#sec-figtab-figure" id="toc-sec-figtab-figure" class="nav-link active" data-scroll-target="#sec-figtab-figure"><span class="header-section-number">3.1</span> 図</a></li>
+  <li><a href="#sec-figtab-figure" id="toc-sec-figtab-figure" class="nav-link active" data-scroll-target="#sec-figtab-figure"><span class="header-section-number">3.1</span> 図</a>
+  <ul class="collapse">
+  <li><a href="#チャンクで作図した場合" id="toc-チャンクで作図した場合" class="nav-link" data-scroll-target="#チャンクで作図した場合"><span class="header-section-number">3.1.1</span> チャンクで作図した場合</a></li>
+  <li><a href="#画像ファイルを挿入した場合" id="toc-画像ファイルを挿入した場合" class="nav-link" data-scroll-target="#画像ファイルを挿入した場合"><span class="header-section-number">3.1.2</span> 画像ファイルを挿入した場合</a></li>
+  </ul></li>
   <li><a href="#sec-figtab-table" id="toc-sec-figtab-table" class="nav-link" data-scroll-target="#sec-figtab-table"><span class="header-section-number">3.2</span> 表</a></li>
   </ul>
 </nav>
@@ -394,6 +398,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="sec-figtab-figure" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-figtab-figure"><span class="header-section-number">3.1</span> 図</h2>
+<section id="チャンクで作図した場合" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="チャンクで作図した場合"><span class="header-section-number">3.1.1</span> チャンクで作図した場合</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-zu</span></span>
@@ -419,14 +425,40 @@ Figure&nbsp;3.1: 散布図
 <p><a href="#fig-zu" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> を参照</p>
 <p>書き方: <code>@fig-zu</code>を参照</p>
 </section>
+<section id="画像ファイルを挿入した場合" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="画像ファイルを挿入した場合"><span class="header-section-number">3.1.2</span> 画像ファイルを挿入した場合</h3>
+<ul>
+<li>画像ファイルの挿入は以下の通り<code>[ ]</code>に画像タイトル、<code>( )</code>に画像の場所、<code>{ }</code>に相互参照する際の名前（fig-より後の部分）を入れる</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="al">![画像タイトル](images/sample_image.png)</span>{#fig-gazo}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fig-gazo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gazo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/sample-image.png" class="img-fluid figure-img" width="103">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gazo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: 画像タイトル
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-gazo" class="quarto-xref">Figure&nbsp;<span>3.2</span></a> を参照</p>
+<p>書き方: <code>@fig-gazo</code> を参照</p>
+<ul>
+<li>公式ドキュメント等の参照箇所
+<ul>
+<li><a href="https://quarto.org/docs/authoring/figures.html#cross-references">Cross References</a></li>
+</ul></li>
+</ul>
+</section>
+</section>
 <section id="sec-figtab-table" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-figtab-table"><span class="header-section-number">3.2</span> 表</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 列1 <span class="pp">|</span> 列2 <span class="pp">|</span> 列3 <span class="pp">|</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|------|------|</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> x    <span class="pp">|</span> 1    <span class="pp">|</span> 10   <span class="pp">|</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> y    <span class="pp">|</span> 0    <span class="pp">|</span> 20   <span class="pp">|</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>: 表タイトル {#tbl-hyo}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 列1 <span class="pp">|</span> 列2 <span class="pp">|</span> 列3 <span class="pp">|</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|------|------|</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> x    <span class="pp">|</span> 1    <span class="pp">|</span> 10   <span class="pp">|</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> y    <span class="pp">|</span> 0    <span class="pp">|</span> 20   <span class="pp">|</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>: 表タイトル {#tbl-hyo}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="tbl-hyo" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hyo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">

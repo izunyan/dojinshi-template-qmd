@@ -94,7 +94,7 @@
     "href": "introduction.html#執筆環境",
     "title": "1  はじめに",
     "section": "1.6 執筆環境",
-    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 10 x64 (build 19045)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-06-02\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
+    "text": "1.6 執筆環境\n\n本書はQuartoにて執筆\n\nバージョン1.7.30\n\n\n\n1.6.1 RおよびRStudio、パッケージのバージョン\n\n\n\n\n\nind\nvalues\n\n\n\n\nversion\nR version 4.5.0 (2025-04-11 ucrt)\n\n\nos\nWindows 11 x64 (build 26100)\n\n\nsystem\nx86_64, mingw32\n\n\ndate\n2025-10-30\n\n\n\n\n\n\n\n\npackage\nloadedversion\n\n\n\n\ntidyverse\n2.0.0\n\n\n\n\n\n\nRstudioのバージョンはRenderすると表示されないので手動で確認して転記\n\nRStudio 2024.9.1.394\n\n\n\n rstudioapi::versionInfo()$version",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>はじめに</span>"
     ]
@@ -234,7 +234,17 @@
     "href": "fig_table.html",
     "title": "3  図表",
     "section": "",
-    "text": "3.1 図\n```{r}\n#| label: fig-zu\n#| fig-cap: \"散布図\"\n\nlibrary(ggplot2)\nggplot(mtcars) +\n  geom_point(aes(mpg,disp))\n```\n\n\n\n\n\n\n\nFigure 3.1: 散布図\nFigure 3.1 を参照\n書き方: @fig-zuを参照",
+    "text": "3.1 図",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>図表</span>"
+    ]
+  },
+  {
+    "objectID": "fig_table.html#sec-figtab-figure",
+    "href": "fig_table.html#sec-figtab-figure",
+    "title": "3  図表",
+    "section": "",
+    "text": "3.1.1 チャンクで作図した場合\n\n```{r}\n#| label: fig-zu\n#| fig-cap: \"散布図\"\n\nlibrary(ggplot2)\nggplot(mtcars) +\n  geom_point(aes(mpg,disp))\n```\n\n\n\n\n\n\n\nFigure 3.1: 散布図\n\n\n\n\n\nFigure 3.1 を参照\n書き方: @fig-zuを参照\n\n\n3.1.2 画像ファイルを挿入した場合\n\n画像ファイルの挿入は以下の通り[ ]に画像タイトル、( )に画像の場所、{ }に相互参照する際の名前（fig-より後の部分）を入れる\n\n![画像タイトル](images/sample_image.png){#fig-gazo}\n\n\n\n\n\n\nFigure 3.2: 画像タイトル\n\n\n\nFigure 3.2 を参照\n書き方: @fig-gazo を参照\n\n公式ドキュメント等の参照箇所\n\nCross References",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>図表</span>"
     ]
